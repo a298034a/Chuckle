@@ -1,9 +1,15 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* #region 全域設定 */
 @font-face {
     font-family: "jf-openhuninn-2.0";
-    src: local("jf-openhuninn-2.0") url(../fonts/jf-openhuninn-2.0.ttf);
+    src: local("jf-openhuninn-2.0"), url(../fonts/jf-openhuninn-2.0.ttf);
+}
+
+@font-face {
+    font-family: "Hannari";
+    src: local("Hannari"), url(../fonts/Hannari.ttf);
 }
 
 :root {
@@ -12,6 +18,7 @@
 }
 
 body {
+    font-size: 16px;
     background-color: var(--base-backgroundColor);
 }
 
@@ -71,12 +78,70 @@ a {
 /* #endregion */
 
 /* #region 導覽列 */
-#topbar {
+#navbar {
     width: 100%;
+    height: 88px;
     z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    height: 100%;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    gap: 15px;
+}
+
+.logo a figure {
+    height: 100%;
+}
+
+.logo a img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.logo a p {
+    font-family: "Poppins";
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navigation ul li {
+    font-family: "jf-openhuninn-2.0";
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.navigation .menu a {
+    line-height: 1;
+    padding-bottom: 6px;
+    border-bottom: solid 1px transparent;
+}
+
+.navigation .menu a:hover {
+    border-bottom: solid 1px #333;
+    transition: .35s ease-in-out;
+}
+
+.navigation .icon img {
+    object-fit: cover;
+    height: 100%;
 }
 
 /* #endregion */
