@@ -145,3 +145,18 @@ a {
 }
 
 /* #endregion */
+
+/* #region 首頁 */
+/* #endregion */
+
+/* #region Footer */
+footer p {
+    font-family: "jf-openhuninn-2.0";
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* #endregion */
