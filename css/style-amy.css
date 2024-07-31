@@ -15,6 +15,8 @@
 :root {
     /* 背景基礎色 */
     --base-backgroundColor: #FFF7CD;
+
+    --green: #7DE5AF;
 }
 
 body {
@@ -147,6 +149,46 @@ a {
 /* #endregion */
 
 /* #region 首頁 */
+#introduce {
+    width: 100%;
+    height: 1000px;
+    background-image: url(../images/index/map.png);
+}
+
+#introduce .item {
+    display: flex;
+    align-items: end;
+    height: 25%;
+}
+
+#introduce .item:nth-child(1) {
+    margin-left: 45%;
+}
+
+#introduce .item figure {
+    height: 100%;
+}
+
+#introduce .item .content {
+    font-family: "jf-openhuninn-2.0";
+    padding: 40px 35px;
+    width: 50%;
+}
+
+#introduce .item .green-dialogbox {
+    background-image: url(../images/index/dialog-box-green.png);
+    background-repeat: no-repeat;
+}
+
+#introduce img {
+    object-fit: cover;
+    height: 100%;
+}
+
+#introduce .item .content h2 {
+    font-size: 1.25rem;
+}
+
 /* #endregion */
 
 /* #region Footer */
@@ -159,4 +201,5 @@ footer p {
     align-items: center;
     justify-content: center;
 }
+
 /* #endregion */
