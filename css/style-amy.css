@@ -442,6 +442,167 @@ a {
 
 /* #endregion */
 
+/* #region 最新資訊 */
+#newinfo-nav .btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 33%;
+    margin: 0 auto;
+    margin-top: -1%;
+}
+
+#newinfo-nav .btn-container .btn {
+    width: 30%
+}
+
+#current-events {
+    position: relative;
+    background-image: url(../images/news/yellow-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "jf-openhuninn-2.0";
+}
+
+#current-events .swiper-btn {
+    position: absolute;
+    top: 45%;
+    width: 5%;
+}
+
+#current-events .swiper-btn-pre {
+    left: 2%;
+}
+
+#current-events .swiper-btn-next {
+    right: 2%;
+}
+
+#current-events .list ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -4.5%;
+    height: 65vh;
+}
+
+#current-events .list ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    width: 15%;
+    height: 33vh;
+
+    background-position: center;
+    background-size: cover;
+
+    margin: 2%;
+    padding: 15px 20px;
+
+    border-radius: 30px;
+}
+
+#current-events .list ul li p,
+#current-events .list ul li h2 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--white);
+}
+
+#current-events .list li {
+    background-image: url(../images/news/fossil.jpg);
+}
+
+#current-events .list .exhibition li:nth-child(1) {
+    background-image: url(../images/news/fossil.jpg);
+}
+
+#current-events .list .exhibition li:nth-child(2) {
+    background-image: url(../images/news/winter.jpg);
+}
+
+#current-events .list .exhibition li:nth-child(3) {
+    background-image: url(../images/news/lance-reis.jpg);
+}
+
+#current-events .list .exhibition li:nth-child(4) {
+    background-image: url(../images/news/history.jpg);
+}
+
+#current-events .list .exhibition li:nth-child(5) {
+    background-image: url(../images/news/old-computer.jpg);
+}
+
+#upcoming-events {
+    position: relative;
+    background-image: url(../images/news/green-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "jf-openhuninn-2.0";
+}
+
+#upcoming-events .swiper-btn {
+    position: absolute;
+    top: 48%;
+    width: 5%;
+}
+
+#upcoming-events .swiper-btn-pre {
+    left: 2%;
+}
+
+#upcoming-events .swiper-btn-next {
+    right: 2%;
+}
+
+#upcoming-events .list ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+#upcoming-events .list ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    width: 18%;
+    height: 35vh;
+
+    background-position: center;
+    background-size: cover;
+
+    margin: 2%;
+    padding: 15px 20px;
+
+    border-radius: 30px;
+}
+
+#upcoming-events .list ul li p,
+#upcoming-events .list ul li h2 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--black);    
+}
+
+#upcoming-events .list li {
+    background-image: url(../images/news/fossil.jpg);
+}
+
+#upcoming-events .news-winter{
+    position: absolute;
+    top: -9.5%;
+    left: 26%;
+    width: 7%;
+}
+/* #endregion */
+
 /* #region Footer */
 footer p {
     font-family: "jf-openhuninn-2.0";
