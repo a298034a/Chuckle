@@ -208,10 +208,28 @@ a {
 
 /* #region 首頁-熱門文章 */
 #hot-article {
+    position: relative;
+    overflow: hidden;
     background-image: url(../images/index/greenfish\ \(2\).png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 90vh;
+}
+
+.sunny-l {
+    position: absolute;
+    left: -30px;
+    bottom: 140px;
+    width: 300px;
+    transform: rotate(60deg);
+}
+
+.sunny-r {
+    position: absolute;
+    right: -130px;
+    top: 150px;
+    width: 300px;
+    transform: rotate(-60deg);
 }
 
 #hot-article h1 {
@@ -219,7 +237,7 @@ a {
     margin: 40px auto;
 }
 
-#hot-article .item:nth-child(-n+3)  {
+#hot-article .item:nth-child(-n+3) {
     border-bottom: 2px var(--black) solid;
 }
 
@@ -257,10 +275,10 @@ a {
 #hot-article .content {
     display: flex;
     justify-content: space-between;
-    margin: 5% 20%;    
+    margin: 5% 20%;
 }
 
-#hot-article .content ul{
+#hot-article .content ul {
     width: 43%;
     margin-left: 5%;
 }
@@ -275,7 +293,7 @@ a {
     border-radius: 10px;
 }
 
-#hot-article .more { 
+#hot-article .more {
     font-size: 1.1rem;
     padding: 4px 10px;
 }
