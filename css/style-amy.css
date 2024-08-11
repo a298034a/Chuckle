@@ -11,7 +11,10 @@
     /* 背景基礎色 */
     --base-backgroundColor: rgb(255, 247, 205);
     --main-yellow: rgb(255, 226, 74);
+    --main-green: rgb(125, 229, 175);
+    --main-pink: rgb(245, 105, 90);
     --black: rgb(0, 0, 0);
+    --white: rgb(255, 253, 243);
 }
 
 body {
@@ -145,64 +148,138 @@ a {
     background-image: url(../images/index/map.png);
     background-repeat: no-repeat;
     background-position: center 10px;
-}
-
-#introduce .item {
-    display: flex;
-    align-items: center;
-    height: 26%;
-}
-
-#introduce .item:nth-child(1) {
-    margin-left: 48%;
-}
-
-#introduce .item figure {
-    display: flex;
-    position: relative;
-    top: 25px;
-    left: -15px;
-    height: 100%;
-}
-
-#introduce .item .content {
     font-family: "jf-openhuninn-2.0";
-    width: 49%;
-    padding: 15px 0 32px 36px;
-    margin-top: 12%;
 }
 
-#introduce .item .green-dialogbox {
-    background-image: url(../images/index/dialog-box-green.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-/* #introduce .item img {
-    object-fit: cover;
-    height: 100%;
-} */
-
-#introduce .item .content h2 {
+#introduce h2 {
     font-size: 1.2rem;
-    line-height: 3rem;
+    line-height: 2rem;
 }
 
-#introduce .item .content p {
-    font-size: 0.8rem;
+.star {
+    width: 4%;
 }
 
-#introduce .star-sunny-left {
-    position: relative;
-    left: -80px;
-    align-self: start;
+.flower {
+    width: 3%;
+}
+
+.corner {
+    width: 4%;
+}
+
+.first-article,
+.second-article,
+.third-article {
+    display: flex;
+}
+
+/* 第一個介紹 */
+.first-article {
+    margin-top: 4%;
+    padding-top: 3%;
+}
+
+.first-article .content {
+    background-color: var(--main-green);
+    border-radius: 30px;
+    width: 20%;
+    padding: 1% 2%;
+    margin-bottom: 5%;
+}
+
+.first-article .character {
+    width: 15%;
+    /* position: relative; */
+    margin-top: -5%;
+}
+
+.first-article .star:first-child {
+    margin: -3% 15% 0 28%;
+}
+
+.first-article .star:last-child {
+    margin-top: -5%;
+    margin-left: -3%;
+}
+
+.first-article .flower {
+    z-index: 999;
+    margin-top: -1%;
+    margin-right: -1.5%;
+}
+
+.first-article .corner {
+    margin-top: 2%;
+    margin-right: -1.5%;
+}
+
+/* 第二個介紹 */
+.second-article {
+    margin-top: -7%;    
+}
+
+.second-article .content {
+    background-color: var(--main-pink);
+    border-radius: 30px;
+    width: 20%;
+    padding: 1% 2%;
+    margin-top: 5%;
+    margin-left: 1%;
+    color: var(--white);
+}
+
+.second-article .character {
     width: 10%;
-    height: 50%;
-
-    background-image: url(../images/index/star.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+    position: relative;
+    margin: -7% 0 0 15%;
 }
+
+.second-article .flower {
+    margin-top: 4%;
+    margin-left: -2%;
+}
+
+.second-article .corner {
+    margin-top: 5.5%;
+    margin-right: -1%;
+}
+
+/* 第三個介紹 */
+.third-article {
+    margin-top: 2%;
+}
+
+.third-article .content {
+    background-color: var(--main-yellow);
+    border-radius: 30px;
+    width: 20%;
+    padding: 1% 2%;
+    margin-bottom: 8%;
+}
+
+.third-article .character {
+    width: 9%;
+    position: relative;
+    margin: -7% 0 0 2%;
+}
+
+.third-article .flower {
+    z-index: 999;
+    margin-top: 5%;
+    margin-right: -1%;
+    margin-left: 38%;
+}
+
+.third-article .corner {
+    margin-top: 2%;
+    margin-left: -0.1%;
+}
+/* 第三個介紹 */
+
+/* #endregion */
+
+/* #region 首頁-最新活動*/
 
 /* #endregion */
 
