@@ -444,6 +444,8 @@ a {
 
 /* #region 最新資訊 */
 #newinfo-nav .btn-container {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -460,7 +462,8 @@ a {
     position: relative;
     background-image: url(../images/news/yellow-bg.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 98%;
+    background-position: bottom;
     font-family: "jf-openhuninn-2.0";
 }
 
@@ -599,7 +602,7 @@ a {
     position: absolute;
     top: -9.5%;
     left: 26%;
-    width: 7%;
+    width: 6%;
 }
 /* #endregion */
 
