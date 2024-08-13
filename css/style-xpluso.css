@@ -4,7 +4,7 @@
 /* #region 全域設定 */
 @font-face {
     font-family: "jf-openhuninn-2.0";
-    src: local("jf-openhuninn-2.0"), url(../fonts/jf-openhuninn-2.0.ttf);
+    src: local("jf-openhuninn-2.0"), url(../fonts/jf-openhuninn-2.0.ttf) format('truetype');
 }
 
 * {
@@ -35,6 +35,8 @@ body {
         "jf-openhuninn-2.0","蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
     font-size: 100%;
     line-height: 1.5;
+    position: relative;
+
 }
 
 /* 重置標題 */
@@ -97,7 +99,7 @@ hr{
 }
 
 
-.img-info p,.comment p,.time p{
+.img-info p,.comment p,.time p,#post-info p{
     font-size: 16px;
 }
 
@@ -109,7 +111,9 @@ hr{
 } 
 
 
+
 section{
+    /* position: fixed; */
     display: flex;
     flex-direction: column;
     align-content: space-between;
@@ -124,21 +128,32 @@ section{
     width: 100%;
     height: 20%;
 }
+.comment h2{
+    margin-bottom: 1rem;
+}
 .comment .memberFace{
     /* 控制圖片尺寸 */
-    height: 16%;
-    width: 16%;
+    /* height: 16%;
+    width: 16%; */
     padding-top: 1%;
     padding-right: 2%;
+
+    width: 100px; /* 設置寬度，根據需要調整 */
+    height: 100px; /* 設置高度，與寬度一致以保持圓形 */
 }
 
 .comment .memberFace img{
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     border-radius: 50%; 
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* 保持圖片內容覆蓋整個容器 */
     
 }
-
+.memberComment{
+    width: 100%;
+}
 
 .memberComment .time{
     display: flex;
@@ -146,3 +161,84 @@ section{
     padding-top: 1rem;
 }
 
+
+/* 文章TAG區 */
+#post-info{
+    width: 400px;
+    height: auto;
+    background-color: var(--main-pink);
+    position: fixed;
+    top:250px;
+    left: 5%; 
+    border-radius: 30px;
+}
+
+#post-info-text{
+    padding: 50px;
+}
+
+.authorBio {
+    display: flex;
+padding-bottom: 20px;
+}
+
+.authorBio .authorFace{
+
+    width: 120px; /* 設置寬度，根據需要調整 */
+    height: 120px; /* 設置高度，與寬度一致以保持圓形 */
+}
+
+.authorBio .authorFace img{
+   
+    border-radius: 50%; 
+    /* width: 100%;
+    height: auto; */
+    object-fit: cover; /* 保持圖片內容覆蓋整個容器 */
+    
+}
+.memberName{
+    padding: 20px;
+
+}
+
+#post-info hr{
+    margin: 20px 0px;
+}
+
+#postTime{
+    margin: 10px 0px;
+}
+
+.tag{
+    margin-top: 12px;
+    margin-right: 12px;
+    border-radius: 20px;
+    background-color: var(--main-green); 
+   
+}
+#tagsArea{
+    display: flex;
+    flex-wrap:wrap
+}
+
+#send {
+    display: flex;
+    justify-content:flex-end;
+    margin-bottom: 20%;
+    margin-top: 5%;
+}
+
+
+#send img{
+    /* icon */
+    width: 32px;
+    height: 32px;
+    
+}
+
+#send input{
+    width: 800px;
+    height: 40px;
+    border-radius: 30px;
+    margin-right: 10px;
+}

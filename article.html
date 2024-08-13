@@ -12,11 +12,41 @@
 </head>
 
 <body>
-    <div id="post-info"></div>
-    
 
 
-    <section id="post-body" >
+    <!-- 文章TAG區 -->
+    <div id="post-info">
+        <div id="post-info-text">
+            <!-- 作者 -->
+            <article id="" class="authorBio">
+                <div class="authorFace">
+                    <img src="./images/article/member-00.jpg" alt="留言者頭像">
+                </div>
+                <div class="memberName">
+                    <h2>Amber</h2>
+                    <p>whoseloveamber</p>
+                    <p>2001.03.11</p>
+                </div>
+            </article>
+            <!-- 文章資訊 -->
+            <h2>饒河街夜市美食推薦 下港名彰臭豆腐</h2>
+            <p id="postTime">2024/9/17 15:30</p>
+            <div id="address" class="tag">台北饒河夜市</div>
+            <hr size="1">
+            <!--文章標籤  -->
+            <div id="tagsArea">
+                <div class="tag">#台北</div>
+                <div class="tag">#松山區</div>
+                <div class="tag">#夜市</div>
+                <div class="tag">#饒河夜市</div>
+                <div class="tag">#夜市美食</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 文章主體 -->
+    <section id="post-body">
         <header class="title">
             <h1>饒河街夜市美食推薦 下港名彰臭豆腐</h1>
         </header>
@@ -37,10 +67,12 @@
             <必吃美食名單>
         </h3>
         <h3>福州世祖胡椒餅</h3>
-        <p>福州世祖胡椒餅被譽為饒河夜市的鎮市之寶。其製作過程講究，選用優質的黑胡椒粉與新鮮的豬肉餡料，外皮酥脆，內餡多汁，每一口都能感受到濃郁的胡椒香氣與肉汁的完美結合。無論是本地人還是外地遊客，都對這一美味讚不絕口。</p>
+        <p>福州世祖胡椒餅被譽為饒河夜市的鎮市之寶。其製作過程講究，選用優質的黑胡椒粉與新鮮的豬肉餡料，外皮酥脆，內餡多汁，每一口都能感受到濃郁的胡椒香氣與肉汁的完美結合。無論是本地人還是外地遊客，都對這一美味讚不絕口。
+        </p>
         <br>
         <h3>東發號麻油雞</h3>
-        <p>麻油雞在台灣的飲食文化中具有特殊地位，而東發號麻油雞則是這其中的翹楚。其選用上等的麻油與新鮮的雞肉，再加上獨家秘方燉煮，湯頭濃郁，雞肉鮮嫩，每一口都令人回味無窮。這一碗麻油雞，既能暖身驅寒，又能滿足味蕾的挑剔。</p>
+        <p>麻油雞在台灣的飲食文化中具有特殊地位，而東發號麻油雞則是這其中的翹楚。其選用上等的麻油與新鮮的雞肉，再加上獨家秘方燉煮，湯頭濃郁，雞肉鮮嫩，每一口都令人回味無窮。這一碗麻油雞，既能暖身驅寒，又能滿足味蕾的挑剔。
+        </p>
         <br>
         <h3>阿國滷味</h3>
         <p>阿國滷味以其豐富多樣的食材和獨特的滷汁味道，吸引了無數滷味愛好者。其滷汁是經過長時間熬煮，吸收了各種香料的精華，入味而不過鹹。無論是滷蛋、滷豆腐，還是滷肉，都能讓人一試成主顧。
@@ -80,7 +112,7 @@
         </p>
     </section>
     <!-- 留言區 -->
-    <section id="comment" >
+    <section id="comment">
         <header class="title">
             <h2>Comment</h2>
         </header>
@@ -88,7 +120,7 @@
 
         <article id="second-comment" class="comment">
             <div class="memberFace">
-                <img src="./images/article/member-02.jpg" alt="留言者頭像">
+                <img src="./images/article/member-01.jpg" alt="留言者頭像">
             </div>
             <div class="memberComment">
                 <div class="member">
@@ -103,7 +135,7 @@
         <!-- 第2個 -->
         <article id="first-comment" class="comment">
             <div class="memberFace">
-                <img src="./images/article/member-01.jpg" alt="留言者頭像">
+                <img src="./images/article/member-02.jpg" alt="留言者頭像">
             </div>
             <div class="memberComment">
                 <div class="member">
@@ -156,8 +188,17 @@
                 <p class="time">2024/9/17 23:48</p>
             </div>
         </article>
+        <!-- 送出留言 -->
+        <div id="send">
+            <form action="">
+                <input type="text" name="sendComment" id="sendComment" title="留言欄" placeholder="   留言..." autocomplete>
+                
+            </form>
+            <img src="./images/article/icon-comment.png" alt="">
+        </div>
 
     </section>
+
 
 
 
