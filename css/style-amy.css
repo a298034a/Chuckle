@@ -11,6 +11,7 @@
     /* 背景基礎色 */
     --base-backgroundColor: rgb(255, 247, 205);
     --main-yellow: rgb(255, 226, 74);
+    --hover-yellow: rgb(237, 199, 0);
     --main-green: rgb(125, 229, 175);
     --main-pink: rgb(245, 105, 90);
     --black: rgb(0, 0, 0);
@@ -163,7 +164,6 @@ a {
     margin: 0 5px;
 }
 
-
 .navigation .menu a {
     line-height: 1;
     border-bottom: solid 1px transparent;
@@ -173,6 +173,10 @@ a {
     border-bottom: solid 1px #333;
     transition: .35s ease-in-out;
 }
+
+/* #endregion */
+
+/* #region 會員登入註冊*/
 
 /* #endregion */
 
