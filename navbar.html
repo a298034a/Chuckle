@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>導覽列</title>
     <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/toggle-button.css">
     <link rel="stylesheet" href="./css/style-amy.css">
 </head>
 
@@ -29,7 +30,26 @@
                 <li class="icon"><a href="#"><img src="./images/icon-member.png" alt="顯示會員區塊"></a></li>
             </ul>
         </nav>
+        <div id="container">
+            <div class="inner-container">
+                <div class="toggle">
+                    <p>登入</p>
+                </div>
+                <div class="toggle">
+                    <p>註冊</p>
+                </div>
+            </div>
+            <div class="inner-container" id='toggle-container'>
+                <div class="toggle">
+                    <p>登入</p>
+                </div>
+                <div class="toggle">
+                    <p>註冊</p>
+                </div>
+            </div>
+        </div>
     </header>
+    <script src="./js/toggle-btn.js"></script>
 </body>
 
 </html>
