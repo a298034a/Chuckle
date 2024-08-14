@@ -110,7 +110,7 @@ hr{
     width: 24px;
 } 
 
-
+/* #region 文章主體 */
 
 section{
     /* position: fixed; */
@@ -221,6 +221,7 @@ padding-bottom: 20px;
     flex-wrap:wrap
 }
 
+/* #region 留言送出欄 */
 #send {
     display: flex;
     justify-content:flex-end;
