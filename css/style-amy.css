@@ -875,6 +875,14 @@ label[for="keep-login"] {
 
 /* #endregion */
 
+/* #region 地圖頁面 */
+#map{
+    width: 100%;
+    height: 100vh;
+    margin-top: -88px;
+}
+/* #endregion */
+
 /* #region Footer */
 #copyright p {    
     height: 100px;
