@@ -6,6 +6,8 @@
     font-family: "jf-openhuninn-2.0";
     src: local("jf-openhuninn-2.0"), url(../fonts/jf-openhuninn-2.0.ttf) format('truetype');
 }
+/* #region 重置所有樣式 */
+body{
 
 * {
     margin: 0;
@@ -72,7 +74,10 @@ a {
     text-decoration: none;
     color: #444;
 }
+}/* #endregion */
 
+/* #region 共用區*/
+body{
 h2{
     font-size: 25px;
     /* padding: 1rem 0rem; */
@@ -99,24 +104,23 @@ p,ul{
 }
 
 hr{
-    border-color:var(--black);
-        
+    border-color:var(--black);       
 }
-
 
 .img-info p,.comment p,.time p,#post-info p{
     font-size: 16px;
 }
-
 
 .img-info img{
     /* icon */
     height: 24px;
     width: 24px;
 } 
+}
+/* #endregion */
 
 /* #region 文章主體 */
-
+body{
 section{
     /* position: fixed; */
     display: flex;
@@ -165,9 +169,10 @@ section{
     justify-content:flex-end;
     padding-top: 1rem;
 }
-
-
-/* 文章TAG區 */
+}
+/* #endregion */
+/* #region 文章TAG區*/
+body{
 #post-info{
     width: 400px;
     height: auto;
@@ -225,8 +230,10 @@ padding-bottom: 20px;
     display: flex;
     flex-wrap:wrap
 }
+}/* #endregion */
 
-/* #region 留言送出欄 */
+/* #region 留言送出欄*/
+body{
 #send {
     display: flex;
     justify-content:flex-end;
@@ -249,9 +256,11 @@ padding-bottom: 20px;
     margin-right: 10px;
 }
 
-/* 文章列表 */
-/* 列表區 */
+}
+/* #endregion */
 
+/*#region 列表區 */
+body{
 .list{
     margin: 36px 0px;
     display: flex;
@@ -337,3 +346,24 @@ padding-bottom: 20px;
     height: 50px;
 
 }
+
+}
+/* #endregion */
+
+/* #region 文章列表左邊的篩選區*/
+body{
+    #post-filter{
+        width: 320px;
+        height: auto;
+        background-color: var(--main-pink);
+        position: fixed;
+        top:280px;
+        left: 5%; 
+        border-radius: 30px;
+    }
+    
+    #post-filter-text{
+        padding: 50px;
+    }
+}
+/* #endregion */
