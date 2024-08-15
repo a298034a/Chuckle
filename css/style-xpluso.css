@@ -474,7 +474,40 @@ header {
 
 
 /* #region 草莓季左右區塊*/
+.block {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
 
+#left-block {
+    width: 240px;
+    height: auto;
+    background-color: rgb(252, 163, 179);
+    position: fixed;
+    top: 280px;
+    left: 5%;
+    border-radius: 30px;
+}
+#right-block {
+    width: 240px;
+    height: auto;
+    /* background-color: rgb(252, 163, 179); */
+    position: fixed;
+    top: 0px;
+    right: 5%;
+    border-radius: 30px;
+}
+
+#right-block figure{
+width: 80%;
+}
+
+.textArea {
+    padding: 40px;
+    font-size: 20px;
+    
+}
 
 /* #endregion */
 
