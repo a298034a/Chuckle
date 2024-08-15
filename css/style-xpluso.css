@@ -6,6 +6,7 @@
     font-family: 'GenSenRounded2-M';
     src: url(../fonts/GenSenRounded2-M.ttc);
 }
+
 /* #region 重置所有樣式 */
 
 
@@ -24,19 +25,21 @@ root {
     --main-pink: rgb(245, 105, 90);
     --black: rgb(0, 0, 0);
     --white: rgb(255, 253, 243);
-    --gray:rgb(179, 173, 144);
+    --gray: rgb(179, 173, 144);
+    --theme-pink: rgb(252, 163, 179);
+
 }
 
 /* 重置字體 */
 body {
-    background-color: rgb(255, 247, 205);
-    /* 不知道為甚麼不給我套--base-backgroundColor */
+    background-color: var(--base-backgroundColor);
+
 
     font-family:
         /*西文*/
         -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
         /*中文*/
-        'GenSenRounded2-M',"蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+        'GenSenRounded2-M', "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
     font-size: 100%;
     line-height: 1.5;
     position: relative;
@@ -65,7 +68,7 @@ img {
     width: 100%;
     max-width: 100%;
     height: auto;
-   
+
 }
 
 /* 重置連接 */
@@ -75,53 +78,61 @@ a {
     text-decoration: none;
     color: #444;
 }
+
 /* #endregion */
 
 /* #region 共用區*/
 
-h2{
+h2 {
     font-size: 25px;
     /* padding: 1rem 0rem; */
 }
-.title h1{
+
+.title h1 {
     font-size: 35px;
     padding: 5rem 0rem;
 }
-.title h2{
+
+.title h2 {
     font-size: 35px;
-    padding: 1rem 0rem; 
+    padding: 1rem 0rem;
 }
 
-h3{
+h3 {
     font-size: 20px;
     padding: 1rem 0rem;
 }
-h4{
-    font-size: 16px;  
-}
 
-p,ul{
-    font-size: 20px;
-}
-
-hr{
-    border-color:var(--black);       
-}
-
-.img-info p,.comment p,.time p,#post-info p{
+h4 {
     font-size: 16px;
 }
 
-.img-info img{
+p,
+ul {
+    font-size: 20px;
+}
+
+hr {
+    border-color: var(--black);
+}
+
+.img-info p,
+.comment p,
+.time p,
+#post-info p {
+    font-size: 16px;
+}
+
+.img-info img {
     /* icon */
     height: 24px;
     width: 24px;
-} 
+}
 
 /* #endregion */
 
 /* #region 文章主體 */
-section{
+section {
     /* position: fixed; */
     display: flex;
     flex-direction: column;
@@ -131,124 +142,136 @@ section{
     margin-top: 4%;
 }
 
-.comment{
+.comment {
     margin: 35px 0px;
     display: flex;
     width: 100%;
     height: 20%;
 }
-.comment h2{
+
+.comment h2 {
     margin-bottom: 1rem;
 }
-.comment .memberFace{
+
+.comment .memberFace {
     /* 控制圖片尺寸 */
     /* height: 16%;
     width: 16%; */
     padding-top: 1%;
     padding-right: 2%;
 
-    width: 100px; /* 設置寬度，根據需要調整 */
-    height: 100px; /* 設置高度，與寬度一致以保持圓形 */
+    width: 100px;
+    /* 設置寬度，根據需要調整 */
+    height: 100px;
+    /* 設置高度，與寬度一致以保持圓形 */
 }
 
-.comment .memberFace img{
+.comment .memberFace img {
     /* width: 100%;
     height: 100%; */
-    border-radius: 50%; 
+    border-radius: 50%;
     width: 100%;
     height: auto;
-    object-fit: cover; /* 保持圖片內容覆蓋整個容器 */
-    
+    object-fit: cover;
+    /* 保持圖片內容覆蓋整個容器 */
+
 }
-.memberComment{
+
+.memberComment {
     width: 100%;
 }
 
-.memberComment .time{
+.memberComment .time {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     padding-top: 1rem;
 }
 
 /* #endregion */
 /* #region 文章TAG區*/
-#post-info{
+#post-info {
     width: 400px;
     height: auto;
     background-color: var(--main-pink);
     position: fixed;
-    top:250px;
-    left: 5%; 
+    top: 250px;
+    left: 5%;
     border-radius: 30px;
 }
 
-#post-info-text{
+#post-info-text {
     padding: 50px;
 }
 
 .authorBio {
     display: flex;
-padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
-.authorBio .authorFace{
+.authorBio .authorFace {
 
-    width: 120px; /* 設置寬度，根據需要調整 */
-    height: 120px; /* 設置高度，與寬度一致以保持圓形 */
+    width: 120px;
+    /* 設置寬度，根據需要調整 */
+    height: 120px;
+    /* 設置高度，與寬度一致以保持圓形 */
 }
 
-.authorBio .authorFace img{
-   
-    border-radius: 50%; 
+.authorBio .authorFace img {
+
+    border-radius: 50%;
     /* width: 100%;
     height: auto; */
-    object-fit: cover; /* 保持圖片內容覆蓋整個容器 */
-    
+    object-fit: cover;
+    /* 保持圖片內容覆蓋整個容器 */
+
 }
-.memberName{
+
+.memberName {
     padding: 20px;
 
 }
 
-#post-info hr{
+#post-info hr {
     margin: 20px 0px;
 }
 
-#postTime{
+#postTime {
     margin: 10px 0px;
 }
 
-.tag{
+.tag {
     margin-top: 12px;
     margin-right: 12px;
     border-radius: 20px;
-    background-color: var(--main-green); 
-   
+    background-color: var(--main-green);
+
 }
-#tagsArea{
+
+#tagsArea {
     display: flex;
-    flex-wrap:wrap
+    flex-wrap: wrap
 }
+
 /* #endregion */
 
 /* #region 留言送出欄*/
 
 #send {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     margin-bottom: 20%;
     margin-top: 5%;
 }
 
 
-#send img{
+#send img {
     /* icon */
     width: 32px;
     height: 32px;
-    
+
 }
 
-#send input{
+#send input {
     width: 800px;
     height: 40px;
     border-radius: 30px;
@@ -260,53 +283,61 @@ padding-bottom: 20px;
 
 /*#region 列表區 */
 
-.list{
+.list {
     margin: 36px 0px;
     display: flex;
     width: 100%;
     height: 20%;
 }
-.list h2{
+
+.list h2 {
     /* 標題粗體 */
     font-weight: 700;
 }
-.list .cover{
-    
+
+.list .cover {
+
     /* padding-top: 1%; */
     padding-left: 2%;
 
-    width: 200px; /* 設置寬度，根據需要調整 */
-    height: auto; /* 設置高度，與寬度一致以保持圓形 */
+    width: 200px;
+    /* 設置寬度，根據需要調整 */
+    height: auto;
+    /* 設置高度，與寬度一致以保持圓形 */
 }
 
-.list .cover img{
+.list .cover img {
     /* width: 100%;
     height: 100%; */
-    border-radius: 20px; 
+    border-radius: 20px;
     width: 100%;
     height: auto;
-    object-fit: cover; /* 保持圖片內容覆蓋整個容器 */
-    
-}
-.listTextArea{
-    width: 100%;
-    height: auto;
-}
-.listTextArea p{
-    font-size: 16px; 
+    object-fit: cover;
+    /* 保持圖片內容覆蓋整個容器 */
+
 }
 
-.listTextArea .postTime{
+.listTextArea {
+    width: 100%;
+    height: auto;
+}
+
+.listTextArea p {
+    font-size: 16px;
+}
+
+.listTextArea .postTime {
     margin-bottom: 1rem;
 }
 
 /* AD */
-#title{
+#title {
     display: flex;
     align-items: center;
     /* 讓AD框和文字一樣高 */
 }
-#AD{
+
+#AD {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -320,19 +351,19 @@ padding-bottom: 20px;
 }
 
 /* 查看更多 */
-#moreArea{
+#moreArea {
     /* 讓紅框至中 */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 
     margin-top: 40px;
     margin-bottom: 120px;
 }
 
-#more{
-     /* 讓紅框的字至中 */
+#more {
+    /* 讓紅框的字至中 */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -351,19 +382,19 @@ padding-bottom: 20px;
 
 /* #region 文章列表左邊的篩選區*/
 
-    #post-filter{
-        width: 320px;
-        height: auto;
-        background-color: var(--main-pink);
-        position: fixed;
-        top:280px;
-        left: 5%; 
-        border-radius: 30px;
-    }
-    
-    #post-filter-text{
-        padding: 50px;
-    }
+#post-filter {
+    width: 320px;
+    height: auto;
+    background-color: var(--main-pink);
+    position: fixed;
+    top: 280px;
+    left: 5%;
+    border-radius: 30px;
+}
+
+#post-filter-text {
+    padding: 50px;
+}
 
 /* #endregion */
 
@@ -371,15 +402,80 @@ padding-bottom: 20px;
 /* #region 草莓季*/
 
 /* #region 草莓季中間區塊*/
-#themeBody{
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
+body.themeSeason {
+    background-color: rgb(255, 253, 243);
+}
+
+header {
     width: 50%;
     margin-left: 25%;
-    margin-top: 0;
 }
+
+#themeBody {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 25%;
+    /* text-align: center; */
+}
+
+.storeBlock {
+    display: flex;
+    flex: 1;
+
+}
+
+.store {
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    /* 讓子元素垂直排列 */
+    align-items: center;
+    padding: 2%;
+    margin-top: 8%;
+}
+
+.store .slogan {
+    display: inline-block;
+    padding: 5px 16px;
+    margin-top: 2%;
+    text-align: center;
+    background-color: rgb(252, 163, 179);
+    border-radius: 99px;
+    width: 1;
+    font-size: 16px;
+
+}
+
+.store img {
+    /* width: auto;
+    height: 50%; */
+    border-radius: 20px;
+    /* padding: 10% 0%; */
+    margin: 10% 0;
+}
+
 /* #endregion */
 
+/* #region 頁碼暫時用圖片*/
+#page-choose {
+    width: 30%;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10% 0;
+
+}
+
+/* #endregion */
+
+
+/* #region 草莓季左右區塊*/
+
+
+/* #endregion */
 
 /* #endregion */
