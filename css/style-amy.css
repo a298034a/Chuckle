@@ -49,7 +49,7 @@ a {
     display: block;
     /* 將預設inline改為block */
     text-decoration: none;
-    color: #444;
+    color: rgb(0, 0, 0);
 }
 
 /* #endregion */
@@ -91,6 +91,9 @@ body {
     border-radius: 99px;
 }
 
+.en {
+    font-family: "Poppins";
+}
 /* #endregion */
 
 /* #region 導覽列 */
@@ -873,13 +876,12 @@ label[for="keep-login"] {
 /* #endregion */
 
 /* #region Footer */
-footer p {
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
+#copyright p {    
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: GenSenRounded2-M;;
+    letter-spacing: 0.1rem;
 }
-
 /* #endregion */
