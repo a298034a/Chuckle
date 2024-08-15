@@ -71,7 +71,7 @@ a {
     --black-alpha-25: rgba(0, 0, 0, 0.25);
     --white: rgb(255, 253, 243);
 
-    --basic1-shadow:-2px 2px 6px -2px var(--black-alpha-25);
+    --basic1-shadow: -2px 2px 6px -2px var(--black-alpha-25);
 }
 
 body {
@@ -94,6 +94,7 @@ body {
 .en {
     font-family: "Poppins";
 }
+
 /* #endregion */
 
 /* #region 導覽列 */
@@ -875,21 +876,58 @@ label[for="keep-login"] {
 
 /* #endregion */
 
+/* #region 官方活動 */
+#officialEvent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: -88px;
+    background-color: rgb(51, 51, 49);
+}
+
+#officialEvent-content {
+    width: 50%;
+    background-color: var(--black);
+    color: var(--white);
+    
+}
+
+#officialEvent-content .intoduce{
+    background-image: url(../images/official/emphasize-bg.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2%;
+    margin: 25px 0;
+}
+
+#officialEvent-content .intoduce p{
+    margin: 10%;
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+
+/* #endregion */
+
 /* #region 地圖頁面 */
-#map{
+#map {
     width: 100%;
     height: 100vh;
     margin-top: -88px;
 }
+
 /* #endregion */
 
 /* #region Footer */
-#copyright p {    
+#copyright p {
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: GenSenRounded2-M;;
+    font-family: GenSenRounded2-M;
+    ;
     letter-spacing: 0.1rem;
 }
+
 /* #endregion */
