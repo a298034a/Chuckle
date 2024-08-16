@@ -857,7 +857,7 @@ input#search-bar {
     margin: 0 -20px;
     margin-bottom: 8%;
     width: 90%;
-    height: 45vh;
+    height: 48vh;
     overflow: hidden;
 }
 
@@ -873,7 +873,7 @@ input#search-bar {
 }
 
 #upcoming-events ul li figure {
-    height: 30vh;
+    height: 28vh;
 }
 
 #upcoming-events ul li {
