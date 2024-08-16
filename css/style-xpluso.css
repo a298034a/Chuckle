@@ -436,13 +436,6 @@ body.themeSeason {
     background-color: var(--white);
 }
 
-body.themeSeason header {
-    /* width: 50%; */
-    flex: 2;
-    margin-left: 25%;
-}
-
-
 
 .storeBlock {
     display: flex;
