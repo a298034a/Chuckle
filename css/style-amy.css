@@ -565,7 +565,7 @@ label[for="keep-login"] {
 #hot-article {
     position: relative;
     overflow: hidden;
-    background-image: url(../images/index/greenfish\ \(2\).png);
+    background-image: url(../images/index/greenfish.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 90vh;
@@ -574,7 +574,7 @@ label[for="keep-login"] {
 
 .sunny-l {
     position: absolute;
-    left: -30px;
+    left: -40px;
     bottom: 140px;
     width: 300px;
     transform: rotate(60deg);
@@ -582,7 +582,7 @@ label[for="keep-login"] {
 
 .sunny-r {
     position: absolute;
-    right: -130px;
+    right: -140px;
     top: 150px;
     width: 300px;
     transform: rotate(-60deg);
@@ -618,14 +618,17 @@ label[for="keep-login"] {
 }
 
 #hot-article .content {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
-    margin: 5% 20%;
+    margin: 2% auto;
+    width: 40%;
+    min-width: 1000px;
 }
 
 #hot-article .content ul {
     width: 43%;
-    margin-left: 5%;
 }
 
 #hot-article .content ul li {
@@ -634,7 +637,7 @@ label[for="keep-login"] {
 
 #hot-article .map {
     background-color: #333;
-    width: 45%;
+    width: 40%;
     border-radius: 10px;
 }
 
