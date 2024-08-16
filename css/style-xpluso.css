@@ -456,6 +456,7 @@ body.themeSeason header {
     align-items: center;
     padding: 2%;
     margin-top: 8%;
+    
 }
 
 .store .slogan {
@@ -475,7 +476,11 @@ body.themeSeason header {
     height: 50%; */
     border-radius: 20px;
     margin: 10% 0;
+    cursor: pointer;
 }
+
+
+
 
 /* #endregion */
 
