@@ -291,8 +291,8 @@ section {
 }
 
 .list h2 {
-    /* 標題粗體 */
-    font-weight: 700;
+    /* 標題粗體，這個字體不適合 */
+    /* font-weight: 700; */
 }
 
 .list .cover {
@@ -324,6 +324,11 @@ section {
 
 .listTextArea p {
     font-size: 16px;
+    overflow: hidden;/* 多出來時則省略 */
+    text-overflow: ellipsis;/* 自動加省略號... */
+    display: -webkit-box;
+    -webkit-box-orient:vertical ;/* 定義Box垂直佈局 */
+    -webkit-line-clamp: 3;/* 行數限制 */
 }
 
 .listTextArea .postTime {
