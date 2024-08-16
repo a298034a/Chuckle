@@ -17,7 +17,7 @@
 }
 
 
-root {
+:root {
     /* 背景基礎色 */
     --base-backgroundColor: rgb(255, 247, 205);
     --main-yellow: rgb(255, 226, 74);
@@ -404,14 +404,14 @@ section {
 /* #endregion */
 
 
-/* #region 草莓季*/
+/* #region 草莓季*/   
 
 /* #region 草莓季中間區塊*/
 body.themeSeason {
-    background-color: rgb(255, 253, 243);
+    background-color: var(--white);
 }
 
-header {
+body.themeSeason header {
     width: 50%;
     margin-left: 25%;
 }
@@ -447,7 +447,7 @@ header {
     padding: 5px 16px;
     margin-top: 2%;
     text-align: center;
-    background-color: rgb(252, 163, 179);
+    background-color: var(--theme-pink);
     border-radius: 99px;
     width: 1;
     font-size: 16px;
@@ -488,7 +488,7 @@ header {
 #left-block {
     width: 240px;
     height: auto;
-    background-color: rgb(252, 163, 179);
+    background-color: var(--theme-pink);
     position: fixed;
     top: 280px;
     left: 5%;
