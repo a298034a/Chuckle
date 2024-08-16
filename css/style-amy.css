@@ -358,19 +358,36 @@ label[for="keep-login"] {
 /* #endregion */
 
 /* #region 搜尋 */
+#search-modal {
+    width: 27%;
+    background-color: var(--main-yellow);
+    border-radius: 20px;
+    padding: 30px;
+}
+
 .search-container {
-    width: 400px;
-    margin: 0 auto;
+    width: 100%;
+}
+
+.search-container a {
+    position: relative;
+    /* top: -50%; */
+    left: 85%;
+    top: -38px;
+    width: 10%;
+    min-width: 30px;
+    max-width: 39px;
 }
 
 input#search-bar {
     margin: 0 auto;
     width: 100%;
-    height: 45px;
+    height: 40px;
     padding: 0 20px;
     font-size: 1rem;
     border: 1px solid transparent;
     outline: none;
+    border-radius: 99px;
 
     &:focus {
         border: 1px solid #008abf;
@@ -394,18 +411,31 @@ input#search-bar {
     }
 }
 
-.search-icon {
-    position: relative;
-    float: right;
-    width: 75px;
-    height: 75px;
-    top: -62px;
-    right: -15px;
-    padding: 20px;
+#search-modal .tag {
+    background-color: var(--white);
 }
 
-#search-bar a {
-    height: 100%;
+#search-modal .tag:hover {
+    background-color: var(--hover-yellow);
+}
+
+#search-modal .tags-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#search-modal .search-tags:first-child {
+    margin: 20px 0;
+}
+
+#search-modal .tags-container a {
+    margin-right: 10px;
+}
+
+.negative-margin {
+    margin-top: -45px;
 }
 
 /* #endregion */
