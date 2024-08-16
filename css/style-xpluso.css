@@ -404,7 +404,30 @@ section {
 /* #endregion */
 
 
-/* #region 草莓季*/   
+/* #region 草莓季大區塊規劃*/   
+#underBanner {
+    display: flex;
+    
+}
+
+#themeBody {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex: 2;
+    /* width: 50%; */
+    /* margin-left: 25%; */
+    /* margin-bottom: 25%; */
+    /* text-align: center; */
+}
+
+#left-block {
+    flex: 1;
+}
+#right-block {
+    flex: 1;
+}
+/* #endregion */
 
 /* #region 草莓季中間區塊*/
 body.themeSeason {
@@ -412,24 +435,15 @@ body.themeSeason {
 }
 
 body.themeSeason header {
-    width: 50%;
+    /* width: 50%; */
+    flex: 2;
     margin-left: 25%;
 }
 
-#themeBody {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    width: 50%;
-    margin-left: 25%;
-    margin-bottom: 25%;
-    /* text-align: center; */
-}
+
 
 .storeBlock {
     display: flex;
-    flex: 1;
-
 }
 
 .store {
@@ -458,62 +472,46 @@ body.themeSeason header {
     /* width: auto;
     height: 50%; */
     border-radius: 20px;
-    /* padding: 10% 0%; */
     margin: 10% 0;
-}
-
-/* #endregion */
-
-/* #region 頁碼暫時用圖片*/
-#page-choose {
-    width: 30%;
-    /* text-align: center; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10% 0;
-
 }
 
 /* #endregion */
 
 
 /* #region 草莓季左右區塊*/
-.block {
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
+
+.block figure{
+width: 70%;
+text-align: center;
+margin: 20%;
 }
 
-#left-block {
-    width: 240px;
-    height: auto;
-    background-color: var(--theme-pink);
-    position: fixed;
-    top: 280px;
-    left: 5%;
-    border-radius: 30px;
-}
-#right-block {
-    width: 240px;
-    height: auto;
-    /* background-color: rgb(252, 163, 179); */
-    position: fixed;
-    top: 0px;
-    right: 5%;
-    border-radius: 30px;
-}
-
-#right-block figure{
-width: 80%;
-}
 
 .textArea {
     padding: 40px;
     font-size: 20px;
-    
+margin: 20%;
+
+    height: auto;
+    background-color: var(--theme-pink);
+    border-radius: 30px;
 }
+/* #endregion */
+
+/* #region 頁碼暫時用圖片*/
+#page-choose {
+    display: flex;  
+    /* padding: 2%; */
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+
+    }
+    #page-choose a{
+        /* width: 5%; */
+        height: auto;
+        margin: 1%;
+    }
 
 /* #endregion */
 
-/* #endregion */
