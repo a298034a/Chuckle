@@ -132,7 +132,7 @@ hr {
 /* #endregion */
 
 /* #region 文章主體 */
-section {
+#post-body ,#comment,#listBody{
     /* position: fixed; */
     display: flex;
     flex-direction: column;
