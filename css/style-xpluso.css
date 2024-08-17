@@ -132,7 +132,9 @@ hr {
 /* #endregion */
 
 /* #region 文章主體 */
-#post-body ,#comment,#listBody{
+#post-body,
+#comment,
+#listBody {
     /* position: fixed; */
     display: flex;
     flex-direction: column;
@@ -324,11 +326,15 @@ hr {
 
 .listTextArea p {
     font-size: 16px;
-    overflow: hidden;/* 多出來時則省略 */
-    text-overflow: ellipsis;/* 自動加省略號... */
+    overflow: hidden;
+    /* 多出來時則省略 */
+    text-overflow: ellipsis;
+    /* 自動加省略號... */
     display: -webkit-box;
-    -webkit-box-orient:vertical ;/* 定義Box垂直佈局 */
-    -webkit-line-clamp: 3;/* 行數限制 */
+    -webkit-box-orient: vertical;
+    /* 定義Box垂直佈局 */
+    -webkit-line-clamp: 3;
+    /* 行數限制 */
 }
 
 .listTextArea .postTime {
@@ -381,7 +387,7 @@ hr {
     height: 50px;
     cursor: pointer;
     font-size: 25px;
-   
+
 }
 
 
@@ -406,10 +412,10 @@ hr {
 /* #endregion */
 
 
-/* #region 草莓季大區塊規劃*/   
+/* #region 草莓季大區塊規劃*/
 #underBanner {
     display: flex;
-    
+
 }
 
 #themeBody {
@@ -426,9 +432,11 @@ hr {
 #left-block {
     flex: 1;
 }
+
 #right-block {
     flex: 1;
 }
+
 /* #endregion */
 
 /* #region 草莓季中間區塊*/
@@ -449,7 +457,7 @@ body.themeSeason {
     align-items: center;
     padding: 2%;
     margin-top: 8%;
-    
+
 }
 
 .store .slogan {
@@ -473,6 +481,9 @@ body.themeSeason {
 }
 
 
+#themeBody{
+    position: relative;
+}
 
 
 /* #endregion */
@@ -480,38 +491,54 @@ body.themeSeason {
 
 /* #region 草莓季左右區塊*/
 
-.block figure{
-width: 70%;
-text-align: center;
-margin: 20%;
+.block figure {
+    
+    /* width: 100%; */
+    text-align: center;
+}
+
+#straw-1{
+  width: 80%;
+  margin: 0% 10%;
+  margin-top: 100%;
+}
+#straw-2{
+    position: absolute;
+    bottom: -5%;
+    right: 70%;   
+    z-index: 1;
+}
+#straw-3{
+    width: 80%;
 }
 
 
 .textArea {
     padding: 40px;
     font-size: 20px;
-margin: 20%;
+    margin: 20%;
 
     height: auto;
     background-color: var(--theme-pink);
     border-radius: 30px;
 }
+
 /* #endregion */
 
 /* #region 頁碼暫時用圖片*/
 #page-choose {
-    display: flex;  
+    display: flex;
     /* padding: 2%; */
     margin-top: 10%;
     justify-content: center;
     align-items: center;
 
-    }
-    #page-choose a{
-        /* width: 5%; */
-        height: auto;
-        margin: 1%;
-    }
+}
+
+#page-choose a {
+    /* width: 5%; */
+    height: auto;
+    margin: 1%;
+}
 
 /* #endregion */
-
