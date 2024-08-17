@@ -220,11 +220,10 @@ body {
     margin: 10px 0;
 }
 
-label[for="member-modal-switch"] input {
+.modal-switch input {
     display: none;
 }
-
-label[for="member-modal-switch"] {
+.modal-switch {
     cursor: pointer;
 }
 
@@ -359,8 +358,12 @@ label[for="keep-login"] {
 
 /* #region 搜尋 */
 #search-modal {
+    position: absolute;
+    right: 6%;
+    top: 100%;
     width: 27%;
     background-color: var(--main-yellow);
+    box-shadow: var(--basic1-shadow);
     border-radius: 20px;
     padding: 30px;
 }
