@@ -22,9 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 </li>
                 <li class="menu"><a href="./articleList.html">文章列表</a></li>
                 <li class="icon"><a href="#"><img src="./images/icon-map.png" alt="前往地圖搜尋頁面"></a></li>
-                <li class="icon"><a href="#"><img src="./images/icon-search.png" alt="顯示搜尋功能區塊"></a></li>
                 <li class="icon">
-                    <label for="member-modal-switch">
+                    <label for="search-modal-switch" class="modal-switch">
+                        <input type="checkbox" id="search-modal-switch">
+                        <img src="./images/icon-search.png" alt="顯示搜尋功能區塊">
+                    </label>
+                </li>
+                <li class="icon">
+                    <label for="member-modal-switch" class="modal-switch">
                         <input type="checkbox" id="member-modal-switch">
                         <img src="./images/icon-member.png" alt="顯示會員區塊">
                     </label>
@@ -67,9 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 <input type="button" value="登入">
 
                 <div class="sns-login">
-                    <a href=""><img src="./images/member/google.png" alt="以google帳號登入"></a>
-                    <a href=""><img src="./images/member/line.png" alt="以line帳號登入"></a>
-                    <a href=""><img src="./images/member/facebook.png" alt="以facebook帳號登入"></a>
+                    <a href="#"><img src="./images/member/google.png" alt="以google帳號登入"></a>
+                    <a href="#"><img src="./images/member/line.png" alt="以line帳號登入"></a>
+                    <a href="#"><img src="./images/member/facebook.png" alt="以facebook帳號登入"></a>
                 </div>
             </form>
 
@@ -87,19 +92,49 @@ document.addEventListener('DOMContentLoaded', function() {
                 <input type="button" value="註冊">
 
                 <div class="sns-login">
-                    <a href=""><img src="./images/member/google.png" alt="以google帳號登入"></a>
-                    <a href=""><img src="./images/member/line.png" alt="以line帳號登入"></a>
-                    <a href=""><img src="./images/member/facebook.png" alt="以facebook帳號登入"></a>
+                    <a href="#"><img src="./images/member/google.png" alt="以google帳號登入"></a>
+                    <a href="#"><img src="./images/member/line.png" alt="以line帳號登入"></a>
+                    <a href="#"><img src="./images/member/facebook.png" alt="以facebook帳號登入"></a>
                 </div>
             </form>
+        </section>
+        <section id="search-modal">
+            <form class="search-container">
+                <input type="text" id="search-bar" placeholder="想去哪玩？">
+                <a href="./articleList.html"><img class="search-icon" src="./images/search/search-icon.png"></a>
+            </form>
+            <div class="negative-margin">
+                <div class="search-tags">
+                    <p>熱門地區</p>
+                    <div class="tags-container">
+                        <a class="tag" href="#">台北市</a>
+                        <a class="tag" href="#">新北市</a>
+                        <a class="tag" href="#">嘉義市</a>
+                        <a class="tag" href="#">台南市</a>
+                        <a class="tag" href="#">玉井區</a>
+                        <a class="tag" href="#">高雄市</a>
+                    </div>
+                </div>
+                <div class="search-tags">
+                    <p>熱門分類</p>
+                    <div class="tags-container">
+                        <a class="tag" href="#">復古拍貼機</a>
+                        <a class="tag" href="#">中秋煙火</a>
+                        <a class="tag" href="#">期間限定美術展</a>
+                        <a class="tag" href="#">日本當代藝文展</a>
+                        <a class="tag" href="#">台北拉麵</a>
+                        <a class="tag" href="#">深夜咖啡</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </header>
     `;
     document.body.insertAdjacentHTML('afterbegin', navbarHTML);
 
-    var script = document.createElement('script');
-    script.src = "./js/display-memberModal.js";
-    script.async = true;
+    const modalScript = document.createElement('script');
+    modalScript.src = "./js/DisplayModal.js";
+    modalScript.async = true;
 
-    document.body.appendChild(script);
+    document.body.appendChild(modalScript);
 });
