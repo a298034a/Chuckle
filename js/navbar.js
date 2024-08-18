@@ -136,5 +136,11 @@ document.addEventListener('DOMContentLoaded', function() {
     modalScript.src = "./js/DisplayModal.js";
     modalScript.async = true;
 
-    document.body.appendChild(modalScript);
+    const navbg = document.createElement('script');
+    navbg.src = "./js/NavbarBG.js";
+    navbg.async = true;
+
+    document.body.appendChild(navbg);
+
+    document.body.appendChild(modalScript);    
 });

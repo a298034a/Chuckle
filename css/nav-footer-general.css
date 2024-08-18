@@ -1,3 +1,9 @@
+@charset "UTF-8";
+
+:root {
+    --navbg-width: 0;
+}
+
 /* #region 導覽列 */
 #navbar {
     position: fixed;
@@ -49,18 +55,17 @@
     padding: 5px 20px;
 }
 
-/* todo:隨滾輪增加 width */
 .navigation .nav-list:after {
     content: "";
     position: absolute;
     top: 10px;
     right: 0;
-    width: 0;
+    width: var(--navbg-width);
     height: 78%;
     background-color: var(--main-yellow);
     box-shadow: var(--basic1-shadow);
     border-radius: 99px 0 0 99px;
-    transition: width 0.5s ease;
+    transition: width 0.3s ease-out;
     z-index: -1;
 }
 
