@@ -1,0 +1,364 @@
+@charset "UTF-8";
+
+:root {
+    --navbg-width: 0;
+}
+
+/* #region 導覽列 */
+#navbar {
+    position: fixed;
+    /* 固定導航列的位置，使其懸浮 */
+    top: 0;
+    width: 100%;
+    height: 88px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 100%;
+    margin-left: 20px;
+    padding: 20px 0;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    gap: 15px;
+}
+
+.logo a figure {
+    height: 100%;
+}
+
+.logo a img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.logo a p {
+    font-family: "Poppins";
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+.navigation .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 5px 20px;
+}
+
+.navigation .nav-list:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: var(--navbg-width);
+    height: 78%;
+    background-color: var(--main-yellow);
+    box-shadow: var(--basic1-shadow);
+    border-radius: 99px 0 0 99px;
+    transition: width 0.3s ease-out;
+    z-index: -1;
+}
+
+.navigation .nav-list li {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    margin: 0 5px;
+}
+
+.navigation .menu a {
+    line-height: 1;
+    border-bottom: solid 1px transparent;
+    color: var(--black);
+}
+
+.navigation .menu>a:hover {
+    border-bottom: solid 1px #333;
+    transition: .35s ease-in-out;
+}
+
+.navigation .menu>ul {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    right: 350px;
+    top: 60%;
+}
+
+.navigation .menu:hover>ul {
+    display: flex;
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-yellow);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.dropdown-menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 99px;
+    padding: 1px 10px;
+}
+
+.dropdown-menu li:hover {
+    background-color: var(--hover-yellow);
+}
+
+.dropdown-menu hr {
+    width: 50%;
+    border: 0.5px solid var(--black);
+
+    margin: 10px 0;
+}
+
+.modal-switch input {
+    display: none;
+}
+
+.modal-switch {
+    cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region 會員登入註冊*/
+#member-modal {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    background-color: var(--main-yellow);
+    border-radius: 20px;
+    box-shadow: var(--basic1-shadow);
+}
+
+#member-modal .radio-container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 50%;
+    background-color: var(--white);
+
+    border-radius: 99px;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
+.radio-container input[type="radio"] {
+    display: none;
+}
+
+.radio-container input[type="radio"]+label {
+    border-radius: 99px;
+    padding: 7px 13px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.radio-container input[type="radio"]:checked+label {
+    background-color: var(--hover-yellow);
+    border: 2px solid var(--black);
+}
+
+#member-modal form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+#member-modal form label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#member-modal form label input[type="text"] {
+    background-color: var(--white);
+    border-radius: 99px;
+    flex: auto;
+    height: 30px;
+    border: none;
+}
+
+#member-modal form label span {
+    margin-right: 10px;
+}
+
+.action-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.action-container input[type="checkbox"] {
+    margin-right: 3px;
+}
+
+.action-container span,
+.action-container a {
+    font-size: 0.75rem;
+    color: var(--black);
+}
+
+label[for="keep-login"] {
+    border-right: 1.75px solid var(--white);
+}
+
+#member-modal input[type="button"] {
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--white);
+    border: none;
+    width: 40%;
+    border-radius: 99px;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    padding: 5px 0;
+    margin-bottom: 15px;
+
+    cursor: pointer;
+}
+
+.sns-login {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    padding: 10px;
+    margin-bottom: 10px;
+    border-top: var(--white) 2px solid;
+}
+
+.sns-login a {
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+/* #endregion */
+
+/* #region 搜尋 */
+#search-modal {
+    position: absolute;
+    right: 6%;
+    top: 100%;
+    width: 27%;
+    background-color: var(--main-yellow);
+    box-shadow: var(--basic1-shadow);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.search-container {
+    width: 100%;
+}
+
+.search-container a {
+    position: relative;
+    /* top: -50%; */
+    left: 85%;
+    top: -38px;
+    width: 10%;
+    min-width: 30px;
+    max-width: 39px;
+}
+
+input#search-bar {
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 99px;
+
+    &:focus {
+        border: 1px solid #008abf;
+        transition: 0.35s ease;
+        color: #008abf;
+
+        &::-webkit-input-placeholder {
+            transition: opacity 0.45s ease;
+            opacity: 0;
+        }
+
+        &::-moz-placeholder {
+            transition: opacity 0.45s ease;
+            opacity: 0;
+        }
+
+        &:-ms-placeholder {
+            transition: opacity 0.45s ease;
+            opacity: 0;
+        }
+    }
+}
+
+#search-modal .tag {
+    background-color: var(--white);
+}
+
+#search-modal .tag:hover {
+    background-color: var(--hover-yellow);
+}
+
+#search-modal .tags-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#search-modal .search-tags:first-child {
+    margin: 20px 0;
+}
+
+#search-modal .tags-container a {
+    margin-right: 10px;
+}
+
+.negative-margin {
+    margin-top: -45px;
+}
+
+/* #endregion */
+
+/* #region Footer */
+#copyright p {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: GenSenRounded2-M;
+    ;
+    letter-spacing: 0.1rem;
+}
+
+/* #endregion */
