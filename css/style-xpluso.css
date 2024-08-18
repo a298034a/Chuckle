@@ -17,18 +17,7 @@
 }
 
 
-:root {
-    /* 背景基礎色 */
-    --base-backgroundColor: rgb(255, 247, 205);
-    --main-yellow: rgb(255, 226, 74);
-    --main-green: rgb(125, 229, 175);
-    --main-pink: rgb(245, 105, 90);
-    --black: rgb(0, 0, 0);
-    --white: rgb(255, 253, 243);
-    --gray: rgb(179, 173, 144);
-    --theme-pink: rgb(252, 163, 179);
 
-}
 
 /* 重置字體 */
 body {
@@ -46,38 +35,6 @@ body {
 
 }
 
-/* 重置標題 */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: normal;
-}
-
-/* 重置列表 */
-ul,
-ol {
-    list-style: none;
-}
-
-/* 重置圖片 */
-img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-
-}
-
-/* 重置連接 */
-a {
-    display: block;
-    /* 將預設inline改為block */
-    text-decoration: none;
-    color: #444;
-}
 
 /* #endregion */
 
@@ -85,36 +42,41 @@ a {
 
 h2 {
     font-size: 25px;
-    /* padding: 1rem 0rem; */
+    letter-spacing: 1px;
+    
 }
 
-.title h1 {
+h1 {
     font-size: 35px;
-    padding: 5rem 0rem;
+    letter-spacing: 2px;
 }
 
 .title h2 {
     font-size: 35px;
     padding: 1rem 0rem;
+    letter-spacing: 2px;
 }
 
 h3 {
     font-size: 20px;
-    padding: 1rem 0rem;
+    letter-spacing: 1px;
+    
 }
 
 h4 {
     font-size: 16px;
+    letter-spacing: 1px;
 }
 
 p,
 ul {
     font-size: 20px;
+    letter-spacing: 1px;
 }
 
 hr {
     border-color: var(--black);
-}
+}    
 
 .img-info p,
 .comment p,
@@ -123,6 +85,11 @@ hr {
     font-size: 16px;
 }
 
+.img-info{
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
 .img-info img {
     /* icon */
     height: 24px;
@@ -141,18 +108,24 @@ hr {
     align-content: space-between;
     width: 50%;
     margin-left: 32%;
+   
+}
+#comment{
     margin-top: 4%;
 }
 
+#post-body .title{
+    margin: 5% 0;
+}
+
 .comment {
-    margin: 35px 0px;
     display: flex;
     width: 100%;
     height: 20%;
 }
 
 .comment h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .comment .memberFace {
@@ -187,6 +160,7 @@ hr {
     display: flex;
     justify-content: flex-end;
     padding-top: 1rem;
+    margin-top: 1rem 0;
 }
 
 /* #endregion */
@@ -196,10 +170,14 @@ hr {
     height: auto;
     background-color: var(--main-pink);
     position: fixed;
-    top: 250px;
+    top: 13%;
     left: 5%;
     border-radius: 30px;
 }
+#post-info h2,#post-info p{
+    color: var(--white);
+}
+
 
 #post-info-text {
     padding: 50px;
@@ -235,6 +213,7 @@ hr {
 
 #post-info hr {
     margin: 20px 0px;
+    border-color:var(--white);
 }
 
 #postTime {
@@ -242,11 +221,13 @@ hr {
 }
 
 .tag {
-    margin-top: 12px;
-    margin-right: 12px;
+   
+    margin: 0.5rem 0.5rem;
+    padding: 0.1rem 1rem;
     border-radius: 20px;
     background-color: var(--main-green);
-
+    font-size: 14px;
+color: var(--black);
 }
 
 #tagsArea {
@@ -259,10 +240,16 @@ hr {
 /* #region 留言送出欄*/
 
 #send {
-    display: flex;
+    /* display: flex;
     justify-content: flex-end;
     margin-bottom: 20%;
-    margin-top: 5%;
+    margin-top: 5%; */
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    /* width: 50%;
+    margin-left: 32%; */
+   
 }
 
 
