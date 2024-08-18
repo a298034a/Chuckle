@@ -679,6 +679,9 @@
 
 /* 加入活動 */
 #officialEvent-join {
+    position: relative;
+    z-index: 1;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -716,14 +719,26 @@
 }
 
 /* 左右兩側招牌裝飾 */
-.shop-sign-left{
+.shop-sign-left {
     position: absolute;
     top: 360px;
-    width: 462px;
-    height: 959px;
+    width: 400px;
+    height: 1000px;
     background-image: url(../images/official/shop-sign-left.png);
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.shop-sign-right {
+    position: absolute;
+    top: 360px;
+    right: 0;
+    width: 400px;
+    height: 1000px;
+    background-image: url(../images/official/shop-sign-right.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
 /* #endregion */
