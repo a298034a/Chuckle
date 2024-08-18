@@ -709,11 +709,23 @@
     margin-bottom: 60px;
 }
 
-#officialEvent-join .content .video{
+#officialEvent-join .content .video {
     width: 100%;
     height: 405px;
     background-color: aliceblue;
 }
+
+/* 左右兩側招牌裝飾 */
+.shop-sign-left{
+    position: absolute;
+    top: 360px;
+    width: 462px;
+    height: 959px;
+    background-image: url(../images/official/shop-sign-left.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 /* #endregion */
 
 /* #region 地圖頁面 */
