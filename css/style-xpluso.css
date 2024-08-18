@@ -413,7 +413,7 @@ hr {
 
 
 /* #region 草莓季大區塊規劃*/
-#underBanner {
+#underNev {
     display: flex;
 
 }
@@ -430,6 +430,7 @@ hr {
 }
 
 #left-block {
+    
     flex: 1;
 }
 
@@ -443,7 +444,13 @@ hr {
 body.themeSeason {
     background-color: var(--white);
 }
+#themeBody{
+    position: relative;
+}
 
+#themeBody #banner{
+    
+}
 
 .storeBlock {
     display: flex;
@@ -481,9 +488,7 @@ body.themeSeason {
 }
 
 
-#themeBody{
-    position: relative;
-}
+
 
 
 /* #endregion */
