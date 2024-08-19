@@ -1,0 +1,14 @@
+
+
+#map{
+    /* left: 20%;
+    width: 80%; */
+    
+}
+#list{
+    position: fixed;
+    width: 20%;
+    height: 20%;
+    background-color: #ff5454;
+    /* 到時候先display:none，按地標再打開，按LOGO會再從左邊收合 */
+}
