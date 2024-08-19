@@ -144,7 +144,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 250px;
+    width: 20%;
+    min-width: 260px;
+    max-width: 300px;
     background-color: var(--main-yellow);
     border-radius: 20px;
     box-shadow: var(--basic1-shadow);
@@ -266,9 +268,11 @@ label[for="keep-login"] {
 /* #region 搜尋 */
 #search-modal {
     position: absolute;
-    right: 6%;
+    right: 80px;
     top: 100%;
     width: 27%;
+    min-width: 300px;
+    max-width: 460px;
     background-color: var(--main-yellow);
     box-shadow: var(--basic1-shadow);
     border-radius: 20px;
@@ -276,21 +280,18 @@ label[for="keep-login"] {
 }
 
 .search-container {
+    display: flex;    
+    align-items: center;
     width: 100%;
 }
 
 .search-container a {
-    position: relative;
-    /* top: -50%; */
-    left: 85%;
-    top: -38px;
-    width: 10%;
-    min-width: 30px;
-    max-width: 39px;
+    margin-left: -50px;
+    height: 35px;
+    width: 35px;
 }
 
 input#search-bar {
-    margin: 0 auto;
     width: 100%;
     height: 40px;
     padding: 0 20px;
@@ -342,10 +343,6 @@ input#search-bar {
 
 #search-modal .tags-container a {
     margin-right: 10px;
-}
-
-.negative-margin {
-    margin-top: -45px;
 }
 
 /* #endregion */
