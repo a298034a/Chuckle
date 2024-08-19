@@ -574,6 +574,11 @@
     margin-top: -20%;
 }
 
+#officialEvent-content .title {
+    width: 40%;
+    margin: 0 auto 20px auto;
+}
+
 .steps ul {
     display: flex;
     flex-direction: column;
@@ -645,25 +650,12 @@
     margin-top: 12%;
 }
 
-#officialEvent-target h2 {
-    width: 100%;
-    line-height: 4rem;
-    background-image: url(../images/official/title-bg.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 40px;
-}
-
 #officialEvent-target p {
     line-height: 2rem;
 }
 
 #officialEvent-target ul {
-    margin: 0 auto;
+    margin: 10px auto 0 auto;
 }
 
 #officialEvent-target ul li {
@@ -681,7 +673,7 @@
 #officialEvent-join {
     position: relative;
     z-index: 1;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
