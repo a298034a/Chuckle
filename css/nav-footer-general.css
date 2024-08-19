@@ -45,6 +45,8 @@
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.1rem;
+    color: var(--black);
+    mix-blend-mode: difference;
 }
 
 .navigation .nav-list {
@@ -354,7 +356,6 @@ input#search-bar {
     align-items: center;
     justify-content: center;
     font-family: GenSenRounded2-M;
-    ;
     letter-spacing: 0.1rem;
 }
 

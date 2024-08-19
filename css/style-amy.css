@@ -539,13 +539,16 @@
 /* #endregion */
 
 /* #region 官方活動 */
+#officialEvent-body {
+    background-color: var(--black);
+}
+
 #officialEvent {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin-top: -88px;
-    background-color: var(--black);
     color: var(--white);
     overflow: hidden;
 }

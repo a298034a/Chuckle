@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var navbarHTML = `
         <header id="navbar">
         <h1 class="logo">
@@ -142,5 +142,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.body.appendChild(navbg);
 
-    document.body.appendChild(modalScript);    
+    document.body.appendChild(modalScript);
 });
+
+const colorAdapts = document.querySelectorAll(".colorAdapt");
+
+const bodyStyle = getComputedStyle(document.body);
+const backgroundColor = bodyStyle.backgroundColor;
+
+// 取得根元素（:root）的樣式
+const rootStyle = getComputedStyle(document.documentElement);
+const blackColor = rootStyle.getPropertyValue('--black').trim();
+
+if (backgroundColor == whiteColor) {
+
+}
+

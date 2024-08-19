@@ -1,17 +1,20 @@
+//滾輪移動時觸發
 document.addEventListener('scroll', function () {
     updatePositionByDistance();
 });
 
+//視窗大小縮放時觸發
 window.addEventListener('resize', () => {
     updatePositionByDistance();
 });
 
+//更新招牌定位方式與位置
 function updatePositionByDistance() {
     var shopSignLeft = document.querySelector('.shop-sign-left');
     var shopSignRight = document.querySelector('.shop-sign-right');
     var shopSignTop = shopSignLeft.getBoundingClientRect().top;
 
-    if (shopSignTop <= 0) {        
+    if (shopSignTop <= 0) {
         shopSignLeft.style.position = 'fixed';
         shopSignLeft.style.top = '0';
 
