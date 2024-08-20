@@ -43,7 +43,7 @@ body {
 h2 {
     font-size: 25px;
     letter-spacing: 1px;
-    
+
 }
 
 h1 {
@@ -60,7 +60,7 @@ h1 {
 h3 {
     font-size: 20px;
     letter-spacing: 1px;
-    
+
 }
 
 h4 {
@@ -68,7 +68,9 @@ h4 {
     letter-spacing: 1px;
 }
 
-#articleBody p,#articleListBody p,#themeSeason p,
+#articleBody p,
+#articleListBody p,
+#themeSeason p,
 ul {
     font-size: 20px;
     letter-spacing: 1px;
@@ -76,7 +78,7 @@ ul {
 
 hr {
     border-color: var(--black);
-}    
+}
 
 .img-info p,
 .comment p,
@@ -85,11 +87,12 @@ hr {
     font-size: 16px;
 }
 
-.img-info{
+.img-info {
     display: flex;
     margin-top: 1rem;
     margin-bottom: 3rem;
 }
+
 .img-info img {
     /* icon */
     height: 24px;
@@ -108,13 +111,14 @@ hr {
     align-content: space-between;
     width: 50%;
     margin-left: 32%;
-   
+
 }
-#comment{
+
+#comment {
     margin-top: 4%;
 }
 
-#post-body .title{
+#post-body .title {
     margin: 5% 0;
 }
 
@@ -174,7 +178,9 @@ hr {
     left: 5%;
     border-radius: 30px;
 }
-#post-info h2,#post-info p{
+
+#post-info h2,
+#post-info p {
     color: var(--white);
 }
 
@@ -213,7 +219,7 @@ hr {
 
 #post-info hr {
     margin: 20px 0px;
-    border-color:var(--white);
+    border-color: var(--white);
 }
 
 #postTime {
@@ -221,13 +227,13 @@ hr {
 }
 
 .tag {
-   
+
     margin: 0.5rem 0.5rem;
     padding: 0.1rem 1rem;
     border-radius: 20px;
     background-color: var(--main-green);
     font-size: 14px;
-color: var(--black);
+    color: var(--black);
 }
 
 #tagsArea {
@@ -249,7 +255,7 @@ color: var(--black);
     align-content: space-between;
     /* width: 50%;
     margin-left: 32%; */
-   
+
 }
 
 
@@ -417,7 +423,7 @@ color: var(--black);
 }
 
 #left-block {
-    
+
     flex: 1;
 }
 
@@ -431,11 +437,12 @@ color: var(--black);
 body.themeSeason {
     background-color: var(--white);
 }
-#themeBody{
+
+#themeBody {
     position: relative;
 }
 
-#themeBody #banner{
+#themeBody #banner {
     margin-top: -88px;
 }
 
@@ -451,19 +458,27 @@ body.themeSeason {
     align-items: center;
     padding: 2%;
     margin-top: 8%;
+}
 
+.straw_icon{
+width: 10%;
 }
 
 .store .slogan {
-    display: inline-block;
-    padding: 5px 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 粉框 */
+    /* padding: 5px 16px;
     margin-top: 2%;
-    text-align: center;
     background-color: var(--theme-pink);
     border-radius: 99px;
-    width: 1;
-    font-size: 16px;
-
+    width: 1; */
+   
+}
+.store h4{
+    
 }
 
 .store img {
@@ -484,23 +499,25 @@ body.themeSeason {
 /* #region 草莓季左右區塊*/
 
 .block figure {
-    
+
     /* width: 100%; */
     text-align: center;
 }
 
-#straw-1{
-  width: 70%;
-  margin: 0% 10%;
-  margin-top: 100%;
+#straw-1 {
+    width: 70%;
+    margin: 0% 10%;
+    margin-top: 100%;
 }
-#straw-2{
+
+#straw-2 {
     position: absolute;
     bottom: -5%;
-    right: 70%;   
+    right: 70%;
     z-index: 1;
 }
-#straw-3{
+
+#straw-3 {
     width: 70%;
     margin: 10%;
 }
