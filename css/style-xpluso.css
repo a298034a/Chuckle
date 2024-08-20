@@ -68,7 +68,7 @@ h4 {
     letter-spacing: 1px;
 }
 
-p,
+#articleBody p,#articleListBody p,#themeSeason p,
 ul {
     font-size: 20px;
     letter-spacing: 1px;
