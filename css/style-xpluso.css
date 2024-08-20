@@ -490,7 +490,7 @@ body.themeSeason {
 }
 
 #straw-1{
-  width: 80%;
+  width: 70%;
   margin: 0% 10%;
   margin-top: 100%;
 }
@@ -501,7 +501,8 @@ body.themeSeason {
     z-index: 1;
 }
 #straw-3{
-    width: 80%;
+    width: 70%;
+    margin: 10%;
 }
 
 
