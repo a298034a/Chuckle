@@ -448,6 +448,7 @@ body.themeSeason {
 
 .storeBlock {
     display: flex;
+    justify-content:space-between;
 }
 
 .store {
@@ -456,7 +457,7 @@ body.themeSeason {
     flex-direction: column;
     /* 讓子元素垂直排列 */
     align-items: center;
-    padding: 2%;
+    padding: 4%;
     margin-top: 8%;
 }
 
@@ -465,7 +466,6 @@ width: 10%;
 }
 
 .store .slogan {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -475,21 +475,15 @@ width: 10%;
     background-color: var(--theme-pink);
     border-radius: 99px;
     width: 1; */
-   
-}
-.store h4{
-    
 }
 
-.store img {
+.store .thing {
     /* width: auto;
     height: 50%; */
     border-radius: 20px;
     margin: 10% 0;
     cursor: pointer;
 }
-
-
 
 
 
