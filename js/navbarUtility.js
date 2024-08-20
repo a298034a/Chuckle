@@ -20,7 +20,7 @@ if (backgroundColor == black) {
 
 window.addEventListener('scroll', function () {
     if (window.scrollY > 0) {
-        document.documentElement.style.setProperty('--navbg-width', `580px`);
+        document.documentElement.style.setProperty('--navbg-width', `590px`);
 
         if (backgroundColor == black) {      
             document.documentElement.style.setProperty('--border-color', black);
@@ -71,4 +71,24 @@ searchModalCheckbox.addEventListener('change',()=>{
     else{
         searchModal.style.display = "none";
     }
+});
+
+const searchIcon = document.querySelector(`.icon-search`);
+
+searchIcon.addEventListener('mouseover', function() {
+    this.src = './images/navbar/icon-search-hover.png';
+});
+
+searchIcon.addEventListener('mouseout', function() {
+    this.src = './images/navbar/icon-search.png';
+});
+
+const memberIcon = document.querySelector(`.icon-member`);
+
+memberIcon.addEventListener('mouseover', function() {
+    this.src = './images/navbar/icon-member-hover.png';
+});
+
+memberIcon.addEventListener('mouseout', function() {
+    this.src = './images/navbar/icon-member.png';
 });

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <h1 class="logo">
             <a href="./index.html">
                 <figure>
-                    <img src="./images/logo.png" alt="Chuckle logo">
+                    <img src="./images/navbar/logo.png" alt="Chuckle logo">
                 </figure>
                 <p class="contrast-text">CHUCKLE</p>
             </a>
@@ -21,22 +21,22 @@ document.addEventListener('DOMContentLoaded', function () {
                     </ul>
                 </li>
                 <li class="menu"><a class="contrast-text" href="./articleList.html">文章列表</a></li>
-                <li class="icon"><a href="#"><img src="./images/icon-map.png" alt="前往地圖搜尋頁面"></a></li>
+                <li class="icon"><a href="#"><img class="icon-map" src="./images/navbar/icon-map.png" alt="前往地圖搜尋頁面"></a></li>
                 <li class="icon">
                     <label for="search-modal-switch" class="modal-switch">
                         <input type="checkbox" id="search-modal-switch">
-                        <img src="./images/icon-search.png" alt="顯示搜尋功能區塊">
+                        <img class="icon-search" src="./images/navbar/icon-search.png" alt="顯示搜尋功能區塊">
                     </label>
                 </li>
                 <li class="icon">
                     <label for="member-modal-switch" class="modal-switch">
                         <input type="checkbox" id="member-modal-switch">
-                        <img src="./images/icon-member.png" alt="顯示會員區塊">
+                        <img class="icon-member" src="./images/navbar/icon-member.png" alt="顯示會員區塊">
                     </label>
                 </li>
             </ul>
         </nav>
-        <section id="member-modal">
+        <section id="member-modal" style="display:none">
             <div class="radio-container">
                 <input id="radio-login" name="chlid-selected" type="radio" value="登入" checked>
                 <label for="radio-login">登入</label>
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </form>
         </section>
-        <section id="search-modal">
+        <section id="search-modal" style="display:none">
             <form class="search-container">
                 <input type="text" id="search-bar" placeholder="想去哪玩？">
                 <a href="./articleList.html"><img class="search-icon" src="./images/search/search-icon.png"></a>
