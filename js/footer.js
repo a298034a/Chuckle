@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     var footerHTML = `
     <footer id="copyright">
-        <p><span class="en">Copyright © 2024 Chuckle Inc.</span> 保留一切權利。</p>
+        <p class="contrast-text"><span class="en">Copyright © 2024 Chuckle Inc.</span> 保留一切權利。</p>
     </footer>
     `;
     

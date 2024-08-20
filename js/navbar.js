@@ -6,21 +6,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 <figure>
                     <img src="./images/logo.png" alt="Chuckle logo">
                 </figure>
-                <p>CHUCKLE</p>
+                <p class="contrast-text">CHUCKLE</p>
             </a>
         </h1>
         <nav class="navigation">
             <ul class="nav-list">
-                <li class="menu"><a href="./news.html">最新消息</a></li>
+                <li class="menu"><a class="contrast-text" href="./news.html">最新消息</a></li>
                 <li class="menu">
-                    <a href="#">活動企劃</a>
+                    <a class="contrast-text" href="#">活動企劃</a>
                     <ul class="dropdown-menu">
                         <li><a href="./themeSeason.html">主題季</a></li>
                         <hr>
-                        <li><a href="#">官方活動</a></li>
+                        <li><a href="./officialEvent.html">官方活動</a></li>
                     </ul>
                 </li>
-                <li class="menu"><a href="./articleList.html">文章列表</a></li>
+                <li class="menu"><a class="contrast-text" href="./articleList.html">文章列表</a></li>
                 <li class="icon"><a href="#"><img src="./images/icon-map.png" alt="前往地圖搜尋頁面"></a></li>
                 <li class="icon">
                     <label for="search-modal-switch" class="modal-switch">
@@ -132,29 +132,9 @@ document.addEventListener('DOMContentLoaded', function () {
     `;
     document.body.insertAdjacentHTML('afterbegin', navbarHTML);
 
-    const modalScript = document.createElement('script');
-    modalScript.src = "./js/DisplayModal.js";
-    modalScript.async = true;
+    const navbarUtility = document.createElement('script');
+    navbarUtility.src = "./js/navbarUtility.js";
+    navbarUtility.async = true;
 
-    const navbg = document.createElement('script');
-    navbg.src = "./js/NavbarBG.js";
-    navbg.async = true;
-
-    document.body.appendChild(navbg);
-
-    document.body.appendChild(modalScript);
+    document.body.appendChild(navbarUtility);
 });
-
-const colorAdapts = document.querySelectorAll(".colorAdapt");
-
-const bodyStyle = getComputedStyle(document.body);
-const backgroundColor = bodyStyle.backgroundColor;
-
-// 取得根元素（:root）的樣式
-const rootStyle = getComputedStyle(document.documentElement);
-const blackColor = rootStyle.getPropertyValue('--black').trim();
-
-if (backgroundColor == whiteColor) {
-
-}
-
