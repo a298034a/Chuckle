@@ -70,8 +70,7 @@ h4 {
 
 #articleBody p,
 #articleListBody p,
-#themeSeason p,
-ul {
+#underNev p {
     font-size: 20px;
     letter-spacing: 1px;
 }
