@@ -285,16 +285,16 @@
     align-items: center;
 
     width: 60%;
-    min-width: 950px;
+    min-width: 920px;
     max-width: 1200px;
-    
-    padding: 50px;
+
+    padding: 50px 40px;
     margin: 2% auto;
     border-radius: 20px;
     background-color: var(--white);
 }
 
-#hot-article .content ul {    
+#hot-article .content ul {
     width: 43%;
 }
 
@@ -312,6 +312,18 @@
 #hot-article .more {
     font-size: 1.1rem;
     padding: 4px 10px;
+}
+
+@media (max-width:820px) {
+
+    .sunny-l,
+    .sunny-r {
+        display: none;
+    }
+
+    #hot-article .content{
+        background-color: transparent;
+    }
 }
 
 /* #endregion */
