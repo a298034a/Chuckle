@@ -137,20 +137,18 @@ memberIcon.addEventListener('mouseout', function () {
 // #endregion
 
 // #region 漢堡按鈕控制
-document.addEventListener('DOMContentLoaded', function () {
-    var hamburgers = document.querySelectorAll('.hamburger');
+var hamburgers = document.querySelectorAll('.hamburger');
 
-    hamburgers.forEach(function (hamburger) {
-        hamburger.addEventListener('click', function () {
-            this.classList.toggle('is-active');
+hamburgers.forEach(function (hamburger) {
+    hamburger.addEventListener('click', function () {
+        this.classList.toggle('is-active');
 
-            const navigation = document.querySelector('.nav-list-v');
-            if (navigation.classList.contains('show')) {
-                navigation.classList.remove('show');
-            } else {
-                navigation.classList.add('show');
-            }
-        });
+        const navigation = document.querySelector('.nav-list-v');
+        if (navigation.classList.contains('show')) {
+            navigation.classList.remove('show');
+        } else {
+            navigation.classList.add('show');
+        }
     });
 });
 // #endregion
