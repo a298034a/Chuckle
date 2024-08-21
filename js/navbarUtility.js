@@ -50,6 +50,9 @@ function updateTextColor(texts, color) {
 // #endregion
 
 // #region 開關會員視窗
+const searchModal = document.getElementById("search-modal");
+const searchModalCheckbox = document.getElementById("search-modal-switch");
+
 const memberModal = document.getElementById("member-modal");
 const memberModalCheckbox = document.getElementById("member-modal-switch");
 
@@ -58,22 +61,42 @@ memberModal.style.display = "none";
 memberModalCheckbox.addEventListener('change', () => {
     if (memberModalCheckbox.checked) {
         memberModal.style.display = "flex";
+
+        searchModalCheckbox.checked = false;
+        searchModal.style.display = "none";
     }
     else {
         memberModal.style.display = "none";
     }
 });
+
+//平板以下尺寸
+const memberModalBtn = document.getElementById("member-modal-btn");
+const blackBoard = document.querySelector(".black-board");
+
+memberModalBtn.addEventListener('click', () => {
+    if (memberModal.style.display == "none") {
+        memberModal.style.display = "flex";
+        blackBoard.style.display = "block";
+    }
+});
+
+const closeMemberModalBtn = document.getElementById("close-member-modal");
+closeMemberModalBtn.addEventListener('click', () => {
+    memberModal.style.display = "none";
+    blackBoard.style.display = "none";
+});
 // #endregion
 
 // #region 開關搜尋列
-const searchModal = document.getElementById("search-modal");
-const searchModalCheckbox = document.getElementById("search-modal-switch");
-
 searchModal.style.display = "none";
 
 searchModalCheckbox.addEventListener('change', () => {
     if (searchModalCheckbox.checked) {
         searchModal.style.display = "block";
+
+        memberModalCheckbox.checked = false;
+        memberModal.style.display = "none";
     }
     else {
         searchModal.style.display = "none";
@@ -82,6 +105,16 @@ searchModalCheckbox.addEventListener('change', () => {
 // #endregion
 
 // #region hover換圖
+const mapIcon = document.querySelector(`.icon-map`);
+
+mapIcon.addEventListener('mouseover', function () {
+    this.src = './images/navbar/icon-map-hover.png';
+});
+
+mapIcon.addEventListener('mouseout', function () {
+    this.src = './images/navbar/icon-map.png';
+});
+
 const searchIcon = document.querySelector(`.icon-search`);
 
 searchIcon.addEventListener('mouseover', function () {
@@ -111,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
         hamburger.addEventListener('click', function () {
             this.classList.toggle('is-active');
 
-            var navigation = document.querySelector('.nav-list-v');
+            const navigation = document.querySelector('.nav-list-v');
             if (navigation.classList.contains('show')) {
                 navigation.classList.remove('show');
             } else {
@@ -119,5 +152,31 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+});
+// #endregion
+
+// #region 視窗大小縮放偵測
+window.addEventListener('resize', () => {
+    if (document.body.clientWidth > 820) {
+        const navigation = document.querySelector('.nav-list-v');
+        if (navigation.classList.contains('show')) {
+            navigation.classList.remove('show');
+        }
+
+        const hamburgers = document.querySelectorAll('.hamburger');
+        hamburgers.forEach(function (hamburger) {
+            hamburger.classList.remove('is-active');
+        });
+
+        blackBoard.style.display = "none";
+    }
+    else {
+        memberModalCheckbox.checked = false;
+        searchModalCheckbox.checked = false;
+
+        memberModal.style.display = "none";
+        searchModal.style.display = "none";
+        blackBoard.style.display = "none";
+    }
 });
 // #endregion

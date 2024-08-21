@@ -8,10 +8,12 @@
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/nav-footer-general.css">
+    <link rel="stylesheet" href="./css/style-amy.css">
 </head>
 
-<body>
+<body>    
     <header id="navbar">
+        <div class="black-board"></div>
         <h1 class="logo">
             <a href="./index.html">
                 <figure>
@@ -34,16 +36,11 @@
                     </form>
                 </li>
                 <li><a href="./news.html">最新消息</a></li>
-                <li><a href="#">活動企劃</a>
-                    <ul class="dropdown-menu">
-                    <li><a href="./themeSeason.html">主題季</a></li>
-                    <hr>
-                    <li><a href="./officialEvent.html">官方活動</a></li>
-                    </ul>
-                </li>
+                <li><a href="./themeSeason.html">主題季</a></li>
+                <li><a href="./officialEvent.html">官方活動</a></li>
                 <li><a href="./articleList.html">文章列表</a></li>
                 <li><a href="#">地圖搜尋</a></li>
-                <li><a href="#">會員登入</a></li>
+                <li><a id="member-modal-btn" href="#">會員登入</a></li>
             </ul>
             <ul class="nav-list">
                 <li class="menu"><a class="contrast-text" href="./news.html">最新消息</a></li>
@@ -73,6 +70,11 @@
             </ul>
         </nav>
         <section id="member-modal" style="display:none">
+            <button id="close-member-modal">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
             <div class="radio-container">
                 <input id="radio-login" name="chlid-selected" type="radio" value="登入" checked>
                 <label for="radio-login">登入</label>
@@ -163,7 +165,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>        
     </header>
     <script src="./js/navbarUtility.js"></script>
 </body>
