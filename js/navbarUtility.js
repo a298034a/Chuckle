@@ -1,3 +1,4 @@
+// #region 自適應顏色與背景縮放
 //取得背景顏色
 const bodyStyle = getComputedStyle(document.body);
 const backgroundColor = bodyStyle.backgroundColor;
@@ -18,16 +19,19 @@ if (backgroundColor == black) {
     updateTextColor(contrastTexts, white);
 }
 
+let scrollYisZero;
 window.addEventListener('scroll', function () {
-    if (window.scrollY > 0) {
+    if (window.scrollY > 0 && scrollYisZero != false) {
+        scrollYisZero = false;
         document.documentElement.style.setProperty('--navbg-width', `590px`);
 
-        if (backgroundColor == black) {      
+        if (backgroundColor == black) {
             document.documentElement.style.setProperty('--border-color', black);
             updateTextColor(texts, black);
         }
     }
-    else if (window.scrollY == 0) {
+    else if (window.scrollY == 0 && scrollYisZero != true) {
+        scrollYisZero = true;
         document.documentElement.style.setProperty('--navbg-width', 0);
 
         if (backgroundColor == black) {
@@ -37,58 +41,83 @@ window.addEventListener('scroll', function () {
     }
 });
 
+
 function updateTextColor(texts, color) {
     texts.forEach(text => {
         text.style.color = color;
     });
 }
+// #endregion
 
-//開關會員視窗
+// #region 開關會員視窗
 const memberModal = document.getElementById("member-modal");
 const memberModalCheckbox = document.getElementById("member-modal-switch");
 
 memberModal.style.display = "none";
 
-memberModalCheckbox.addEventListener('change',()=>{
-    if(memberModalCheckbox.checked){
+memberModalCheckbox.addEventListener('change', () => {
+    if (memberModalCheckbox.checked) {
         memberModal.style.display = "flex";
     }
-    else{
+    else {
         memberModal.style.display = "none";
     }
 });
+// #endregion
 
-//開關搜尋列
+// #region 開關搜尋列
 const searchModal = document.getElementById("search-modal");
 const searchModalCheckbox = document.getElementById("search-modal-switch");
 
 searchModal.style.display = "none";
 
-searchModalCheckbox.addEventListener('change',()=>{
-    if(searchModalCheckbox.checked){
+searchModalCheckbox.addEventListener('change', () => {
+    if (searchModalCheckbox.checked) {
         searchModal.style.display = "block";
     }
-    else{
+    else {
         searchModal.style.display = "none";
     }
 });
+// #endregion
 
+// #region hover換圖
 const searchIcon = document.querySelector(`.icon-search`);
 
-searchIcon.addEventListener('mouseover', function() {
+searchIcon.addEventListener('mouseover', function () {
     this.src = './images/navbar/icon-search-hover.png';
 });
 
-searchIcon.addEventListener('mouseout', function() {
+searchIcon.addEventListener('mouseout', function () {
     this.src = './images/navbar/icon-search.png';
 });
 
 const memberIcon = document.querySelector(`.icon-member`);
 
-memberIcon.addEventListener('mouseover', function() {
+memberIcon.addEventListener('mouseover', function () {
     this.src = './images/navbar/icon-member-hover.png';
 });
 
-memberIcon.addEventListener('mouseout', function() {
+memberIcon.addEventListener('mouseout', function () {
     this.src = './images/navbar/icon-member.png';
 });
+// #endregion
+
+// #region 漢堡按鈕控制
+document.addEventListener('DOMContentLoaded', function () {
+    var hamburgers = document.querySelectorAll('.hamburger');
+
+    hamburgers.forEach(function (hamburger) {
+        hamburger.addEventListener('click', function () {
+            this.classList.toggle('is-active');
+
+            var navigation = document.querySelector('.nav-list-v');
+            if (navigation.classList.contains('show')) {
+                navigation.classList.remove('show');
+            } else {
+                navigation.classList.add('show');
+            }
+        });
+    });
+});
+// #endregion
