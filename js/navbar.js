@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     var navbarHTML = `
         <header id="navbar">
+        <div class="black-board"></div>
         <h1 class="logo">
             <a href="./index.html">
                 <figure>
@@ -10,6 +11,25 @@ document.addEventListener('DOMContentLoaded', function () {
             </a>
         </h1>
         <nav class="navigation">
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-list-v">
+                <li>
+                    <form class="search-container">
+                        <input type="text" id="search-bar" placeholder="想去哪玩？">
+                        <a href="./articleList.html"><img class="search-icon" src="./images/search/search-icon.png"></a>
+                    </form>
+                </li>
+                <li><a href="./news.html">最新消息</a></li>
+                <li><a href="./themeSeason.html">主題季</a></li>
+                <li><a href="./officialEvent.html">官方活動</a></li>
+                <li><a href="./articleList.html">文章列表</a></li>
+                <li><a href="#">地圖搜尋</a></li>
+                <li><a id="member-modal-btn" href="#">會員登入</a></li>
+            </ul>
             <ul class="nav-list">
                 <li class="menu"><a class="contrast-text" href="./news.html">最新消息</a></li>
                 <li class="menu">
@@ -21,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     </ul>
                 </li>
                 <li class="menu"><a class="contrast-text" href="./articleList.html">文章列表</a></li>
-                <li class="icon"><a href="#"><img class="icon-map" src="./images/navbar/icon-map.png" alt="前往地圖搜尋頁面"></a></li>
+                <li class="icon"><a href="#"><img class="icon-map" src="./images/navbar/icon-map.png"
+                            alt="前往地圖搜尋頁面"></a></li>
                 <li class="icon">
                     <label for="search-modal-switch" class="modal-switch">
                         <input type="checkbox" id="search-modal-switch">
@@ -37,6 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
             </ul>
         </nav>
         <section id="member-modal" style="display:none">
+            <button id="close-member-modal">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
             <div class="radio-container">
                 <input id="radio-login" name="chlid-selected" type="radio" value="登入" checked>
                 <label for="radio-login">登入</label>
@@ -127,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                 </div>
             </div>
-        </section>
+        </section>        
     </header>
     `;
     document.body.insertAdjacentHTML('afterbegin', navbarHTML);

@@ -223,13 +223,37 @@
         width: 30px;
     }
 
-    .nav-list-v a {
+    .nav-list-v li>a {
         border-bottom: solid 1px transparent;
     }
 
-    .nav-list-v a:hover {
+    .nav-list-v li>a:hover {
         border-bottom: solid 1px var(--border-color);
         transition: .35s ease-in-out;
+    }
+}
+
+/* 手機版 */
+@media (max-width:390px) {
+    .navigation .nav-list-v.show {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 20px;
+
+        position: fixed;
+        top: 20px;
+        right: 0;
+
+        width: 100%;
+
+        background-color: var(--main-yellow);
+        box-shadow: var(--basic1-shadow);
+        font-size: 1.1rem;
+    }
+
+    .navigation .nav-list-v li:nth-child(1) {
+        width: 100%;
     }
 }
 
@@ -409,7 +433,7 @@ label[for="keep-login"] {
     #member-modal {
         position: fixed;
         top: 30%;
-        left: 10%;
+        left: 1px;
         margin: 0 auto;
         z-index: 1001;
         display: flex;
@@ -447,6 +471,12 @@ label[for="keep-login"] {
 
     #member-modal .radio-container {
         margin-top: 0;
+    }
+}
+
+@media (max-width:390px){
+    #member-modal{
+        top: 23%;
     }
 }
 
