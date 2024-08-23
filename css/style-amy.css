@@ -19,11 +19,13 @@
 /* #region 首頁-網頁特色 */
 #introduce {
     width: 100%;
-    height: 1050px;
+    height: 100vh;
     background-image: url(../images/index/map.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center 10px;
+    background-position: right center;
+
+    overflow: hidden;
 }
 
 #introduce h2 {
@@ -32,21 +34,34 @@
 }
 
 .star {
+    overflow: hidden;
     width: 4%;
+    min-width: 50px;
 }
 
 .flower {
     width: 3%;
+    min-width: 40px;
 }
 
 .corner {
     width: 4%;
+    min-width: 70px;
 }
 
 .first-article,
 .second-article,
 .third-article {
     display: flex;
+}
+
+.first-article .content,
+.second-article .content,
+.third-article .content {
+    width: 20%;
+    min-width: 300px;
+    border-radius: 15px;
+    padding: 25px 35px;
 }
 
 /* 第一個介紹 */
@@ -57,15 +72,13 @@
 
 .first-article .content {
     background-color: var(--main-green);
-    border-radius: 30px;
-    width: 20%;
-    padding: 1% 2%;
     margin-bottom: 5%;
 }
 
 .first-article .character {
+    position: relative;
     width: 15%;
-    /* position: relative; */
+    min-width: 150px;
     margin-top: -5%;
 }
 
@@ -96,9 +109,6 @@
 
 .second-article .content {
     background-color: var(--main-pink);
-    border-radius: 30px;
-    width: 20%;
-    padding: 1% 2%;
     margin-top: 5%;
     margin-left: 1%;
     color: var(--white);
@@ -106,6 +116,7 @@
 
 .second-article .character {
     width: 10%;
+    min-width: 90px;
     position: relative;
     margin: -7% 0 0 15%;
 }
@@ -127,20 +138,18 @@
 
 .third-article .content {
     background-color: var(--main-yellow);
-    border-radius: 30px;
-    width: 20%;
-    padding: 1% 2%;
     margin-bottom: 8%;
 }
 
 .third-article .character {
     width: 9%;
+    min-width: 70px;
     position: relative;
     margin: -7% 0 0 2%;
 }
 
 .third-article .flower {
-    z-index: 999;
+    z-index: 5;
     margin-top: 5%;
     margin-right: -1%;
     margin-left: 38%;
@@ -149,6 +158,80 @@
 .third-article .corner {
     margin-top: 2%;
     margin-left: -0.1%;
+}
+
+@media (max-width:1440px) {
+    .first-article .content,
+    .second-article .content,
+    .third-article .content {
+        width: 30%;
+    }
+
+    .first-article {
+        justify-content: center;
+    }
+
+    .first-article .star:first-child {
+        margin: -3% 10% 0 0;
+    }
+
+    .third-article {
+        justify-content: center;
+    }
+
+    .third-article .character {
+        width: 11%;
+    }
+
+    .third-article .flower {
+        margin-top: 5%;
+        margin-right: -1%;
+        margin-left: 10%;
+    }
+
+}
+
+@media (max-width:820px) {
+    #introduce {
+        height: 60vh;
+        background-image: url(../images/index/map-820.png);
+    }
+
+    #introduce h2 {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    #introduce p {
+        font-size: 0.9rem;
+    }
+
+    .first-article {
+        padding: 0;
+    }
+
+    .first-article .star:first-child {
+        margin: -3% 8% 0 5%;
+    }
+
+    .first-article .star:last-child {
+        display: none;
+    }
+
+    .first-article .character {
+        margin-top: 0;
+    }
+
+    .first-article .corner {
+        margin-top: 6.5%;
+        margin-left: -0.5%;
+    }
+}
+
+@media (max-width:390px) {
+    .corner {
+        display: none;
+    }
 }
 
 /* #endregion */
@@ -160,7 +243,7 @@
     background-image: url(../images/index/news-bg.png);
     background-repeat: no-repeat;
     background-size: contain;
-    margin-top: -24%;
+    margin-top: -16%;
     padding: 15% 0;
 }
 
@@ -216,6 +299,27 @@
     margin-left: 0.5%;
 }
 
+@media (max-width:1440px) {
+    #news {
+        margin-top: 0;
+    }
+}
+
+@media (max-width:820px) {
+    #news {
+        flex-direction: column;
+        align-items: center;
+
+        height: 990px;
+
+        background-image: url(../images/index/news-bg-820.png);
+        background-size: contain;
+        background-position: center;
+
+        margin: 0;
+    }
+}
+
 /* #endregion */
 
 /* #region 首頁-熱門文章 */
@@ -223,13 +327,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     position: relative;
+
     overflow: hidden;
     background-image: url(../images/index/greenfish.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    height: 90vh;
+
     margin-top: -10%;
 }
 
@@ -281,6 +387,7 @@
 #hot-article .content {
     position: relative;
     z-index: 1;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -322,7 +429,7 @@
         display: none;
     }
 
-    #hot-article .content{
+    #hot-article .content {
         background-color: transparent;
     }
 }
