@@ -474,8 +474,8 @@ label[for="keep-login"] {
     }
 }
 
-@media (max-width:390px){
-    #member-modal{
+@media (max-width:390px) {
+    #member-modal {
         top: 23%;
     }
 }
@@ -586,6 +586,18 @@ input#search-bar {
     justify-content: center;
     font-family: GenSenRounded2-M;
     letter-spacing: 0.1rem;
+}
+
+@media (max-width:820px) {
+    #copyright p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width:430px) {
+    #copyright p {
+        font-size: 0.8rem;
+    }
 }
 
 /* #endregion */
