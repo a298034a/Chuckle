@@ -639,10 +639,7 @@
     align-items: end;
     justify-content: center;
 
-    height: 30vh;
-
     margin: 0 32%;
-    margin-top: -3%;
 }
 
 #newinfo-nav .btn-container .btn {
@@ -650,7 +647,24 @@
     margin: 0 2%;
 }
 
-#newinfo-nav a img {
+#newinfo-nav a {
+    min-width: 150px;
+}
+
+#newinfo-nav .cloud {
+    min-width: 440px;
+
+}
+
+#newinfo-nav .cloud:first-child {
+    margin-right: 5%;
+}
+
+#newinfo-nav .cloud:last-child {
+    margin-left: 5%;
+}
+
+#newinfo-nav img {
     object-fit: cover;
     height: 100%;
 }
@@ -658,20 +672,20 @@
 #current-events {
     position: relative;
 
-    background-image: url(../images/news/yellow-bg.png);
+    background-image: url(../images/news/upcome-bg-pc.png);
     background-repeat: no-repeat;
-    background-size: 100% 98%;
+    background-size: 100% 90%;
     background-position: bottom;
 
-    margin-top: -6%;
-
     z-index: 2;
+    overflow: hidden;
 }
 
 #current-events .swiper-btn {
     position: absolute;
-    top: 45%;
+    top: 47%;
     width: 5%;
+    min-width: 80px;
 }
 
 #current-events .swiper-btn-pre {
@@ -682,56 +696,59 @@
     right: 2%;
 }
 
-#current-events ul {
+#current-events .event-list {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: -4.5%;
-    height: 65vh;
+    align-items: flex-start;
+    width: 100%;
 }
 
-#current-events ul li {
+#current-events .event-list li {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
     width: 15%;
-    height: 33vh;
+    min-width: 300px;
+    aspect-ratio: 3/4;
 
     background-position: center;
     background-size: cover;
 
     margin: 2%;
+    margin-bottom: 10%;
     padding: 15px 20px;
 
     border-radius: 30px;
+
+    overflow: hidden;
 }
 
-#current-events ul li p,
-#current-events ul li h2 {
+#current-events .event-list li p,
+#current-events .event-list li h2 {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     color: var(--white);
 }
 
-#current-events ul li:nth-child(1) {
+#current-events .event-list li:nth-child(1) {
     background-image: url(../images/news/fossil.jpg);
 }
 
-#current-events ul li:nth-child(2) {
+#current-events .event-list li:nth-child(2) {
     background-image: url(../images/news/winter.jpg);
 }
 
-#current-events ul li:nth-child(3) {
+#current-events .event-list li:nth-child(3) {
     background-image: url(../images/news/lance-reis.jpg);
 }
 
-#current-events ul li:nth-child(4) {
+#current-events .event-list li:nth-child(4) {
     background-image: url(../images/news/history.jpg);
 }
 
-#current-events ul li:nth-child(5) {
+#current-events .event-list li:nth-child(5) {
     background-image: url(../images/news/old-computer.jpg);
 }
 
@@ -740,6 +757,19 @@
     bottom: -25%;
     left: 26%;
     width: 6%;
+}
+
+@media (max-width:820px) {
+    #current-events .event-list li {
+        margin-top: 5%;
+        margin-bottom: 15%;
+    }
+}
+
+@media (max-width:640px) {
+    #current-events .event-list li {
+        min-width: 200px;
+    }
 }
 
 #upcoming-events {
@@ -793,7 +823,6 @@
 #upcoming-events ul li img {
     object-fit: cover;
     height: 100%;
-    filter: brightness(40%);
     transition: 0.3s ease-in-out;
 }
 
