@@ -2,10 +2,19 @@
     padding-top: 0px;
     width: 100%;
     height: 100%;
-    background-color: transparent;
+    /* background-color: #FFE24A; */
 }
 
-/* nev */
+#map-body h2 {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+#map-body h4 {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* #region nev*/
 #map-nev{
     position: fixed;
     top: 0;
@@ -45,29 +54,20 @@ margin-right: 2%;
     text-align: center;
 }
 
-/* nev */
+/* #endregion */
 
 
-
-
-
-
-
-
-#block{
-    width: 20%;
-    background-color: transparent;  
-}
-
-
+/* #region map區*/
 #map{
     /* 當叫出LIST時縮小，寫完LIST要先恢復成W100% */
     left: 20%;
     width: 80%;
     padding: 0px;
     z-index: 2;
-    
 }
+/* #endregion */
+
+
 #list{
     position: fixed;
     width: 20%;
@@ -75,3 +75,20 @@ margin-right: 2%;
     background-color: #FFE24A;
     /* 到時候先display:none，按地標再打開，按LOGO會再從左邊收合 */
 }
+
+#list-body{
+    /* adsolut對準nev */
+}
+
+
+/* #region 地址資訊*/
+#attraction-introduction{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin: 8%;
+margin-top: 130px;
+w
+}
+
+/* #endregion */
