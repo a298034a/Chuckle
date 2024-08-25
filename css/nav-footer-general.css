@@ -596,7 +596,7 @@ input#search-bar {
 
 @media (max-width:430px) {
     #copyright p {
-        font-size: 0.8rem;
+        font-size: 12px;
     }
 }
 
