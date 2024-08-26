@@ -14,6 +14,9 @@
 #map-body h2 {
     font-size: 25px;
 }
+#map-body h3 {
+    font-size: 20px;
+}
 
 #map-body p {
     font-size: 16px;
@@ -134,14 +137,16 @@
 .posts-title {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.posts-title h2 {
-    width: 80%;
+.posts-title h3 {
+    width: 65%;
     overflow: hidden;
     /* 多出來時則省略 */
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin: 0.5rem 0;
 }
 
 .posts-btn {
@@ -151,6 +156,7 @@
 .posts-btn img {
     width: 24px;
     height: 24px;
+    margin: 0 2%;
 }
 
 
