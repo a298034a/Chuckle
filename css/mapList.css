@@ -62,6 +62,10 @@
     margin: 0 8px;
     text-align: center;
 }
+#map-nev .nev-things:hover{
+    background-color: var(--hover-yellow);
+    transition: 0.35s;
+}
 
 /* #endregion */
 
@@ -101,25 +105,31 @@
     margin-top: 120px;
     padding: 5%;
     border-radius: 10px;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 #attraction-article {
     position: absolute;
     top: 1;
     width: 80%;
-    height: 50vh;
+    /* height: 50vh; */
     margin: 0 10%;
     padding: 5% 0;
     overflow: hidden;
 }
 
-.addressPosts {
+#attraction-article .addressPosts {
     margin-bottom: 5%;
     padding: 5%;
     background-color: var(--white);
     border-radius: 10px;
 }
+
+#attraction-article .addressPosts:hover{
+    background-color: var(--hover-yellow);
+    transition: 0.35s;
+}
+
 
 .posts-title {
     display: flex;
