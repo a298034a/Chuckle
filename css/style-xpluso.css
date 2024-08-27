@@ -176,6 +176,9 @@ hr {
     top: 13%;
     left: 5%;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 #post-info h2,
@@ -186,6 +189,7 @@ hr {
 
 #post-info-text {
     padding: 50px;
+    padding-bottom: 20px;
 }
 
 .authorBio {
@@ -225,19 +229,46 @@ hr {
     margin: 10px 0px;
 }
 
-.tag {
-
-    margin: 0.5rem 0.5rem;
-    padding: 0.1rem 1rem;
-    border-radius: 20px;
-    background-color: var(--main-green);
-    font-size: 14px;
-    color: var(--black);
-}
-
 #tagsArea {
     display: flex;
     flex-wrap: wrap
+}
+.tag {
+
+    margin: 0.5rem 0.5rem;
+    margin-left: 0;
+    padding: 0.1rem 1rem;
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--black);
+}
+#articleBody .tag{
+    background-color: var(--main-green);
+}
+
+
+
+
+/* ICON區 */
+#post-info-icon {
+    color: var(--white);
+    padding: 0px 50px;
+    padding-bottom: 50px;
+}
+
+.posts-btn {
+    display: flex;
+}
+
+.posts-btn img {
+    width: 32px;
+    margin: 3px;
+}
+
+#post-info-icon p {
+    font-size: 14px;
+    padding-left: 7px;
+    margin-top: -8px;
 }
 
 /* #endregion */
@@ -402,6 +433,8 @@ hr {
     padding: 50px;
 }
 
+
+
 /* #endregion */
 
 
@@ -448,7 +481,7 @@ body.themeSeason {
 
 .storeBlock {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .store {
@@ -461,8 +494,8 @@ body.themeSeason {
     margin-top: 8%;
 }
 
-.straw_icon{
-width: 10%;
+.straw_icon {
+    width: 10%;
 }
 
 .store .slogan {
