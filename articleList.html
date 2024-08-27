@@ -9,6 +9,7 @@
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./css/nav-footer-general.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/postFiter.css">
     <link rel="stylesheet" href="./css/style-xpluso.css">
 </head>
 
@@ -16,7 +17,102 @@
     <main id="articleListBody">
         <!-- 左邊篩選區 -->
         <div id="post-filter">
-            <div id="post-filter-text" >
+            
+                <div class='filter'>
+                    <!--地點-->
+                    <div id="type-title1" class="filter-title-Area">
+                      <legend class="filter-title">地點顯示
+                      </legend>
+                      <div class="filter-btn">
+                        <img class="filter-icon" src="./images/articleList/filter.svg" alt="三角形下拉按鈕">
+                      </div>
+                    </div>
+                
+                    <ul id="container-body" class="Classification">
+                
+                      <div id="container-1" class="filter-order-Area">
+                        <!-- 多選 -->
+                        <li>
+                          <label class="container">台北市
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                        <!-- 選單按鈕，當按了container-1會顯示多選inOder-1 -->
+                        <div class="filter-btn">
+                          <img class="filter-icon" src="./images/articleList/filter.svg" alt="三角形下拉按鈕">
+                        </div>
+                      </div>
+                
+                
+                      <!--多選的項目-->
+                      <ul id="inOder-1" class="inOder">
+                        <li>
+                          <label class="container">信義區
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="container">中山區
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                      </ul>
+                    </ul>
+                
+                
+                    <!--  -->
+                
+                
+                    <div id="type-title2" class="filter-title-Area">
+                      <legend class="filter-title">類型
+                      </legend>
+                      <div class="filter-btn">
+                        <img class="filter-icon" src="./images/articleList/filter.svg" alt="三角形下拉按鈕">
+                      </div>
+                    </div>
+                
+                
+                    <!-- 當按了type-title2會顯示type-body -->
+                    <ul id="type-body" class="Classification">
+                      <div id="" class="filter-order-Area">
+                        <!-- 多選 -->
+                        <li>
+                          <label class="container">戶外運動
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                      </div>
+                
+                      <div id="" class="filter-order-Area">
+                        <!-- 多選 -->
+                        <li>
+                          <label class="container">文藝活動
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                      </div>
+                
+                      <div id="" class="filter-order-Area">
+                        <!-- 多選 -->
+                        <li>
+                          <label class="container">室內景點
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                          </label>
+                        </li>
+                      </div>
+                      
+                
+                    </ul>
+                
+                
+                
+                  </div>
 
                 <!-- <form action="" class="filterTable">
                     <label for="classification">類型</label>
@@ -35,16 +131,9 @@
                     </select>
                 </form> -->
 
-                
 
 
-                <form action="" id="area">
-
-                </form>
-
-
-
-            </div>
+            
         </div>
 
         <!-- 文章列表主體 -->
@@ -149,6 +238,7 @@
 
     <script src="./js/navbar.js"></script>
     <script src="./js/footer.js"></script>
+    <script src="./js/postFilter.js"></script>
 </body>
 
 </html>

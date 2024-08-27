@@ -392,9 +392,10 @@ hr {
     height: auto;
     background-color: var(--main-pink);
     position: fixed;
-    top: 280px;
+    top: 150px;
     left: 5%;
     border-radius: 30px;
+    padding: 25px;
 }
 
 #post-filter-text {
