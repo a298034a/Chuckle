@@ -29,11 +29,17 @@ function updatePositionByDistance() {
 
     var verticalDistance = shopSignRect.top - bannerRect.bottom;
 
+    let top = 400 * (window.innerWidth / 1980);
+    //根據平板 banner 高度進行補正
+    if (window.innerWidth <= 860) {
+        top += 220;
+    }
+
     if (verticalDistance < -15) {
         shopSignLeft.style.position = 'absolute';
-        shopSignLeft.style.top = `${400 * (window.innerWidth / 1980)}px`;
+        shopSignLeft.style.top = `${top}px`;
 
         shopSignRight.style.position = 'absolute';
-        shopSignRight.style.top = `${400 * (window.innerWidth / 1980)}px`;
+        shopSignRight.style.top = `${top}px`;
     }
 }
