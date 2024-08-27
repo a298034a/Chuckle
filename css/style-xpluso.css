@@ -68,7 +68,7 @@ h4 {
     letter-spacing: 1px;
 }
 
-#articleBody p,
+#newArticleBody p,#articleBody p,
 #articleListBody p,
 #underNev p {
     font-size: 20px;
@@ -167,11 +167,21 @@ hr {
 }
 
 /* #endregion */
+
+/* #region 最新消息-文章主體 */
+#newArticleBody #post-body p{
+    font-size: 20px;
+    padding: 1rem 0;
+}
+
+
+/* #endregion */
+
 /* #region 文章TAG區*/
 #post-info {
     width: 400px;
     height: auto;
-    background-color: var(--main-pink);
+    
     position: fixed;
     top: 13%;
     left: 5%;
@@ -181,23 +191,17 @@ hr {
     align-items: flex-end;
 }
 
-#post-info h2,
-#post-info p {
-    color: var(--white);
-}
-
-
 #post-info-text {
-    padding: 50px;
+    padding: 40px;
     padding-bottom: 20px;
 }
 
-.authorBio {
+.bio {
     display: flex;
     padding-bottom: 20px;
 }
 
-.authorBio .authorFace {
+.bio .authorFace {
 
     width: 120px;
     /* 設置寬度，根據需要調整 */
@@ -205,7 +209,7 @@ hr {
     /* 設置高度，與寬度一致以保持圓形 */
 }
 
-.authorBio .authorFace img {
+.bio .authorFace img {
 
     border-radius: 50%;
     /* width: 100%;
@@ -222,7 +226,6 @@ hr {
 
 #post-info hr {
     margin: 20px 0px;
-    border-color: var(--white);
 }
 
 #postTime {
@@ -242,18 +245,51 @@ hr {
     font-size: 14px;
     color: var(--black);
 }
+
+/* 文章內容-TAG區顏色 */
+#articleBody #post-info{
+    color:  var(--white);
+    background-color: var(--main-pink);
+}
+#articleBody #post-info hr {
+    border-color: var(--white);
+}
+
 #articleBody .tag{
     background-color: var(--main-green);
 }
 
+/* 最新消息文章-TAG區顏色+字體 */
+#newArticleBody #post-info{
+    color:  var(--black);
+    background-color:var(--main-green);
+}
+
+#newArticleBody #post-info hr {
+    border-color: var(--black);
+}
+
+#newArticleBody .tag{
+    background-color: var(--main-yellow);
+}
 
 
+#aboutPost h2{
+    padding-bottom: 1rem;
+    font-size: 25px;
+}
+#aboutPost P{
+    font-size: 16px;
+}
+#newArticleBody #post-info-icon{
+    color: var(--black);
+}
 
 /* ICON區 */
 #post-info-icon {
     color: var(--white);
-    padding: 0px 50px;
-    padding-bottom: 50px;
+    padding: 0px 40px;
+    padding-bottom: 40px;
 }
 
 .posts-btn {
