@@ -1559,9 +1559,10 @@
 
 #officialEvent-join .content .video {
     width: 100%;
-    aspect-ratio: 16/9;
-    background-color: aliceblue;
+}
 
+video {
+    width: 100%;
 }
 
 @media (max-width:1680px) {
@@ -1577,8 +1578,25 @@
     }
 
     #officialEvent-join .content {
-        width: 60%;
+        width: 50%;
         padding-top: 10%;
+    }
+}
+
+@media (max-width:430px) {
+    #officialEvent-join .content {
+        width: 60%;
+    }
+
+    #officialEvent-join .content h2 {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
+    #officialEvent-join .content p {
+        line-height: 1.5rem;
+        font-size: 12px;
+        margin-bottom: 20px;
     }
 }
 
