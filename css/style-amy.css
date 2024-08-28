@@ -1258,6 +1258,91 @@
     }
 }
 
+/* 輪播動畫 */
+.left-enter {
+    opacity: 0;
+    left: -60px;
+    height: 120px;
+    width: 90px;
+    line-height: 120px;
+    margin-top: 40px;
+}
+
+.left-enter.left-enter-active {
+    opacity: 1;
+    left: 50px;
+    height: 150px;
+    width: 110px;
+    line-height: 150px;
+    margin-top: 25px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+
+.left-leave {
+    opacity: 1;
+    left: 650px;
+    height: 150px;
+    width: 110px;
+    line-height: 150px;
+    margin-top: 25px;
+}
+
+.left-leave.left-leave-active {
+    left: 780px;
+    opacity: 0;
+    height: 120px;
+    line-height: 120px;
+    margin-top: 40px;
+    width: 90px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+
+.right-enter {
+    opacity: 0;
+    left: 760px;
+    height: 120px;
+    width: 90px;
+    line-height: 120px;
+    margin-top: 40px;
+}
+
+.right-enter.right-enter-active {
+    left: 650px;
+    opacity: 1;
+    height: 150px;
+    margin-top: 25px;
+    line-height: 150px;
+    width: 110px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+
+.right-leave {
+    left: 50px;
+    height: 150px;
+    opacity: 1;
+    margin-top: 25px;
+    line-height: 150px;
+    width: 110px;
+}
+
+.right-leave.right-leave-active {
+    left: -60px;
+    opacity: 0;
+    height: 120px;
+    width: 90px;
+    line-height: 120px;
+    margin-top: 40px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+
+.noselect {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 /* #endregion */
 
 /* #region 官方活動 */
@@ -1592,7 +1677,7 @@ video {
         font-size: 1rem;
         margin-bottom: 20px;
     }
-    
+
     #officialEvent-join .content p {
         line-height: 1.5rem;
         font-size: 12px;
