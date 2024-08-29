@@ -911,9 +911,10 @@
 #current-events .event-list {
     position: relative;
 
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; */
+    height: 600px;
     width: 100%;
 }
 
@@ -1239,46 +1240,72 @@
 }
 
 /* 輪播動畫 */
+
+.event-list .item {
+    position: absolute;
+    transition: left 1s, opacity 1s;
+}
+
+.level-2 {
+    left: 1500px;
+}
+
+.level-1 {
+    left: 1150px;
+}
+
+.level0 {
+    left: 800px;
+}
+
+.level1 {
+    left: 450px;
+}
+
+.level2 {
+    left: 100px;
+}
+
 .left-enter {
     opacity: 0;
-    left: -150px;
+    left: -250px;
 }
 
 .left-enter.left-enter-active {
     opacity: 1;
-    left: -100px;
+    left: 100px;
     transition: left 1s, opacity 1s;
 }
 
 .left-leave {
     opacity: 1;
-    left: 100px;
+    left: 1500px;
 }
 
 .left-leave.left-leave-active {
-    left: 150px;
+    left: 1800px;
     opacity: 0;
     transition: left 1s, opacity 1s;
 }
 
 .right-enter {
     opacity: 0;
-    left: 150px;
+    left: 1800px;
 }
 
 .right-enter.right-enter-active {
-    left: 100px;
+    left: 1500px;
     opacity: 1;
     transition: left 1s, opacity 1s;
 }
 
 .right-leave {
-    left: -100px;
+    left: 100px;
     opacity: 1;
 }
 
 .right-leave.right-leave-active {
-    left: -150px;
+    left: -250px;
     opacity: 0;
     transition: left 1s, opacity 1s;
 }
@@ -1289,31 +1316,6 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-.event-list .item {
-    position: relative;
-    transition: left 1s, opacity 1s;
-}
-
-.level-2 {
-    left: 100px;
-}
-
-.level-1 {
-    left: 50px;
-}
-
-.level0 {
-    left: 0px;
-}
-
-.level1 {
-    left: -50px;
-}
-
-.level2 {
-    left: -100px;
 }
 
 /* #endregion */
