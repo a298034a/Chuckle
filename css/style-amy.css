@@ -922,7 +922,7 @@
     min-width: 300px;
     aspect-ratio: 3/4;
 
-    margin: 2%;
+    margin-top: 2%;
     margin-bottom: 10%;
 }
 
@@ -1004,26 +1004,6 @@
 
 #current-events .event-list li a:hover .content {
     opacity: 1;
-}
-
-#current-events .event-list li:nth-child(1) a {
-    background-image: url(../images/news/fossil.jpg);
-}
-
-#current-events .event-list li:nth-child(2) a {
-    background-image: url(../images/news/winter.jpg);
-}
-
-#current-events .event-list li:nth-child(3) a {
-    background-image: url(../images/news/lance-reis.jpg);
-}
-
-#current-events .event-list li:nth-child(4) a {
-    background-image: url(../images/news/history.jpg);
-}
-
-#current-events .event-list li:nth-child(5) a {
-    background-image: url(../images/news/old-computer.jpg);
 }
 
 #news-body .character {
@@ -1261,78 +1241,46 @@
 /* 輪播動畫 */
 .left-enter {
     opacity: 0;
-    left: -60px;
-    height: 120px;
-    width: 90px;
-    line-height: 120px;
-    margin-top: 40px;
+    left: -150px;
 }
 
 .left-enter.left-enter-active {
     opacity: 1;
-    left: 50px;
-    height: 150px;
-    width: 110px;
-    line-height: 150px;
-    margin-top: 25px;
-    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+    left: -100px;
+    transition: left 1s, opacity 1s;
 }
 
 .left-leave {
     opacity: 1;
-    left: 650px;
-    height: 150px;
-    width: 110px;
-    line-height: 150px;
-    margin-top: 25px;
+    left: 100px;
 }
 
 .left-leave.left-leave-active {
-    left: 780px;
+    left: 150px;
     opacity: 0;
-    height: 120px;
-    line-height: 120px;
-    margin-top: 40px;
-    width: 90px;
-    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+    transition: left 1s, opacity 1s;
 }
 
 .right-enter {
     opacity: 0;
-    left: 760px;
-    height: 120px;
-    width: 90px;
-    line-height: 120px;
-    margin-top: 40px;
+    left: 150px;
 }
 
 .right-enter.right-enter-active {
-    left: 650px;
+    left: 100px;
     opacity: 1;
-    height: 150px;
-    margin-top: 25px;
-    line-height: 150px;
-    width: 110px;
-    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+    transition: left 1s, opacity 1s;
 }
 
 .right-leave {
-    left: 50px;
-    height: 150px;
+    left: -100px;
     opacity: 1;
-    margin-top: 25px;
-    line-height: 150px;
-    width: 110px;
 }
 
 .right-leave.right-leave-active {
-    left: -60px;
+    left: -150px;
     opacity: 0;
-    height: 120px;
-    width: 90px;
-    line-height: 120px;
-    margin-top: 40px;
-    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+    transition: left 1s, opacity 1s;
 }
 
 .noselect {
@@ -1341,6 +1289,31 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.event-list .item {
+    position: relative;
+    transition: left 1s, opacity 1s;
+}
+
+.level-2 {
+    left: 100px;
+}
+
+.level-1 {
+    left: 50px;
+}
+
+.level0 {
+    left: 0px;
+}
+
+.level1 {
+    left: -50px;
+}
+
+.level2 {
+    left: -100px;
 }
 
 /* #endregion */

@@ -219,7 +219,7 @@
                         index = i % items.length;
                     }
                     level = currentActive - i;
-                    newItems.push(<Item key={index} id={items[index]} />);
+                    newItems.push(<Item key={index} id={items[index]} level={level}/>);
                 }
                 return newItems;
             };
