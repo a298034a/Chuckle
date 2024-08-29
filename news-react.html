@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最新資訊</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/nav-footer-general.css">
+    <link rel="stylesheet" href="./css/style-amy.css">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/react-transition-group/dist/react-transition-group.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body id="news-body">
+    <div class="characters exhibition">
+        <figure class="showall sunny">
+            <img src="./images/news/exhibition-char.png" alt="裝飾吉祥物">
+        </figure>
+        <figure class="rainy">
+            <img src="./images/news/popup-char.png" alt="裝飾吉祥物">
+        </figure>
+        <figure class="winter">
+            <img src="./images/news/market-char.png" alt="裝飾吉祥物">
+        </figure>
+    </div>
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState } = React;
+        const { CSSTransition, TransitionGroup } = window.ReactTransitionGroup;
+
+        const CurrentItem = ({ href, content, date, title, bg, level }) => {
+            const className = `item level${level}`;
+            return (
+                <li className={className}>
+                    <a href={href} style={{ backgroundImage: `url(${bg})`}}>
+                        <div className="overlay"></div>
+                        <p className="content">
+                            {content}
+                        </p>
+                        <div className="wrap">
+                            <p>{date}</p>
+                            <h2>{title}</h2>
+                        </div>
+                    </a>
+                </li>
+            );
+        };
+
+        function Carousel({ items, active }) {
+            const [currentActive, setCurrentActive] = useState(active);
+            const [direction, setDirection] = useState('');
+
+            const generateCurrentItems = () => {
+                let newItems = [];
+                let level;
+
+                for (let i = currentActive - 2; i < currentActive + 3; i++) {
+                    let index = i;
+                    if (i < 0) {
+                        index = items.length + i;
+                    } else if (i >= items.length) {
+                        index = i % items.length;
+                    }
+                    level = currentActive - i;
+                    newItems.push(<CurrentItem key={index} href={items[index].href} content={items[index].content} date={items[index].date} title={items[index].title} bg={items[index].bg} level={level} />);
+                }
+                return newItems;
+            };
+
+            const moveLeft = () => {
+                setDirection('left');
+                setTimeout(() => {
+                    const newActive = currentActive - 1;
+                    setCurrentActive(newActive < 0 ? items.length - 1 : newActive);
+                }, 0);
+            };
+
+            const moveRight = () => {
+                setDirection('right');
+                setTimeout(() => {
+                    const newActive = currentActive + 1;
+                    setCurrentActive(newActive % items.length);
+                }, 0);
+            };
+
+            return (
+                <>
+                    <section id="current-events">
+                        <nav id="newinfo-nav">
+                            <ul className="btn-container">
+                                <li className="cloud">
+                                    <img src="./images/news/cloud.png" alt="裝飾雲" />
+                                </li>
+                                <li className="btn">
+                                    <a class="current" href="./news.html">
+                                        <img src="./images/news/exhibition-cur.png" alt="切換至展覽分類" />
+                                    </a>
+                                </li>
+                                <li className="btn">
+                                    <a href="./news-popup.html">
+                                        <img src="./images/news/popup.png" alt="切換至快閃店分類" />
+                                    </a>
+                                </li>
+                                <li className="btn">
+                                    <a href="./news-market.html">
+                                        <img src="./images/news/market.png" alt="切換至市集分類" />
+                                    </a>
+                                </li>
+                                <li className="cloud">
+                                    <img src="./images/news/cloud.png" alt="裝飾雲" />
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="event-list">
+                            <TransitionGroup component={null}>
+                                {generateCurrentItems().map((item) => (
+                                    <CSSTransition
+                                        key={item.key}
+                                        timeout={1000}
+                                        classNames={{
+                                            enter: `${direction}-enter`,
+                                            enterActive: `${direction}-enter-active`,
+                                            exit: `${direction}-leave`,
+                                            exitActive: `${direction}-leave-active`,
+                                        }}
+                                    >
+                                        {item}
+                                    </CSSTransition>
+                                ))}
+                            </TransitionGroup>
+                        </ul>
+                        <div class="swiper-btn swiper-btn-pre" onClick={moveLeft}>
+                            <img src="./images/hand-l.png" alt="" />
+                        </div>
+                        <div class="swiper-btn swiper-btn-next" onClick={moveRight}>
+                            <img src="./images/hand-r.png" alt="" />
+                        </div>
+                    </section>
+                </>
+            );
+        }
+
+        const items = [
+            {
+                href: '#',
+                content: '穿越時光，探索地球億萬年的歷史與神秘。<br>在這裡，您將有機會近距離接觸來自不同地質時期的珍貴化石，了解古生物的演化歷程，並感受地球過去的變遷。',
+                date: '2024/7/12~2025/9/12',
+                title: '探索遠古秘境—化石的故事',
+                bg: './images/news/fossil.jpg'
+            },
+            {
+                href: '#',
+                content: '本次展覽精心挑選了全球各地的秋冬美食與文化，讓您在一個地方即可體驗不同國家的節日氛圍和美食風味。<br>歐洲的秋冬文化將成為本展覽的焦點，帶您領略歐洲的魅力，讓您仿佛置身於童話世界，體驗各地獨特的節慶氛圍。',
+                date: '2024/8/1~2024/9/31',
+                title: '秋冬奧秘-歐洲節慶與美食的奇幻之旅',
+                bg: './images/news/winter.jpg'
+            },
+            {
+                href: '#',
+                content: '展覽精選了眾多中世紀時期的服裝畫作，細緻呈現了那個年代的時尚風貌。從貴族的華美長袍到平民的樸素衣著，每一幅作品都見證了歷史的變遷和文化的交融。透過這些畫作，我們不僅能一窺中世紀的服飾美學，更能感受到當時的社會風貌與生活方式。快來參加這場視覺盛宴，重溫中世紀的迷人風采吧！',
+                date: '2024/8/8~2024/10/8',
+                title: '中世紀服飾與畫作的時尚火花',
+                bg: './images/news/lance-reis.jpg'
+            },
+            {
+                href: '#',
+                content: '踏入盛唐風華，探索古代中國的輝煌時代！<br>本次展覽精選唐朝各式服飾，包括皇室禮服、文人雅服以及民間流行的時尚服飾。這些服飾不僅展現了唐代的工藝之美，還展現出當時的社會風氣與生活方式。透過這些精美的服飾展品，我們邀請您一同感受唐朝的富麗堂皇，體驗那個充滿詩意與繁榮的時代。',
+                date: '2024/8/13~2024/10/13',
+                title: '盛唐風華：中國唐朝服飾展',
+                bg: './images/news/history.jpg'
+            },
+            {
+                href: '#',
+                content: '來看看電腦世界的變遷史，探索從巨無霸到袖珍的科技進步之旅！<br>匯集各個時代的經典電腦，每一件展品都見證了科技的飛速發展。透過這些電腦，我們不僅能了解科技如何改變我們的生活方式，還能一窺未來科技的無限可能。快來參觀，回顧那些屬於電腦的美好時光吧！',
+                date: '2024/8/10~2024/10/20',
+                title: '從巨無霸到袖珍：電腦演變',
+                bg: './images/news/old-computer.jpg'
+            },
+            {
+                href: '#',
+                content: '埃及金字塔的秘密。',
+                date: '2024/8/15~2024/10/26',
+                title: '埃及金字塔的秘密',
+                bg: './images/news/pyramids.jpg'
+            },
+            {
+                href: '#',
+                content: '亞馬遜雨林展。',
+                date: '2024/8/31~2024/10/31',
+                title: '世界之肺-亞馬遜雨林展',
+                bg: './images/news/rain-forest.jpg'
+            }
+        ]
+        const active = 2;
+
+        ReactDOM.render(
+            <Carousel items={items} active={active} />,
+            document.getElementById('root')
+        );
+    </script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/newsUtility.js"></script>
+</body>
+
+</html>

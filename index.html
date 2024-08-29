@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/nav-footer-general.css">
     <link rel="stylesheet" href="./css/style-amy.css">
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <body>
@@ -73,18 +77,18 @@
                 <source media="(max-width: 820px)" srcset="./images/index/whatnews-820.png" />
                 <img src="./images/index/whatnews.png" alt="最新活動">
             </picture>
-            <div class="carousel">
-                <a href="#">
+            <div id="root" class="carousel">
+                <!-- <a href="#">
                     <h2>南村創意市集－展現你的個人風格！</h2>
                     <p>2024/07/27~2024/07/28</p>
-                </a>
-                <div class="arrow-btn"><img class="arrow-btn-l" src="./images/index/button-2.png" alt=""></div>
-                <div class="arrow-btn"><img class="arrow-btn-r" src="./images/index/button-1.png" alt=""></div>
-                <div class="carousel-dots">
+                </a> -->
+                <!-- <div class="arrow-btn"><img class="arrow-btn-l" src="./images/index/button-2.png" alt=""></div>
+                <div class="arrow-btn"><img class="arrow-btn-r" src="./images/index/button-1.png" alt=""></div> -->
+                <!-- <div class="carousel-dots">
                     <div class="dot"></div>
                     <div class="dot"></div>
                     <div class="dot"></div>
-                </div>
+                </div> -->
             </div>
         </section>
         <!-- 熱門文章 -->
@@ -134,9 +138,55 @@
             <div class="sunny-l"><img src="./images/index/sunny-bg.png" alt=""></div>
         </section>
     </main>
-    <script src="./js/ArrowBtnHover.js"></script>
+    <!-- <script src="./js/ArrowBtnHover.js"></script> -->
     <script src="./js/navbar.js"></script>
     <script src="./js/footer.js"></script>
+
+    <script type="text/babel">
+        const { useEffect } = React;
+
+        function App() {
+            // useEffect 觸發的時間點是在渲染之後
+            useEffect(() => {
+                const arrowL = document.querySelector(`.arrow-btn-l`);
+
+                arrowL.addEventListener('mouseover', function () {
+                    this.src = './images/index/button-hover-2.png';
+                });
+
+                arrowL.addEventListener('mouseout', function () {
+                    this.src = './images/index/button-2.png';
+                });
+
+                const arrowR = document.querySelector(`.arrow-btn-r`);
+
+                arrowR.addEventListener('mouseover', function () {
+                    this.src = './images/index/button-hover-1.png';
+                });
+
+                arrowR.addEventListener('mouseout', function () {
+                    this.src = './images/index/button-1.png';
+                });
+            });
+
+            return (
+                <>
+                    <a href="#">
+                        <h2>南村創意市集－展現你的個人風格！</h2>
+                        <p>2024/07/27~2024/07/28</p>
+                    </a>
+                    <div className="arrow-btn"><img className="arrow-btn-l" src="./images/index/button-2.png" alt="" /></div>
+                    <div className="arrow-btn"><img className="arrow-btn-r" src="./images/index/button-1.png" alt="" /></div>
+                    <div className="carousel-dots">
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                    </div>
+                </>
+            )
+        }
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
 </body>
 
 </html>
