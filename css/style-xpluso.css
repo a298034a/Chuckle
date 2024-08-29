@@ -195,44 +195,18 @@ hr {
 
 /* #region 文章TAG區*/
 #post-info {
-    width: 400px;
+    /* width: 400px; */
+    width: 20%;
     height: auto;
 
     position: fixed;
     top: 13%;
-    left: 5%;
+    left: 7%;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
-
-@media (max-width:1550px) {
-    /* 移動大區域不要互撞 */
-    #post-body,
-    #comment,
-    #listBody {
-        margin-left: 35%;
-    }
-}
-
-@media (max-width:1440px) {
-    /* 移動大區域不要互撞 */
-    #post-info {
-        left: 3%;
-    }
-    #post-body,
-    #comment,
-    #listBody {
-        margin-left: 35%;
-    }
-}
-@media (max-width:1330px) {
-    /* 縮小TAG區 */
-    
-}
-
-
 
 #post-info-text {
     padding: 40px;
