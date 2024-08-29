@@ -29,14 +29,14 @@
     </div>
     <div id="root"></div>
     <script type="text/babel">
-        const { useState } = React;
+        const { useState, useEffect } = React;
         const { CSSTransition, TransitionGroup } = window.ReactTransitionGroup;
 
-        const CurrentItem = ({ href, content, date, title, bg, level }) => {
+        function CurrentItem({ href, content, date, title, bg, level }) {
             const className = `item level${level}`;
             return (
                 <li className={className}>
-                    <a href={href} style={{ backgroundImage: `url(${bg})`}}>
+                    <a href={href} style={{ backgroundImage: `url(${bg})` }}>
                         <div className="overlay"></div>
                         <p className="content">
                             {content}
@@ -50,15 +50,46 @@
             );
         };
 
-        function Carousel({ items, active }) {
+        function NavBtn({ isCurrent, href, src, alt }) {
+            return (
+                <li className="btn">
+                    <a class={isCurrent === true ? "current" : ""} href={href}>
+                        <img src={src} alt={alt} />
+                    </a>
+                </li>
+            );
+        }
+
+        function CurrentEvents({ items, active }) {
             const [currentActive, setCurrentActive] = useState(active);
             const [direction, setDirection] = useState('');
+            const [rangeStart, setRangeStart] = useState(2);
+            const [rangeEnd, setRangeEnd] = useState(3);
+
+            useEffect(() => {
+                const updateRange = () => {
+                    if (window.innerWidth < 860) {
+                        setRangeStart(1);
+                        setRangeEnd(2);
+                    } else {
+                        setRangeStart(2);
+                        setRangeEnd(3);
+                    }
+                };
+
+                updateRange();
+                window.addEventListener('resize', updateRange);
+
+                return () => {
+                    window.removeEventListener('resize', updateRange);
+                };
+            }, []);
 
             const generateCurrentItems = () => {
                 let newItems = [];
                 let level;
 
-                for (let i = currentActive - 2; i < currentActive + 3; i++) {
+                for (let i = currentActive - rangeStart; i < currentActive + rangeEnd; i++) {
                     let index = i;
                     if (i < 0) {
                         index = items.length + i;
@@ -198,7 +229,7 @@
         const active = 2;
 
         ReactDOM.render(
-            <Carousel items={items} active={active} />,
+            <CurrentEvents items={items} active={active} />,
             document.getElementById('root')
         );
     </script>

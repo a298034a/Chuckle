@@ -636,7 +636,7 @@
     margin-top: 50px;
 }
 
-/* 最新消息-導覽列 */
+/* #region 最新消息-導覽列 */
 #newinfo-nav .btn-container {
     position: relative;
     z-index: 3;
@@ -678,7 +678,9 @@
     height: 100%;
 }
 
-/* 最新消息-背景角色 */
+/* #endregion */
+
+/* #region 最新消息-背景角色 */
 #news-body .characters {
     position: absolute;
     left: 50%;
@@ -841,7 +843,9 @@
     }
 }
 
-/* 現正舉行 */
+/* #endregion */
+
+/* #region 現正舉行 */
 #current-events {
     position: relative;
     z-index: 2;
@@ -1093,21 +1097,63 @@
     transition: left 1s, opacity 1s;
 }
 
-.noselect {
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
 @media (max-width:1440px) {
+    #current-events .event-list {
+        height: 500px;
+    }
+
     #current-events .event-list li a .content {
         -webkit-line-clamp: 6;
     }
 }
 
-@media (max-width:820px) {
+@media (max-width:1280px) {
+    .level-2 {
+        left: 88%;
+    }
+
+    .level-1 {
+        left: 65%;
+    }
+
+    .level0 {
+        left: 42%;
+    }
+
+    .level1 {
+        left: 19%;
+    }
+
+    .level2 {
+        left: -4%;
+    }
+
+    .right-leave,
+    .left-enter.left-enter-active {
+        left: -4%;
+    }
+
+    .right-enter,
+    .left-leave.left-leave-active {
+        left: 111%;
+    }
+
+    .left-leave,
+    .right-enter.right-enter-active {
+        left: 88%;
+    }
+
+    .left-enter,
+    .right-leave.right-leave-active {
+        left: -27%;
+    }
+}
+
+@media (max-width:860px) {
+    #current-events .event-list {
+        height: 550px;
+    }
+
     #current-events .event-list li a {
         margin-top: 5%;
         margin-bottom: 15%;
@@ -1120,9 +1166,58 @@
     #newinfo-nav .current {
         min-width: 180px;
     }
+
+    #current-events .event-list li{
+        min-width: 300px;
+    }
+
+    .event-list .item{
+        top: 0;
+    }
+
+    .level-2,
+    .level2 {
+        display: none;
+    }
+
+    .level-1 {
+        left: 80%;
+    }
+
+    .level0 {
+        left: 32%;
+    }
+
+    .level1 {
+        left: -16%;
+    }
+
+    .right-leave,
+    .left-enter.left-enter-active {
+        left: -16%;
+    }
+
+    .right-enter,
+    .left-leave.left-leave-active {
+        left: 111%;
+    }
+
+    .left-leave,
+    .right-enter.right-enter-active {
+        left: 80%;
+    }
+    
+    .left-enter,
+    .right-leave.right-leave-active {
+        left: -27%;
+    }
 }
 
 @media (max-width:640px) {
+    #current-events .event-list {
+        height: 380px;
+    }
+
     #current-events .event-list li {
         min-width: 200px;
     }
@@ -1146,6 +1241,38 @@
     #newinfo-nav .current {
         min-width: 150px;
     }
+
+    .level-1 {
+        left: 86%;
+    }
+
+    .level0 {
+        left: 32%;
+    }
+
+    .level1 {
+        left: -22%;
+    }
+
+    .right-leave,
+    .left-enter.left-enter-active {
+        left: -16%;
+    }
+
+    .right-enter,
+    .left-leave.left-leave-active {
+        left: 111%;
+    }
+
+    .left-leave,
+    .right-enter.right-enter-active {
+        left: 86%;
+    }
+    
+    .left-enter,
+    .right-leave.right-leave-active {
+        left: -22%;
+    }
 }
 
 @media (max-width:420px) {
@@ -1161,7 +1288,41 @@
     #newinfo-nav .current {
         min-width: 115px;
     }
+
+    .level-1 {
+        left: 86%;
+    }
+
+    .level0 {
+        left: 28%;
+    }
+
+    .level1 {
+        left: -30%;
+    }
+
+    .right-leave,
+    .left-enter.left-enter-active {
+        left: -16%;
+    }
+
+    .right-enter,
+    .left-leave.left-leave-active {
+        left: 111%;
+    }
+
+    .left-leave,
+    .right-enter.right-enter-active {
+        left: 86%;
+    }
+    
+    .left-enter,
+    .right-leave.right-leave-active {
+        left: -30%;
+    }
 }
+
+/* #endregion */
 
 #upcoming-events {
     display: flex;
