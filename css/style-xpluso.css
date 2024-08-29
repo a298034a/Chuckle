@@ -68,7 +68,8 @@ h4 {
     letter-spacing: 1px;
 }
 
-#newArticleBody p,#articleBody p,
+#newArticleBody p,
+#articleBody p,
 #articleListBody p,
 #underNev p {
     font-size: 20px;
@@ -112,6 +113,7 @@ hr {
     margin-left: 32%;
 
 }
+
 
 #comment {
     margin-top: 4%;
@@ -166,14 +168,28 @@ hr {
     margin-top: 1rem 0;
 }
 
+
 /* #endregion */
 
 /* #region 最新消息-文章主體 */
-#newArticleBody #post-body p{
+#newArticleBody #post-body p {
     font-size: 20px;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
+#post-body .img2and2 {
+    /* 圖片並排 */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 2%;
+    flex: 1;
+    width: 49%;
+}
+
+#blockbuttom {
+    height: 5vh;
+}
 
 /* #endregion */
 
@@ -181,7 +197,7 @@ hr {
 #post-info {
     width: 400px;
     height: auto;
-    
+
     position: fixed;
     top: 13%;
     left: 5%;
@@ -190,6 +206,33 @@ hr {
     flex-direction: column;
     align-items: flex-end;
 }
+
+@media (max-width:1550px) {
+    /* 移動大區域不要互撞 */
+    #post-body,
+    #comment,
+    #listBody {
+        margin-left: 35%;
+    }
+}
+
+@media (max-width:1440px) {
+    /* 移動大區域不要互撞 */
+    #post-info {
+        left: 3%;
+    }
+    #post-body,
+    #comment,
+    #listBody {
+        margin-left: 35%;
+    }
+}
+@media (max-width:1330px) {
+    /* 縮小TAG區 */
+    
+}
+
+
 
 #post-info-text {
     padding: 40px;
@@ -236,6 +279,7 @@ hr {
     display: flex;
     flex-wrap: wrap
 }
+
 .tag {
 
     margin: 0.5rem 0.5rem;
@@ -247,41 +291,44 @@ hr {
 }
 
 /* 文章內容-TAG區顏色 */
-#articleBody #post-info{
-    color:  var(--white);
+#articleBody #post-info {
+    color: var(--white);
     background-color: var(--main-pink);
 }
+
 #articleBody #post-info hr {
     border-color: var(--white);
 }
 
-#articleBody .tag{
+#articleBody .tag {
     background-color: var(--main-green);
 }
 
 /* 最新消息文章-TAG區顏色+字體 */
-#newArticleBody #post-info{
-    color:  var(--black);
-    background-color:var(--main-green);
+#newArticleBody #post-info {
+    color: var(--black);
+    background-color: var(--main-green);
 }
 
 #newArticleBody #post-info hr {
     border-color: var(--black);
 }
 
-#newArticleBody .tag{
+#newArticleBody .tag {
     background-color: var(--main-yellow);
 }
 
 
-#aboutPost h2{
+#aboutPost h2 {
     padding-bottom: 1rem;
     font-size: 25px;
 }
-#aboutPost P{
+
+#aboutPost P {
     font-size: 16px;
 }
-#newArticleBody #post-info-icon{
+
+#newArticleBody #post-info-icon {
     color: var(--black);
 }
 
