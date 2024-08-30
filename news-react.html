@@ -50,10 +50,34 @@
             );
         };
 
-        function NavBtn({ isCurrent, href, src, alt }) {
+        function NavBtn({ isCurrent = false, href, src, alt, animTarget }) {
+            let target;
+
+            useEffect(() => {
+                target = document.querySelector(`.characters .${animTarget}`);
+
+                return () => {
+                    if (target) {
+                        target.style.animation = 'none';
+                    }
+                };
+            }, [animTarget]);
+
+            const handleMouseEnter = () => {
+                if (target && !target.classList.contains('showall')) {
+                    target.style.animation = 'moveUpAndDown 0.6s ease-in-out infinite';
+                }
+            };
+
+            const handleMouseLeave = () => {
+                if (target) {
+                    target.style.animation = 'none';
+                }
+            };
+
             return (
                 <li className="btn">
-                    <a class={isCurrent === true ? "current" : ""} href={href}>
+                    <a class={isCurrent === true ? "current" : ""} href={href} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                         <img src={src} alt={alt} />
                     </a>
                 </li>
@@ -126,21 +150,9 @@
                                 <li className="cloud">
                                     <img src="./images/news/cloud.png" alt="裝飾雲" />
                                 </li>
-                                <li className="btn">
-                                    <a class="current" href="./news.html">
-                                        <img src="./images/news/exhibition-cur.png" alt="切換至展覽分類" />
-                                    </a>
-                                </li>
-                                <li className="btn">
-                                    <a href="./news-popup.html">
-                                        <img src="./images/news/popup.png" alt="切換至快閃店分類" />
-                                    </a>
-                                </li>
-                                <li className="btn">
-                                    <a href="./news-market.html">
-                                        <img src="./images/news/market.png" alt="切換至市集分類" />
-                                    </a>
-                                </li>
+                                <NavBtn isCurrent={true} href="./news.html" src="./images/news/exhibition-cur.png" alt="展覽分類" animTarget="sunny" />
+                                <NavBtn href="./news-popup.html" src="./images/news/popup.png" alt="切換至快閃店分類" animTarget="rainy" />
+                                <NavBtn href="./news-market.html" src="./images/news/market.png" alt="切換至市集分類" animTarget="winter" />
                                 <li className="cloud">
                                     <img src="./images/news/cloud.png" alt="裝飾雲" />
                                 </li>
