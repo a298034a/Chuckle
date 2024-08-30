@@ -33,15 +33,6 @@
         const { useState, useEffect, useRef } = React;
         const { CSSTransition, TransitionGroup } = window.ReactTransitionGroup;
 
-        function debounce(func, wait) {
-            let timeout;
-            return function (...args) {
-                const context = this;
-                clearTimeout(timeout);
-                timeout = setTimeout(() => func.apply(context, args), wait);
-            };
-        }
-
         function CurrentItem({ href, content, date, title, bg, level }) {
             const className = `item level${level}`;
             return (
@@ -108,25 +99,6 @@
                 getEventData();
             }, []);
 
-            useEffect(() => {
-                const updateRange = debounce(() => {
-                    if (window.innerWidth < 860) {
-                        setRangeStart(1);
-                        setRangeEnd(2);
-                    } else {
-                        setRangeStart(2);
-                        setRangeEnd(3);
-                    }
-                }, 200);
-
-                updateRange();
-                window.addEventListener('resize', updateRange);
-
-                return () => {
-                    window.removeEventListener('resize', updateRange);
-                };
-            }, []);
-
             const generateCurrentItems = () => {
                 if (items.length === 0) return [];
 
@@ -143,6 +115,7 @@
                     level = currentActive - i;
                     newItems.push(<CurrentItem key={index} href={items[index].href} content={items[index].content} date={items[index].date} title={items[index].title} bg={items[index].bg} level={level} />);
                 }
+
                 return newItems;
             };
 
@@ -245,6 +218,15 @@
                 getEventData();
             }, []);
 
+            function debounce(func, wait) {
+                let timeout;
+                return function (...args) {
+                    const context = this;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func.apply(context, args), wait);
+                };
+            }
+
             useEffect(() => {
                 const updateRange = debounce(() => {
                     if (window.innerWidth < 860) {
@@ -254,7 +236,7 @@
                         setRangeStart(2);
                         setRangeEnd(3);
                     }
-                }, 2000);
+                }, 10);
 
                 updateRange();
                 window.addEventListener('resize', updateRange);
@@ -264,7 +246,7 @@
                 };
             }, []);
 
-            const generateCurrentItems = () => {
+            const generateItems = () => {
                 if (items.length === 0) return [];
 
                 let newItems = [];
@@ -315,7 +297,7 @@
                         </figure>
                         <ul>
                             <TransitionGroup component={null}>
-                                {generateCurrentItems().map((item) => (
+                                {generateItems().map((item) => (
                                     <CSSTransition
                                         key={item.key}
                                         timeout={1000}

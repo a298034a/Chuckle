@@ -50,5 +50,25 @@
         "tags": [
             "台中"
         ]
+    },
+    {
+        "href": "#",
+        "src": "./images/news/van-gogh.jpg",
+        "alt": "圖畫",
+        "date": "2025/3/1~2025/5/1",
+        "title": "梵谷畫展",
+        "tags": [
+            "高雄"
+        ]
+    },
+    {
+        "href": "#",
+        "src": "./images/news/kitchen.jpg",
+        "alt": "廚房裝潢",
+        "date": "2025/3/23~2025/6/23",
+        "title": "廚房裝潢設計特展",
+        "tags": [
+            "新竹"
+        ]
     }
 ]
