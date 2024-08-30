@@ -33,6 +33,15 @@
         const { useState, useEffect, useRef } = React;
         const { CSSTransition, TransitionGroup } = window.ReactTransitionGroup;
 
+        function debounce(func, wait) {
+            let timeout;
+            return function (...args) {
+                const context = this;
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(context, args), wait);
+            };
+        }
+
         function CurrentItem({ href, content, date, title, bg, level }) {
             const className = `item level${level}`;
             return (
@@ -90,14 +99,17 @@
             const [rangeEnd, setRangeEnd] = useState(3);
             const [items, setItems] = useState([]);
 
-            const getCurrentEventData = async () => {
+            const getEventData = async () => {
                 const result = await axios.get("./json/currentEvent.json");
                 setItems(result.data);
             }
-            getCurrentEventData();
 
             useEffect(() => {
-                const updateRange = () => {
+                getEventData();
+            }, []);
+
+            useEffect(() => {
+                const updateRange = debounce(() => {
                     if (window.innerWidth < 860) {
                         setRangeStart(1);
                         setRangeEnd(2);
@@ -105,7 +117,7 @@
                         setRangeStart(2);
                         setRangeEnd(3);
                     }
-                };
+                }, 200);
 
                 updateRange();
                 window.addEventListener('resize', updateRange);
@@ -224,14 +236,17 @@
             const [rangeEnd, setRangeEnd] = useState(3);
             const [items, setItems] = useState([]);
 
-            const getCurrentEventData = async () => {
+            const getEventData = async () => {
                 const result = await axios.get("./json/upcommingEvent.json");
                 setItems(result.data);
             }
-            getCurrentEventData();
 
             useEffect(() => {
-                const updateRange = () => {
+                getEventData();
+            }, []);
+
+            useEffect(() => {
+                const updateRange = debounce(() => {
                     if (window.innerWidth < 860) {
                         setRangeStart(1);
                         setRangeEnd(2);
@@ -239,7 +254,7 @@
                         setRangeStart(2);
                         setRangeEnd(3);
                     }
-                };
+                }, 2000);
 
                 updateRange();
                 window.addEventListener('resize', updateRange);
@@ -296,7 +311,7 @@
                 <>
                     <section id="upcoming-events">
                         <figure class="upcoming-title">
-                            <img src="./images/news/upcoming-title.png" alt="即將開始"/>
+                            <img src="./images/news/upcoming-title.png" alt="即將開始" />
                         </figure>
                         <ul>
                             <TransitionGroup component={null}>
