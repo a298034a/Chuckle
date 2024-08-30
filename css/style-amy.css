@@ -1303,7 +1303,7 @@
 
     .right-leave,
     .left-enter.left-enter-active {
-        left: -16%;
+        left: -30%;
     }
 
     .right-enter,
@@ -1318,7 +1318,7 @@
 
     .left-enter,
     .right-leave.right-leave-active {
-        left: -30%;
+        left: -45%;
     }
 }
 

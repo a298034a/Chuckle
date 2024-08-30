@@ -99,6 +99,34 @@
                 getEventData();
             }, []);
 
+            function debounce(func, wait) {
+                let timeout;
+                return function (...args) {
+                    const context = this;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func.apply(context, args), wait);
+                };
+            }
+
+            useEffect(() => {
+                const updateRange = debounce(() => {
+                    if (window.innerWidth < 860) {
+                        setRangeStart(1);
+                        setRangeEnd(2);
+                    } else {
+                        setRangeStart(2);
+                        setRangeEnd(3);
+                    }
+                }, 100);
+
+                updateRange();
+                window.addEventListener('resize', updateRange);
+
+                return () => {
+                    window.removeEventListener('resize', updateRange);
+                };
+            }, []);
+
             const generateCurrentItems = () => {
                 if (items.length === 0) return [];
 
@@ -169,13 +197,16 @@
                                 ))}
                             </TransitionGroup>
                         </ul>
-                        <div class="swiper-btn swiper-btn-pre" onClick={moveLeft}>
+                        <div className="swiper-btn swiper-btn-pre" onClick={moveLeft}>
                             <img src="./images/hand-l.png" alt="" />
                         </div>
-                        <div class="swiper-btn swiper-btn-next" onClick={moveRight}>
+                        <div className="swiper-btn swiper-btn-next" onClick={moveRight}>
                             <img src="./images/hand-r.png" alt="" />
                         </div>
                     </section>
+                    <div className="character">
+                        <img src="./images/news/news-winter.png" alt="" />
+                    </div>
                 </>
             );
         }
@@ -236,7 +267,7 @@
                         setRangeStart(2);
                         setRangeEnd(3);
                     }
-                }, 10);
+                }, 100);
 
                 updateRange();
                 window.addEventListener('resize', updateRange);
@@ -313,10 +344,10 @@
                                 ))}
                             </TransitionGroup>
                         </ul>
-                        <div class="swiper-btn swiper-btn-pre" onClick={moveLeft}>
+                        <div className="swiper-btn swiper-btn-pre" onClick={moveLeft}>
                             <img src="./images/hand-l.png" alt="" />
                         </div>
-                        <div class="swiper-btn swiper-btn-next" onClick={moveRight}>
+                        <div className="swiper-btn swiper-btn-next" onClick={moveRight}>
                             <img src="./images/hand-r.png" alt="" />
                         </div>
                     </section>
