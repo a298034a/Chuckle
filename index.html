@@ -200,6 +200,12 @@
                 }
             };
 
+            const handleDotClick = (index) => {
+                if (!isThrottledRef.current) {
+                    setSlideIndex(index);
+                }
+            };
+
             useEffect(() => {
                 const arrowL = document.querySelector(`.arrow-btn-l`);
 
@@ -239,9 +245,14 @@
                     <div className="arrow-btn" onClick={handlePrev}><img className="arrow-btn-l" src="./images/index/button-2.png" alt="" /></div>
                     <div className="arrow-btn" onClick={handleNext}><img className="arrow-btn-r" src="./images/index/button-1.png" alt="" /></div>
                     <div className="carousel-dots">
-                        <div className="dot"></div>
-                        <div className="dot"></div>
-                        <div className="dot"></div>
+                        {items.map((_, index) => (
+                            <div
+                                key={index}
+                                className={`dot ${index === slideIndex ? 'active' : ''}`}
+                                onClick={() => handleDotClick(index)}
+                            ></div>
+                        ))}
+                        
                     </div>
                 </>
             )
@@ -253,13 +264,13 @@
                 date: "2024/07/27~2024/07/28"
             },
             {
-                bg: "./images/index/market.jpg",
-                title: "南村創意市集－展現你的個人風格！",
-                date: "2024/07/27~2024/07/28"
+                bg: "./images/news/winter.jpg",
+                title: "歐洲節慶與美食的奇幻之旅",
+                date: "2024/8/1~2024/9/31"
             },
             {
-                bg: "./images/index/market.jpg",
-                title: "南村創意市集－展現你的個人風格！",
+                bg: "./images/news/ai.jpg",
+                title: "AI誕生的秘辛",
                 date: "2024/07/27~2024/07/28"
             }
         ]
