@@ -249,7 +249,7 @@ hr {
     margin: 10px 0px;
 }
 
-#tagsArea {
+.tagsArea {
     display: flex;
     flex-wrap: wrap
 }
@@ -262,7 +262,24 @@ hr {
     border-radius: 20px;
     font-size: 14px;
     color: var(--black);
+    cursor: pointer;
 }
+/* 文章列表-TAG區顏色 */
+#articleListBody .tag {
+    font-size: 20px;
+    border-radius: 10px;
+}
+#articleListBody #hotFilter .tag {
+    background-color: var(--black);
+    color: var(--base-backgroundColor);
+    padding: 0.4rem 0.8rem;
+}
+#articleListBody #listTag .tag {
+    border: var(--black) 3px solid;
+    font-weight: 500;
+    padding: 0.2rem 0.8rem;
+}
+
 
 /* 文章內容-TAG區顏色 */
 #articleBody #post-info {
@@ -383,6 +400,7 @@ hr {
     padding-left: 2%;
 
     width: 200px;
+    
     /* 設置寬度，根據需要調整 */
     height: auto;
     /* 設置高度，與寬度一致以保持圓形 */
@@ -402,6 +420,16 @@ hr {
 .listTextArea {
     width: 100%;
     height: auto;
+}
+.listTextArea h2{
+    overflow: hidden;/* 多出來時則省略 */
+    text-overflow: ellipsis;
+      /* 自動加省略號... */
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      /* 定義Box垂直佈局 */
+      -webkit-line-clamp: 1;
+      /* 行數限制 */
 }
 
 .listTextArea p {
