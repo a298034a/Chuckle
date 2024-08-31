@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* #region 共用區 */
+:root {
+    --next-z: 5;
+    --prev-z: 9;
+}
+
 .tag {
     display: inline-flex;
     padding: 1px 10px;
@@ -338,6 +343,21 @@
     padding-top: 3%;
     padding-bottom: 4.5%;
     flex: 0.81;
+
+    overflow: hidden;
+}
+
+.carousel .wrapper {
+    position: relative;
+
+    width: 85%;
+    height: 100%;
+
+    margin-right: 5%;
+    overflow: hidden;
+
+    border-radius: 20px;
+    border: var(--black) 2px solid;
 }
 
 .carousel a {
@@ -347,12 +367,8 @@
 
     height: 100%;
 
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(136, 136, 136, 0.2) 28%, rgba(96, 95, 95, 0.5) 60%, #383737 90%), url(../images/index/market.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
-    border-radius: 20px;
-    border: var(--black) 2px solid;
 
     color: var(--white);
     padding-bottom: 5%;
@@ -385,6 +401,30 @@
 
 .carousel-dots {
     display: none;
+}
+
+.swiper-slide {
+    transition: transform 0.5s ease;
+    position: absolute;
+    width: 100%;
+    transform: translateX(100%);
+
+    z-index: 1;
+}
+
+.active {
+    transform: translateX(0);
+    z-index: 10;
+}
+
+.prev {
+    transform: translateX(-100%);
+    z-index: var(--prev-z);
+}
+
+.next {
+    transform: translateX(100%);
+    z-index: var(--next-z);
 }
 
 @media (max-width:820px) {
@@ -1324,6 +1364,7 @@
 
 /* #endregion */
 
+/* #region 即將舉辦 */
 #upcoming-events {
     display: flex;
     flex-direction: column;

@@ -138,15 +138,68 @@
             <div class="sunny-l"><img src="./images/index/sunny-bg.png" alt=""></div>
         </section>
     </main>
-    <!-- <script src="./js/ArrowBtnHover.js"></script> -->
+
     <script src="./js/navbar.js"></script>
     <script src="./js/footer.js"></script>
 
     <script type="text/babel">
-        const { useEffect } = React;
+        const { useEffect, useState, useRef } = React;
+
+        function Item({ bg, title, date, className }) {
+            return (
+                <a className={`swiper-slide ${className}`} href="#" style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(136, 136, 136, 0.2) 28%, rgba(96, 95, 95, 0.5) 60%, #383737 90%), url(${bg})` }}>
+                    <h2>{title}</h2>
+                    <p>{date}</p>
+                </a>
+            )
+        }
 
         function App() {
-            // useEffect 觸發的時間點是在渲染之後
+            const [slideIndex, setSlideIndex] = useState(0);
+            const isThrottledRef = useRef(false);
+
+            const slideNumber = items.length;
+
+            const handleNext = () => {
+                if (!isThrottledRef.current) {
+                    isThrottledRef.current = true;
+                    setSlideIndex((prevIndex) => (prevIndex === slideNumber - 1 ? 0 : prevIndex + 1));
+
+                    document.documentElement.style.setProperty('--next-z', `5`);
+                    document.documentElement.style.setProperty('--prev-z', `9`);
+
+                    setTimeout(() => {
+                        isThrottledRef.current = false;
+                    }, 500);
+                }
+            };
+
+            const handlePrev = () => {
+                if (!isThrottledRef.current) {
+                    isThrottledRef.current = true;
+                    setSlideIndex((prevIndex) => (prevIndex === 0 ? slideNumber - 1 : prevIndex - 1));
+
+                    document.documentElement.style.setProperty('--next-z', `9`);
+                    document.documentElement.style.setProperty('--prev-z', `5`);
+
+                    setTimeout(() => {
+                        isThrottledRef.current = false;
+                    }, 500);
+                }
+            };
+
+            const getClassNames = (index) => {
+                if (index === slideIndex) {
+                    return 'active';
+                } else if (index === (slideIndex === 0 ? slideNumber - 1 : slideIndex - 1)) {
+                    return 'prev';
+                } else if (index === (slideIndex === slideNumber - 1 ? 0 : slideIndex + 1)) {
+                    return 'next';
+                } else {
+                    return '';
+                }
+            };
+
             useEffect(() => {
                 const arrowL = document.querySelector(`.arrow-btn-l`);
 
@@ -167,16 +220,24 @@
                 arrowR.addEventListener('mouseout', function () {
                     this.src = './images/index/button-1.png';
                 });
-            });
+            }, []);
 
             return (
                 <>
-                    <a href="#">
-                        <h2>南村創意市集－展現你的個人風格！</h2>
-                        <p>2024/07/27~2024/07/28</p>
-                    </a>
-                    <div className="arrow-btn"><img className="arrow-btn-l" src="./images/index/button-2.png" alt="" /></div>
-                    <div className="arrow-btn"><img className="arrow-btn-r" src="./images/index/button-1.png" alt="" /></div>
+                    <div className="wrapper">
+                        {items.map((item, index) => (
+                            <Item
+                                key={index}
+                                bg={item.bg}
+                                title={item.title}
+                                date={item.date}
+                                className={getClassNames(index)}
+                            />
+                        ))}
+                    </div>
+
+                    <div className="arrow-btn" onClick={handlePrev}><img className="arrow-btn-l" src="./images/index/button-2.png" alt="" /></div>
+                    <div className="arrow-btn" onClick={handleNext}><img className="arrow-btn-r" src="./images/index/button-1.png" alt="" /></div>
                     <div className="carousel-dots">
                         <div className="dot"></div>
                         <div className="dot"></div>
@@ -185,6 +246,23 @@
                 </>
             )
         }
+        const items = [
+            {
+                bg: "./images/index/market.jpg",
+                title: "南村創意市集－展現你的個人風格！",
+                date: "2024/07/27~2024/07/28"
+            },
+            {
+                bg: "./images/index/market.jpg",
+                title: "南村創意市集－展現你的個人風格！",
+                date: "2024/07/27~2024/07/28"
+            },
+            {
+                bg: "./images/index/market.jpg",
+                title: "南村創意市集－展現你的個人風格！",
+                date: "2024/07/27~2024/07/28"
+            }
+        ]
         ReactDOM.createRoot(document.getElementById('root')).render(<App />);
     </script>
 </body>
