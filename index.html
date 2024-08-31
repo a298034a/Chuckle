@@ -77,19 +77,7 @@
                 <source media="(max-width: 820px)" srcset="./images/index/whatnews-820.png" />
                 <img src="./images/index/whatnews.png" alt="最新活動">
             </picture>
-            <div id="root" class="carousel">
-                <!-- <a href="#">
-                    <h2>南村創意市集－展現你的個人風格！</h2>
-                    <p>2024/07/27~2024/07/28</p>
-                </a> -->
-                <!-- <div class="arrow-btn"><img class="arrow-btn-l" src="./images/index/button-2.png" alt=""></div>
-                <div class="arrow-btn"><img class="arrow-btn-r" src="./images/index/button-1.png" alt=""></div> -->
-                <!-- <div class="carousel-dots">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </div> -->
-            </div>
+            <div id="root" class="carousel"></div>
         </section>
         <!-- 熱門文章 -->
         <section id="hot-article">
@@ -131,8 +119,8 @@
                         <a class="tag more" href="#">查看更多</a>
                     </li>
                 </ul>
-                <!-- TODO: 改成 google 地圖 -->
-                <div class="map"></div>
+                <!-- data-json-path => json 資料路徑 -->
+                <div id="map" data-json-path="./json/indexMarker.json"></div>
             </div>
             <div class="sunny-r"><img src="./images/index/sunny-bg.png" alt=""></div>
             <div class="sunny-l"><img src="./images/index/sunny-bg.png" alt=""></div>
@@ -141,6 +129,9 @@
 
     <script src="./js/navbar.js"></script>
     <script src="./js/footer.js"></script>
+    <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+            ({ key: "AIzaSyBnV_x0SwoErXaHcDSIh84eI1y4YRj0sYY", v: "weekly" });</script>
+    <script src="./js/initMap.js"></script>
 
     <script type="text/babel">
         const { useEffect, useState, useRef } = React;
@@ -206,6 +197,7 @@
                 }
             };
 
+            //按鈕hover
             useEffect(() => {
                 const arrowL = document.querySelector(`.arrow-btn-l`);
 
@@ -227,6 +219,16 @@
                     this.src = './images/index/button-1.png';
                 });
             }, []);
+
+            //自動輪播
+            useEffect(() => {
+                const interval = setInterval(() => {
+                    handleNext();
+                }, 5000); // 每5秒切换一次
+
+                // 清除計時器
+                return () => clearInterval(interval);
+            }, [slideIndex]);
 
             return (
                 <>
@@ -252,7 +254,7 @@
                                 onClick={() => handleDotClick(index)}
                             ></div>
                         ))}
-                        
+
                     </div>
                 </>
             )
