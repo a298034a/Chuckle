@@ -427,6 +427,10 @@
     z-index: var(--next-z);
 }
 
+.dot.active {
+    background-color: var(--main-pink);
+}
+
 @media (max-width:820px) {
     #news {
         flex-direction: column;
@@ -455,12 +459,20 @@
         margin: 0;
     }
 
-    .carousel a {
-        width: 72%;
-        margin-top: 14%;
-        margin-bottom: 2.5%;
+    .carousel .wrapper {
+        position: relative;
 
+        width: 83%;
         aspect-ratio: 3/2;
+
+        margin-top: 16%;
+        margin-bottom: 2%;
+
+        margin-right: 0;
+        overflow: hidden;
+
+        border-radius: 20px;
+        border: var(--black) 2px solid;
     }
 
     .carousel a h2 {
@@ -483,15 +495,13 @@
 
         border: solid 5px var(--main-pink);
         border-radius: 50%;
+
+        cursor: pointer;
+        transition: all 0.3s;
     }
 }
 
 @media (max-width:431px) {
-    .carousel a {
-        width: 74%;
-        border-radius: 10px;
-    }
-
     .carousel a h2 {
         font-size: 1.1rem;
     }
