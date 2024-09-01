@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <a href="./articleList.html"><img class="search-icon" src="./images/search/search-icon.png"></a>
                     </form>
                 </li>
-                <li><a href="./news.html">最新消息</a></li>
+                <li><a href="./news-exhibition.html">最新消息</a></li>
                 <li><a href="./themeSeason.html">主題季</a></li>
                 <li><a href="./officialEvent.html">官方活動</a></li>
                 <li><a href="./articleList.html">文章列表</a></li>
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <li><a id="member-modal-btn" href="#">會員登入</a></li>
             </ul>
             <ul class="nav-list">
-                <li class="menu"><a class="contrast-text" href="./news.html">最新消息</a></li>
+                <li class="menu"><a class="contrast-text" href="./news-exhibition.html">最新消息</a></li>
                 <li class="menu">
                     <a class="contrast-text" href="#">活動企劃</a>
                     <ul class="dropdown-menu">
