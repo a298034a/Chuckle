@@ -86,9 +86,13 @@
 
         function App() {
             const [isContainerVisible, setContainerVisible] = useState(false);
-
             const handleTitleClick = () => {
                 setContainerVisible(!isContainerVisible);
+            };
+
+            const [isTypeVisible, setTypeVisible] = useState(true); //類型
+            const handleTypeClick = () => {
+                setTypeVisible(!isTypeVisible); // 切換 inOder-1 的可見性
             };
 
             return (
@@ -122,11 +126,13 @@
                                     </ul>
                                 )}
 
-                                <div id="type-title2" className="filter-title-Area" >
+                               
+                                
+                                    <div id="type-title2" className="filter-title-Area" onClick={handleTypeClick}>
                                     <legend className="filter-title">類型</legend>
                                     <FilterBtn />
                                 </div>
-
+                                { isTypeVisible && (
                                 <ul id="type-body" className="Classification">
                                     <div className="filter-order-Area">
                                         <li>
@@ -144,6 +150,7 @@
                                         </li>
                                     </div>
                                 </ul>
+                            )}
                             </div>
                         </div>
 
