@@ -102,7 +102,6 @@
 
 /* #region list區塊規劃*/
 #attraction-introduction {
-    position: relative;
     width: auto;
     margin: 0 10%;
     margin-top: 120px;
@@ -112,14 +111,17 @@
 }
 
 #attraction-article {
-    position: absolute;
-    top: 1;
     width: 80%;
-    /* height: 50vh; */
+    height: 50vh;
+    /* 加高度才能滑 */
     margin: 0 10%;
     padding: 5% 0;
-    overflow: hidden;
+    overflow:auto;
 }
+#attraction-article::-webkit-scrollbar {
+    display: none;
+  }
+
 
 #attraction-article .addressPosts {
     margin-bottom: 5%;
