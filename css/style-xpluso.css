@@ -68,6 +68,7 @@ h4 {
     letter-spacing: 1px;
 }
 
+#newArticleBody p,
 #articleBody p,
 #articleListBody p,
 #underNev p {
@@ -112,6 +113,7 @@ hr {
     margin-left: 32%;
 
 }
+
 
 #comment {
     margin-top: 4%;
@@ -166,34 +168,57 @@ hr {
     margin-top: 1rem 0;
 }
 
+
 /* #endregion */
+
+/* #region 最新消息-文章主體 */
+#newArticleBody #post-body p {
+    font-size: 20px;
+    padding: 2rem 0;
+}
+
+#post-body .img2and2 {
+    /* 圖片並排 */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 2%;
+    flex: 1;
+    width: 49%;
+}
+
+#blockbuttom {
+    height: 5vh;
+}
+
+/* #endregion */
+
 /* #region 文章TAG區*/
 #post-info {
-    width: 400px;
+    /* width: 400px; */
+    width: 20%;
     height: auto;
-    background-color: var(--main-pink);
+
     position: fixed;
     top: 13%;
-    left: 5%;
+    left: 7%;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
-
-#post-info h2,
-#post-info p {
-    color: var(--white);
-}
-
 
 #post-info-text {
-    padding: 50px;
+    padding: 40px;
+    padding-bottom: 20px;
 }
 
-.authorBio {
+.bio {
     display: flex;
     padding-bottom: 20px;
 }
 
-.authorBio .authorFace {
+.bio .authorFace {
 
     width: 120px;
     /* 設置寬度，根據需要調整 */
@@ -201,7 +226,7 @@ hr {
     /* 設置高度，與寬度一致以保持圓形 */
 }
 
-.authorBio .authorFace img {
+.bio .authorFace img {
 
     border-radius: 50%;
     /* width: 100%;
@@ -218,26 +243,106 @@ hr {
 
 #post-info hr {
     margin: 20px 0px;
-    border-color: var(--white);
 }
 
 #postTime {
     margin: 10px 0px;
 }
 
+.tagsArea {
+    display: flex;
+    flex-wrap: wrap
+}
+
 .tag {
 
     margin: 0.5rem 0.5rem;
+    margin-left: 0;
     padding: 0.1rem 1rem;
     border-radius: 20px;
-    background-color: var(--main-green);
     font-size: 14px;
+    color: var(--black);
+    cursor: pointer;
+}
+/* 文章列表-TAG區顏色 */
+#articleListBody .tag {
+    font-size: 20px;
+    border-radius: 10px;
+}
+#articleListBody #hotFilter .tag {
+    background-color: var(--black);
+    color: var(--base-backgroundColor);
+    padding: 0.4rem 0.8rem;
+}
+#articleListBody #listTag .tag {
+    border: var(--black) 3px solid;
+    font-weight: 500;
+    padding: 0.2rem 0.8rem;
+}
+
+
+/* 文章內容-TAG區顏色 */
+#articleBody #post-info {
+    color: var(--white);
+    background-color: var(--main-pink);
+}
+
+#articleBody #post-info hr {
+    border-color: var(--white);
+}
+
+#articleBody .tag {
+    background-color: var(--main-green);
+}
+
+/* 最新消息文章-TAG區顏色+字體 */
+#newArticleBody #post-info {
+    color: var(--black);
+    background-color: var(--main-green);
+}
+
+#newArticleBody #post-info hr {
+    border-color: var(--black);
+}
+
+#newArticleBody .tag {
+    background-color: var(--main-yellow);
+}
+
+
+#aboutPost h2 {
+    padding-bottom: 1rem;
+    font-size: 25px;
+}
+
+#aboutPost P {
+    font-size: 16px;
+}
+
+#newArticleBody #post-info-icon {
     color: var(--black);
 }
 
-#tagsArea {
+/* ICON區 */
+#post-info-icon {
+    color: var(--white);
+    padding: 0px 40px;
+    padding-bottom: 40px;
+}
+
+.posts-btn {
     display: flex;
-    flex-wrap: wrap
+}
+
+.posts-btn img {
+    width: 32px;
+    margin: 3px;
+}
+
+#post-info-icon p {
+    font-size: 14px;
+    padding-left: 7px;
+    margin-top: -8px;
 }
 
 /* #endregion */
@@ -295,6 +400,7 @@ hr {
     padding-left: 2%;
 
     width: 200px;
+    
     /* 設置寬度，根據需要調整 */
     height: auto;
     /* 設置高度，與寬度一致以保持圓形 */
@@ -314,6 +420,16 @@ hr {
 .listTextArea {
     width: 100%;
     height: auto;
+}
+.listTextArea h2{
+    overflow: hidden;/* 多出來時則省略 */
+    text-overflow: ellipsis;
+      /* 自動加省略號... */
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      /* 定義Box垂直佈局 */
+      -webkit-line-clamp: 1;
+      /* 行數限制 */
 }
 
 .listTextArea p {
@@ -392,14 +508,17 @@ hr {
     height: auto;
     background-color: var(--main-pink);
     position: fixed;
-    top: 280px;
+    top: 150px;
     left: 5%;
     border-radius: 30px;
+    padding: 25px;
 }
 
 #post-filter-text {
     padding: 50px;
 }
+
+
 
 /* #endregion */
 
@@ -447,7 +566,7 @@ body.themeSeason {
 
 .storeBlock {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .store {
@@ -460,8 +579,8 @@ body.themeSeason {
     margin-top: 8%;
 }
 
-.straw_icon{
-width: 10%;
+.straw_icon {
+    width: 10%;
 }
 
 .store .slogan {
