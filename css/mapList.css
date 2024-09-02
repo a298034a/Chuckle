@@ -14,6 +14,7 @@
 #map-body h2 {
     font-size: 25px;
 }
+
 #map-body h3 {
     font-size: 20px;
 }
@@ -41,7 +42,7 @@
     margin: 16px 0px;
 }
 
-#map-nevleft{
+#map-nevleft {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -52,12 +53,16 @@
     width: 64px;
     margin: 0 8px;
     cursor: pointer;
+    /* background-image: url(../images/map/logo_bg.svg); */
 }
-#back{
-    justify-content:flex-end;  
+
+#back {
+    justify-content: flex-end;
 }
-#back:hover{
-    /* background-image: url("search-icon.png"); */
+
+#back:hover {
+    background-image: url(../images/map/goback-hover.svg);
+    /* transform: scale(1.1,1.1); */
 }
 
 .icon-search {
@@ -78,7 +83,8 @@
     margin: 0 8px;
     text-align: center;
 }
-#map-nev .nev-things:hover{
+
+#map-nev .nev-things:hover {
     background-color: var(--hover-yellow);
     transition: 0.35s;
 }
@@ -108,8 +114,21 @@
     height: 100vh;
     background-color: #FFE24A;
     /* 到時候先display:none，按地標再打開，按LOGO會再從左邊收合 */
+    opacity: 0;
+    
 }
 
+.slide-out {
+    transform: translateX(-200%);
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    opacity: 0;
+  }
+
+  .slide-in {
+    transform: translateX(0%);
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    opacity: 0;
+  }
 /* #endregion */
 
 
@@ -129,11 +148,12 @@
     /* 加高度才能滑 */
     margin: 0 10%;
     padding: 5% 0;
-    overflow:auto;
+    overflow: auto;
 }
+
 #attraction-article::-webkit-scrollbar {
     display: none;
-  }
+}
 
 
 #attraction-article .addressPosts {
@@ -143,7 +163,7 @@
     border-radius: 10px;
 }
 
-#attraction-article .addressPosts:hover{
+#attraction-article .addressPosts:hover {
     background-color: var(--hover-yellow);
     transition: 0.35s;
 }
@@ -166,7 +186,7 @@
 
 .posts-btn {
     display: flex;
-    
+
 }
 
 .posts-btn img {
@@ -176,9 +196,7 @@
     cursor: pointer;
 }
 
-.posts-btn img:hover{
-
-}
+.posts-btn img:hover {}
 
 
 .posts-content {

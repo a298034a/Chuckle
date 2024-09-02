@@ -16,7 +16,7 @@
     <header id="map-nev">
         <!-- LOGO和搜尋欄在的地方 -->
         <div id="map-nevleft">
-            <img class="map-icon" src="./images/map/logo_bg.svg" alt="黃版LOGO">
+            <img class="map-icon" src="./images/map/logo_bg.svg" onclick="toggleImage(this)" alt="黃版LOGO">
             <form class="search-container">
                 <input type="text" id="search-bar" placeholder="想去哪玩？">
                 <a href="#"><img class="search-icon" src="./images/search/search-icon.png"></a>
@@ -33,8 +33,31 @@
 
     </header>
 
+<script>
+    // list往左
+function toggleImage(prop) {
+    let list = document.getElementById('list');
 
-    <div id="list" class="list">
+  // 檢查目前圖片的 src，並根據不同的 src 切換圖片
+  if (prop.src.includes("logo_bg.svg")) {
+    prop.src = "./images/map/logo_bg_white.svg";
+    
+    list.classList.add('slide-in');
+    list.classList.remove('slide-out');
+    list.style.opacity=1;
+  } else {
+    prop.src = "./images/map/logo_bg.svg";
+    list.style.opacity=0;
+    
+    list.classList.add('slide-out');
+    list.classList.remove('slide-in');
+  }
+}
+    
+</script>
+
+
+    <div id="list" class="list" >
 
         <div id="attraction-introduction">
             <h2>店家名稱店家名稱店家名稱</h2>
