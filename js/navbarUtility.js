@@ -11,12 +11,19 @@ const white = rootStyle.getPropertyValue('--white');
 //取得需要變色的文字 contrast-text
 const contrastTexts = document.querySelectorAll(".contrast-text");
 
-//取得需要變色的文字 contrast-text
+//取得需要變色的文字
 const texts = document.querySelectorAll(".navigation .menu>a");
+
+//取得漢堡按鈕
+const bars = document.querySelectorAll(".navigation .hamburger .bar");
 
 // 根據背景顏色改變導覽列顏色
 if (backgroundColor == black) {
-    updateTextColor(contrastTexts, white);
+    updateColor(contrastTexts, white);
+
+    bars.forEach(bar =>{
+        bar.style.backgroundColor = white;
+    });
 }
 
 let scrollYisZero;
@@ -27,7 +34,7 @@ window.addEventListener('scroll', function () {
 
         if (backgroundColor == black) {
             document.documentElement.style.setProperty('--border-color', black);
-            updateTextColor(texts, black);
+            updateColor(texts, black);
         }
     }
     else if (window.scrollY == 0 && scrollYisZero != true) {
@@ -36,13 +43,13 @@ window.addEventListener('scroll', function () {
 
         if (backgroundColor == black) {
             document.documentElement.style.setProperty('--border-color', white);
-            updateTextColor(texts, white);
+            updateColor(texts, white);
         }
     }
 });
 
 
-function updateTextColor(texts, color) {
+function updateColor(texts, color) {
     texts.forEach(text => {
         text.style.color = color;
     });
