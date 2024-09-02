@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async function () {
     const jsonPath = document.getElementById('map').getAttribute('data-json-path');
-    
+
     //取得 marker 資料
     const response = await fetch(jsonPath);
     const markersData = await response.json();
@@ -21,19 +21,26 @@ document.addEventListener("DOMContentLoaded", async function () {
         });
 
         markersData.forEach((data) => {
-            const flagImg = document.createElement("img");
-            flagImg.style.width = "50%";
-            flagImg.src = data.imgSrc;
+            //之後寫css class 控制樣式比較好
+            const img = document.createElement("img");
+            img.style.width = "50%";
+            img.src = data.imgSrc;
 
             const marker = new AdvancedMarkerElement({
                 map: map,
                 position: data.position,
-                content: flagImg,
+                content: img,
                 title: data.title,
             });
 
             marker.addListener("click", () => {
-                window.open(data.url, '_blank');
+                //如果資料帶有連結則打開連結
+                if (data.url) {
+                    window.open(data.url, '_blank');
+                }
+                else {
+                    //地圖頁的視窗開關寫這裡
+                }
             });
         });
     }
