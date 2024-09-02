@@ -153,14 +153,19 @@
 
 .posts-btn {
     display: flex;
+    
 }
 
 .posts-btn img {
     width: 24px;
     height: 24px;
     margin: 0 2%;
+    cursor: pointer;
 }
 
+.posts-btn img:hover{
+    
+}
 
 
 .posts-content {

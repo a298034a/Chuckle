@@ -264,6 +264,10 @@ hr {
     color: var(--black);
     cursor: pointer;
 }
+.tag:hover{
+    transform: scale(1.1,1.1);
+}
+
 /* 文章列表-TAG區顏色 */
 #articleListBody .tag {
     font-size: 20px;
@@ -278,6 +282,10 @@ hr {
     border: var(--black) 3px solid;
     font-weight: 500;
     padding: 0.2rem 0.8rem;
+}
+
+#articleListBody #listTag .tag:hover{
+background-color: rgba(0, 0, 0, 0.2);
 }
 
 
