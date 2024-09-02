@@ -29,35 +29,48 @@
             <a class="tag nev-things" href="#">台北市</a>
 
         </div>
-        <a href="#"><img id="back" class="map-icon" src="./images/map/goback.svg"></a>
-
+        <a href="#" onclick="history.back(); return false;" onmouseover="changeImage(true);"
+            onmouseout="changeImage(false);">
+            <img id="back" class="map-icon" src="./images/map/goback.svg" alt="返回">
+        </a>
     </header>
 
-<script>
-    // list往左
-function toggleImage(prop) {
-    let list = document.getElementById('list');
+    <script>
+        // list往左
+        function toggleImage(prop) {
+            let list = document.getElementById('list');
 
-  // 檢查目前圖片的 src，並根據不同的 src 切換圖片
-  if (prop.src.includes("logo_bg.svg")) {
-    prop.src = "./images/map/logo_bg_white.svg";
-    
-    list.classList.add('slide-in');
-    list.classList.remove('slide-out');
-    list.style.opacity=1;
-  } else {
-    prop.src = "./images/map/logo_bg.svg";
-    list.style.opacity=0;
-    
-    list.classList.add('slide-out');
-    list.classList.remove('slide-in');
-  }
-}
-    
-</script>
+            // 檢查目前圖片的 src，並根據不同的 src 切換圖片
+            if (prop.src.includes("logo_bg.svg")) {
+                prop.src = "./images/map/logo_bg_white.svg";
+
+                list.classList.add('slide-in');
+                list.classList.remove('slide-out');
+                list.style.opacity = 1;
+            } else {
+                prop.src = "./images/map/logo_bg.svg";
+                list.style.opacity = 0;
+
+                list.classList.add('slide-out');
+                list.classList.remove('slide-in');
+            }
+
+            function changeImage(isHover) {
+                const back = document.getElementById('back');
+
+                if (isHover) {
+                    back.src = './images/map/goback-hover.svg'; // 滑鼠移入時的圖片
+                } else {
+                    back.src = './images/map/goback.svg'; // 滑鼠移出時恢復的圖片
+                    
+                }
+            }
+        }
+
+    </script>
 
 
-    <div id="list" class="list" >
+    <div id="list" class="list">
 
         <div id="attraction-introduction">
             <h2>店家名稱店家名稱店家名稱</h2>
