@@ -613,6 +613,36 @@ body.themeSeason {
     cursor: pointer;
 }
 
+/* 草莓 */
+.thing .col{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 1%;
+}
+.thing .mask{
+    mask-image: url(../images/theme/straw_icon.svg);
+    mask-size: 100% 100%;
+    mask-position: center;
+    mask-repeat: no-repeat;
+}
+.thing img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+.thing .photo{
+    z-index: 10;
+    width: 97%;
+    position: absolute;
+    margin: -9% 10%;
+}
+.thing .straw{
+    width: 100%;
+   
+}
 
 
 /* #endregion */
@@ -629,7 +659,7 @@ body.themeSeason {
 #straw-1 {
     width: 70%;
     margin: 0% 10%;
-    margin-top: 100%;
+    margin-top: 10%;
 }
 
 #straw-2 {
