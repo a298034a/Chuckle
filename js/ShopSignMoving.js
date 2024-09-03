@@ -31,7 +31,9 @@ function updatePositionByDistance() {
 
     let top = 400 * (window.innerWidth / 1980);
     //根據平板 banner 高度進行補正
-    if (window.innerWidth <= 860) {
+    if (window.innerWidth <= 430) {
+        top += 620;
+    } else if (window.innerWidth <= 860) {
         top += 220;
     }
 

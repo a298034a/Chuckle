@@ -266,6 +266,7 @@
     box-shadow: var(--basic1-shadow);
     border-radius: 10px;
     padding: 10px 20px;
+    margin-top: 3px;
 }
 
 .dropdown-menu li {
