@@ -597,12 +597,17 @@ body.themeSeason {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     /* 粉框 */
     /* padding: 5px 16px;
     margin-top: 2%;
     background-color: var(--theme-pink);
     border-radius: 99px;
     width: 1; */
+}
+
+.slogan h4{
+    padding: 0 2%;
 }
 
 .store .thing {
@@ -667,7 +672,10 @@ body.themeSeason {
     bottom: -5%;
     right: 70%;
     z-index: 1;
+    margin-left: 5%;
+    
 }
+
 
 #straw-3 {
     width: 70%;
@@ -691,7 +699,7 @@ body.themeSeason {
 #page-choose {
     display: flex;
     /* padding: 2%; */
-    margin-top: 10%;
+    margin: 10% 0;
     justify-content: center;
     align-items: center;
 
