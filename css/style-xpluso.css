@@ -251,7 +251,7 @@ hr {
 
 .tagsArea {
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .tag {
@@ -263,6 +263,8 @@ hr {
     font-size: 14px;
     color: var(--black);
     cursor: pointer;
+    width: fit-content;
+
 }
 .tag:hover{
     transform: scale(1.1,1.1);
