@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", async function () {
             zoom: 14,
             center: position,
             mapId: "4422581b7cba5492",
+            disableDefaultUI: true,
+            zoomControl: true
         });
 
         markersData.forEach((data) => {
