@@ -124,6 +124,7 @@
     background-color: #FFE24A;
     /* 到時候先display:none，按地標再打開，按LOGO會再從左邊收合 */
     opacity: 0;
+    z-index: 99;
 }
 
 .slide-out {
