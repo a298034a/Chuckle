@@ -101,12 +101,21 @@
 
 #map {
     /* 當叫出LIST時縮小，寫完LIST要先恢復成W100% */
-    left: 20%;
-    width: 80%;
+    /* width: 100%; */
     padding: 0px;
     z-index: 2;
-
+    
 }
+
+.map-listin{
+    left: 20%;
+    width: 80%;
+}
+.map-listout{
+    left: 0%;
+    width: 100%;
+}
+
 
 #list {
     position: fixed;
@@ -115,7 +124,6 @@
     background-color: #FFE24A;
     /* 到時候先display:none，按地標再打開，按LOGO會再從左邊收合 */
     opacity: 0;
-
 }
 
 .slide-out {
