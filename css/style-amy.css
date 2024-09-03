@@ -900,10 +900,8 @@
     position: relative;
     z-index: 2;
 
-    background-image: url(../images/news/upcome-bg-pc.png);
-    background-repeat: no-repeat;
-    background-size: 100% 88%;
-    background-position: bottom;
+    background: rgb(255, 226, 74);
+    background: linear-gradient(0deg, rgba(255,226,74,0) 60%, rgba(255,226,74,1) 60%, rgba(255,226,74,1) 90%, rgba(255,226,74,0) 90%),linear-gradient(182deg, rgba(255,226,74,0) 20%, rgba(255,226,74,1) 20%, rgba(255,226,74,1) 88%, rgba(255,226,74,1) 93%, rgba(34,193,195,0) 93%);
 
     overflow: hidden;
 }
