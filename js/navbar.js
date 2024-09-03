@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <h1 class="logo">
             <a href="./index.html">
                 <figure>
-                    <img src="./images/navbar/logo.png" alt="Chuckle logo">
+                    <img src="./images/navbar/logo.svg" alt="Chuckle logo">
                 </figure>
                 <p class="contrast-text">CHUCKLE</p>
             </a>
