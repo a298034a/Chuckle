@@ -607,7 +607,8 @@ body.themeSeason {
 }
 
 .slogan h4{
-    padding: 0 2%;
+    padding: 1rem 2%;
+    text-align: center;
 }
 
 .store .thing {
@@ -618,7 +619,7 @@ body.themeSeason {
     cursor: pointer;
 }
 
-/* 草莓 */
+/* 草莓遮色片 */
 .thing .col{
     display: flex;
     position: relative;
