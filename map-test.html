@@ -34,61 +34,10 @@
         </a>
     </header>
 
-    <script>
-        // list往左
-        function toggleImage(prop) {
-            let list = document.getElementById('list');
-
-            // 檢查目前圖片的 src，並根據不同的 src 切換圖片
-            if (prop.src.includes("logo_bg.svg")) {
-                prop.src = "./images/map/logo_bg_white.svg";
-
-                list.classList.add('slide-in');
-                list.classList.remove('slide-out');
-                list.style.opacity = 1;
-            } else {
-                prop.src = "./images/map/logo_bg.svg";
-                list.style.opacity = 0;
-
-                list.classList.add('slide-out');
-                list.classList.remove('slide-in');
-            }
-        }
-
-        const back = document.getElementById('back');
-
-        back.addEventListener('mouseover', function () {
-            this.src = './images/map/goback-hover.svg';
-        });
-
-        back.addEventListener('mouseout', function () {
-            this.src = './images/map/goback.svg';
-        });
+    
 
 
-
-        const map = document.getElementById('map');
-
-        map.addEventListener('click', function () {
-            if (map.className === 'map-listout') {
-                map.classList.add('map-listin');
-                map.classList.remove('map-listout');
-            } else {
-                map.classList.add('map-listout');
-                map.classList.remove('map-listin');
-            }
-        });
-
-
-
-
-
-
-
-    </script>
-
-
-    <div id="list" class="list" class="list slide-out" style="opacity: 0;">
+    <div id="list" class="list slide-out" style="opacity: 0;">
 
         <div id="attraction-introduction">
             <h2>店家名稱店家名稱店家名稱</h2>
@@ -229,13 +178,64 @@
 
 
     <!-- 地圖 -->
-    <div id="map" class="map-listout" >
-        <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
-                ({ key: "AIzaSyBnV_x0SwoErXaHcDSIh84eI1y4YRj0sYY", v: "weekly" });</script>
-        <script src="./js/initMap.js"></script>
+    <div id="map" class="map-listout" data-json-path="./json/map.json">
+        
     </div>
+    <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+        ({ key: "AIzaSyBnV_x0SwoErXaHcDSIh84eI1y4YRj0sYY", v: "weekly" });</script>
+<script src="./js/initMap.js"></script>
+<script>
+    // list往左
+    function toggleImage(prop) {
+        let list = document.getElementById('list');
+
+        // 檢查目前圖片的 src，並根據不同的 src 切換圖片
+        if (prop.src.includes("logo_bg.svg")) {
+            prop.src = "./images/map/logo_bg_white.svg";
+
+            list.classList.add('slide-in');
+            list.classList.remove('slide-out');
+            list.style.opacity = 1;
+        } else {
+            prop.src = "./images/map/logo_bg.svg";
+            list.style.opacity = 0;
+
+            list.classList.add('slide-out');
+            list.classList.remove('slide-in');
+        }
+    }
+
+    const back = document.getElementById('back');
+
+    back.addEventListener('mouseover', function () {
+        this.src = './images/map/goback-hover.svg';
+    });
+
+    back.addEventListener('mouseout', function () {
+        this.src = './images/map/goback.svg';
+    });
 
 
+
+    const map = document.getElementById('map');
+
+    map.addEventListener('click', function () {
+        if (map.className === 'map-listout') {
+            map.classList.add('map-listin');
+            map.classList.remove('map-listout');
+        } else {
+            map.classList.add('map-listout');
+            map.classList.remove('map-listin');
+        }
+    });
+
+
+
+
+
+
+
+</script>
 </body>
 
 </html>
