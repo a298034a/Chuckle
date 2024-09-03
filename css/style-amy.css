@@ -1067,6 +1067,10 @@
     min-width: 70px;
 }
 
+#news-body .character img {
+    aspect-ratio: auto 129 / 221;
+}
+
 #current-events .event-list li a .content {
     overflow: hidden;
     text-overflow: ellipsis;
