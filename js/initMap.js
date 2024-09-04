@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         markersData.forEach((data) => {
             //之後寫css class 控制樣式比較好
             const img = document.createElement("img");
-            img.style.width = "50%";
+            img.style.width = "90%";
             img.src = data.imgSrc;
 
             const marker = new AdvancedMarkerElement({

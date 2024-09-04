@@ -1,19 +1,19 @@
 [
     {
         "position": { "lat": 25.042827, "lng": 121.524863 },
-        "imgSrc": "./images/map/hot1.png",
+        "imgSrc": "./images/map/landmark-red.svg",
         "title": "麵屋雲山",
         "url": "./articleList.html"
     },
     {
         "position": { "lat": 25.044756, "lng": 121.515822 },
-        "imgSrc": "./images/map/hot2.png",
+        "imgSrc": "./images/map/landmark-blue.svg",
         "title": "小豬拉麵",
         "url": "./articleList.html"
     },
     {
         "position": { "lat": 25.038252, "lng": 121.536847 },
-        "imgSrc": "./images/map/hot3.png",
+        "imgSrc": "./images/map/landmark-blue.svg",
         "title": "拉麵",
         "url": "./articleList.html"
     }
