@@ -58,6 +58,7 @@ a {
 @font-face {
     font-family: GenSenRounded2-M;
     src: url(../fonts/GenSenRounded2-M.ttc);
+    font-display: swap;
 }
 
 :root {
