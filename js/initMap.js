@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             const img = document.createElement("img");
             img.style.width = "90%";
             img.src = data.imgSrc;
+            img.alt = "地標";
 
             const marker = new AdvancedMarkerElement({
                 map: map,
