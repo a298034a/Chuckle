@@ -1,9 +1,13 @@
+let list = document.getElementById('list');
+// const logo = document.getElementsByClassName('map-icon');
+
 document.addEventListener("DOMContentLoaded", async function () {
     const jsonPath = document.getElementById('map').getAttribute('data-json-path');
 
     //取得 marker 資料
     const response = await fetch(jsonPath);
     const markersData = await response.json();
+    
 
     async function initMap() {
         //地圖中心點座標
@@ -35,13 +39,24 @@ document.addEventListener("DOMContentLoaded", async function () {
                 title: data.title,
             });
 
+            
             marker.addListener("click", () => {
                 //如果資料帶有連結則打開連結
                 if (data.url) {
                     window.open(data.url, '_blank');
+
+                    
+                    
                 }
                 else {
                     //地圖頁的視窗開關寫這裡
+                    // 打開list
+                    list.classList.add('slide-in');
+                    list.classList.remove('slide-out');
+                    list.style.opacity = 1;
+                    // LOGO圖案也變白底版
+                    // logo.src = "./images/map/logo_bg_white.svg";
+
                 }
             });
         });

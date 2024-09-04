@@ -29,17 +29,18 @@
             <a class="tag nev-things" href="#">飲料店</a>
 
         </div>
-        <a href="#" onclick="history.back(); return false;">
+        <!-- <a href="#" onclick="history.back(); return false;">
             <img id="back" class="map-icon" src="./images/map/goback.svg" alt="返回">
-        </a>
+        </a> -->
     </header>
 
-    
 
 
+    <!-- 文章 -->
     <div id="list" class="list slide-out" style="opacity: 0;">
 
         <div id="attraction-introduction">
+            <div id="close" onclick="Close(this)"><img src="./images/map/close-btn.svg" alt=""></div>
             <h2>店家名稱店家名稱店家名稱</h2>
             <p>營業時間營業時間營業時間營業時間營業時間營業時間營業時間營業時間</p>
             <p>地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址</p>
@@ -169,6 +170,9 @@
                 </a>
             </article>
 
+            <div class="lest"></div>
+            <!-- 為了滑到最後一篇可以看到背景而加的 -->
+
 
 
         </div>
@@ -178,64 +182,82 @@
 
 
     <!-- 地圖 -->
-    <div id="map" class="map-listout" data-json-path="./json/map.json" >
-        
+    <div id="map" class="map-listout" data-json-path="./json/map.json">
+
     </div>
+    
+
+
+    <script>
+        // list往左
+        const logo = document.getElementsByClassName('map-icon');
+
+       
+
+
+        function Close(prop) {
+            let list = document.getElementById('list');
+
+            // 檢查目前圖片的 src，並根據不同的 src 切換圖片
+           
+                list.style.opacity = 0;
+
+                list.classList.add('slide-out');
+                list.classList.remove('slide-in');
+            
+        }
+
+
+
+        // 舊版是按LOGO打開LIST
+        function toggleImage(prop) {
+            let list = document.getElementById('list');
+
+            // 檢查目前圖片的 src，並根據不同的 src 切換圖片
+            if (prop.src.includes("logo_bg.svg")) {
+                prop.src = "./images/map/logo_bg_white.svg";
+
+                list.classList.add('slide-in');
+                list.classList.remove('slide-out');
+                list.style.opacity = 1;
+            } else {
+                prop.src = "./images/map/logo_bg.svg";
+                list.style.opacity = 0;
+
+                list.classList.add('slide-out');
+                list.classList.remove('slide-in');
+            }
+        }
+
+        // 返回鍵
+        // const back = document.getElementById('back');
+
+        // back.addEventListener('mouseover', function () {
+        //     this.src = './images/map/goback-hover.svg';
+        // });
+
+        // back.addEventListener('mouseout', function () {
+        //     this.src = './images/map/goback.svg';
+        // });
+
+
+
+        const map = document.getElementById('map');
+
+        map.addEventListener('click', function () {
+            if (map.className === 'map-listout') {
+                map.classList.add('map-listin');
+                map.classList.remove('map-listout');
+            } else {
+                map.classList.add('map-listout');
+                map.classList.remove('map-listin');
+            }
+        });
+
+    </script>
     <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
         ({ key: "AIzaSyBnV_x0SwoErXaHcDSIh84eI1y4YRj0sYY", v: "weekly" });</script>
 <script src="./js/initMap.js"></script>
-<script>
-    // list往左
-    function toggleImage(prop) {
-        let list = document.getElementById('list');
-
-        // 檢查目前圖片的 src，並根據不同的 src 切換圖片
-        if (prop.src.includes("logo_bg.svg")) {
-            prop.src = "./images/map/logo_bg_white.svg";
-
-            list.classList.add('slide-in');
-            list.classList.remove('slide-out');
-            list.style.opacity = 1;
-        } else {
-            prop.src = "./images/map/logo_bg.svg";
-            list.style.opacity = 0;
-
-            list.classList.add('slide-out');
-            list.classList.remove('slide-in');
-        }
-    }
-
-    const back = document.getElementById('back');
-
-    back.addEventListener('mouseover', function () {
-        this.src = './images/map/goback-hover.svg';
-    });
-
-    back.addEventListener('mouseout', function () {
-        this.src = './images/map/goback.svg';
-    });
-
-
-
-    const map = document.getElementById('map');
-
-    map.addEventListener('click', function () {
-        if (map.className === 'map-listout') {
-            map.classList.add('map-listin');
-            map.classList.remove('map-listout');
-        } else {
-            map.classList.add('map-listout');
-            map.classList.remove('map-listin');
-        }
-    });
-
-
-
-
-
-
-
-</script>
 </body>
 
 </html>

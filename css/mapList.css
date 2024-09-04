@@ -123,6 +123,12 @@
     opacity: 0;
     z-index: 99;
 }
+#close{
+    /* 關閉list */
+    width: 16px;
+    height: 16px;
+    margin-bottom: 10%;
+}
 
 .slide-out {
     transform: translateX(-200%);
@@ -143,15 +149,17 @@
 #attraction-introduction {
     width: auto;
     margin: 0 10%;
-    margin-top: 120px;
+    margin-top: 90px;
     padding: 5%;
     border-radius: 10px;
-    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 #attraction-article {
     width: 80%;
-    height: 50vh;
+    height: 60vh;
     /* 加高度才能滑 */
     margin: 0 10%;
     padding: 5% 0;
@@ -175,7 +183,9 @@
     transition: 0.35s;
 }
 
-
+.lest{
+    padding: 5%;
+}
 .posts-title {
     display: flex;
     align-items: center;

@@ -347,6 +347,7 @@ background-color: rgba(0, 0, 0, 0.2);
 .posts-btn img {
     width: 32px;
     margin: 3px;
+    cursor: pointer;
 }
 
 #post-info-icon p {
