@@ -5,27 +5,237 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>地圖搜尋</title>
-    <style>
-        #map {
-            height: 100%;
-        }
-
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style-amy.css">
+    <link rel="stylesheet" href="./css/nav-footer-general.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/mapList.css">
 </head>
 
-<body>
-    <!-- data-json-path => json 資料路徑 -->
-    <div id="map" data-json-path="./json/map.json" style="position: static;"></div>
+<body id="map-body">
 
+    <header id="map-nev">
+        <!-- LOGO和搜尋欄在的地方 -->
+        <div id="map-nevleft">
+            <img class="map-icon" src="./images/map/logo_bg.svg" onclick="toggleImage(this)" alt="黃版LOGO">
+            <form class="search-container">
+                <input type="text" id="search-bar" placeholder="想去哪玩？">
+                <a href="#"><img class="search-icon" src="./images/search/search-icon.png"></a>
+            </form>
+
+            <a class="tag nev-things" href="#">市集</a>
+            <a class="tag nev-things" href="#">展覽</a>
+            <a class="tag nev-things" href="#">快閃店</a>
+            <a class="tag nev-things" href="#">餐廳</a>
+            <a class="tag nev-things" href="#">飲料店</a>
+
+        </div>
+        <a href="#" onclick="history.back(); return false;">
+            <img id="back" class="map-icon" src="./images/map/goback.svg" alt="返回">
+        </a>
+    </header>
+
+    
+
+
+    <div id="list" class="list slide-out" style="opacity: 0;">
+
+        <div id="attraction-introduction">
+            <h2>店家名稱店家名稱店家名稱</h2>
+            <p>營業時間營業時間營業時間營業時間營業時間營業時間營業時間營業時間</p>
+            <p>地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址</p>
+
+        </div>
+
+        <div id="attraction-article">
+            <!-- 超出時要可以往下滑，可能要加滾軸 -->
+
+
+            <article class="addressPosts">
+                <a href="./article.html">
+                    <div class="posts-title">
+                        <h3>貼文名稱貼文名稱貼文名稱貼文名稱</h3>
+                        <div class="posts-btn">
+                            <img src="./images/collect.svg" alt="">
+                            <img src="./images/Share.svg" alt="">
+                            <img src="./images/unLove.svg" alt="">
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="posts-content">
+                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                    </p>
+                </a>
+            </article>
+
+            <article class="addressPosts">
+                <a href="./article.html">
+                    <div class="posts-title">
+                        <h3>貼文名稱貼文名稱貼文名稱貼文名稱</h3>
+                        <div class="posts-btn">
+                            <img src="./images/collect.svg" alt="">
+                            <img src="./images/Share.svg" alt="">
+                            <img src="./images/unLove.svg" alt="">
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="posts-content">
+                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                    </p>
+                </a>
+            </article>
+
+            <article class="addressPosts">
+                <a href="./article.html">
+                    <div class="posts-title">
+                        <h3>貼文名稱貼文名稱貼文名稱貼文名稱</h3>
+                        <div class="posts-btn">
+                            <img src="./images/collect.svg" alt="">
+                            <img src="./images/Share.svg" alt="">
+                            <img src="./images/unLove.svg" alt="">
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="posts-content">
+                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                    </p>
+                </a>
+            </article>
+
+            <article class="addressPosts">
+                <a href="./article.html">
+                    <div class="posts-title">
+                        <h3>貼文名稱貼文名稱貼文名稱貼文名稱</h3>
+                        <div class="posts-btn">
+                            <img src="./images/collect.svg" alt="">
+                            <img src="./images/Share.svg" alt="">
+                            <img src="./images/unLove.svg" alt="">
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="posts-content">
+                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                    </p>
+                </a>
+            </article>
+
+            <article class="addressPosts">
+                <a href="./article.html">
+                    <div class="posts-title">
+                        <h3>貼文名稱貼文名稱貼文名稱貼文名稱</h3>
+                        <div class="posts-btn">
+                            <img src="./images/collect.svg" alt="">
+                            <img src="./images/Share.svg" alt="">
+                            <img src="./images/unLove.svg" alt="">
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="posts-content">
+                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                    </p>
+                </a>
+            </article>
+
+            <article class="addressPosts">
+                <a href="./article.html">
+                    <div class="posts-title">
+                        <h3>貼文名稱貼文名稱貼文名稱貼文名稱</h3>
+                        <div class="posts-btn">
+                            <img src="./images/collect.svg" alt="">
+                            <img src="./images/Share.svg" alt="">
+                            <img src="./images/unLove.svg" alt="">
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="posts-content">
+                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                    </p>
+                </a>
+            </article>
+
+            <article class="addressPosts">
+                <a href="./article.html">
+                    <div class="posts-title">
+                        <h3>貼文名稱貼文名稱貼文名稱貼文名稱</h3>
+                        <div class="posts-btn">
+                            <img src="./images/collect.svg" alt="">
+                            <img src="./images/Share.svg" alt="">
+                            <img src="./images/unLove.svg" alt="">
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="posts-content">
+                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                    </p>
+                </a>
+            </article>
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 地圖 -->
+    <div id="map" class="map-listout" data-json-path="./json/map.json" >
+        
+    </div>
     <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
-            ({ key: "AIzaSyBnV_x0SwoErXaHcDSIh84eI1y4YRj0sYY", v: "weekly" });</script>
-    <script src="./js/initMap.js"></script>
+        ({ key: "AIzaSyBnV_x0SwoErXaHcDSIh84eI1y4YRj0sYY", v: "weekly" });</script>
+<script src="./js/initMap.js"></script>
+<script>
+    // list往左
+    function toggleImage(prop) {
+        let list = document.getElementById('list');
+
+        // 檢查目前圖片的 src，並根據不同的 src 切換圖片
+        if (prop.src.includes("logo_bg.svg")) {
+            prop.src = "./images/map/logo_bg_white.svg";
+
+            list.classList.add('slide-in');
+            list.classList.remove('slide-out');
+            list.style.opacity = 1;
+        } else {
+            prop.src = "./images/map/logo_bg.svg";
+            list.style.opacity = 0;
+
+            list.classList.add('slide-out');
+            list.classList.remove('slide-in');
+        }
+    }
+
+    const back = document.getElementById('back');
+
+    back.addEventListener('mouseover', function () {
+        this.src = './images/map/goback-hover.svg';
+    });
+
+    back.addEventListener('mouseout', function () {
+        this.src = './images/map/goback.svg';
+    });
+
+
+
+    const map = document.getElementById('map');
+
+    map.addEventListener('click', function () {
+        if (map.className === 'map-listout') {
+            map.classList.add('map-listin');
+            map.classList.remove('map-listout');
+        } else {
+            map.classList.add('map-listout');
+            map.classList.remove('map-listin');
+        }
+    });
+
+
+
+
+
+
+
+</script>
 </body>
 
 </html>
