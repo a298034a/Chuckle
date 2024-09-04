@@ -60,10 +60,7 @@
     justify-content: flex-end;
 }
 
-#back:hover {
-    background-image: url(../images/map/goback-hover.svg);
-    /* transform: scale(1.1,1.1); */
-}
+
 
 .icon-search {
     display: flex;
