@@ -24,7 +24,6 @@
 /* #region 首頁-網頁特色 */
 #introduce {
     width: 100%;
-    /* height: 100vh; */
     background-image: url(../images/index/map.png);
     background-repeat: no-repeat;
     background-size: contain;
