@@ -80,8 +80,8 @@ hr {
     border-color: var(--black);
 }
 
-.img-info p,
-.comment p,
+
+#comment p,
 .time p,
 #post-info p {
     font-size: 16px;
