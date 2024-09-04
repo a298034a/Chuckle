@@ -305,6 +305,9 @@ background-color: rgba(0, 0, 0, 0.2);
 #articleBody .tag {
     background-color: var(--main-green);
 }
+#articleBody .tag:hover {
+    background-color: var(--hover-green);
+}
 
 /* 最新消息文章-TAG區顏色+字體 */
 #newArticleBody #post-info {
@@ -318,6 +321,9 @@ background-color: rgba(0, 0, 0, 0.2);
 
 #newArticleBody .tag {
     background-color: var(--main-yellow);
+}
+#newArticleBody .tag:hover {
+    background-color: var(--hover-yellow);
 }
 
 
