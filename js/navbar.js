@@ -20,14 +20,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 <li>
                     <form class="search-container">
                         <input type="text" id="search-bar" placeholder="想去哪玩？">
-                        <a href="./articleList.html"><img class="search-icon" src="./images/search/search-icon.png"></a>
+                        <a href="./articleList-react.html"><img class="search-icon" src="./images/search/search-icon.png"></a>
                     </form>
                 </li>
                 <li><a href="./news-exhibition.html">最新消息</a></li>
                 <li><a href="./themeSeason.html">主題季</a></li>
                 <li><a href="./officialEvent.html">官方活動</a></li>
-                <li><a href="./articleList.html">文章列表</a></li>
-                <li><a href="#">地圖搜尋</a></li>
+                <li><a href="./articleList-react.html">文章列表</a></li>
+                <li><a href="./map.html">地圖搜尋</a></li>
                 <li><a id="member-modal-btn" href="#">會員登入</a></li>
             </ul>
             <ul class="nav-list">
@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         <li><a href="./officialEvent.html">官方活動</a></li>
                     </ul>
                 </li>
-                <li class="menu"><a class="contrast-text" href="./articleList.html">文章列表</a></li>
-                <li class="icon"><a href="#"><img class="icon-map" src="./images/navbar/icon-map.png"
+                <li class="menu"><a class="contrast-text" href="./articleList-react.html">文章列表</a></li>
+                <li class="icon"><a href="./map.html"><img class="icon-map" src="./images/navbar/icon-map.png"
                             alt="前往地圖搜尋頁面"></a></li>
                 <li class="icon">
                     <label for="search-modal-switch" class="modal-switch">
@@ -127,29 +127,29 @@ document.addEventListener('DOMContentLoaded', function () {
         <section id="search-modal" style="display:none">
             <form class="search-container">
                 <input type="text" id="search-bar" placeholder="想去哪玩？">
-                <a href="./articleList.html"><img class="search-icon" src="./images/search/search-icon.png"></a>
+                <a href="./articleList-react.html"><img class="search-icon" src="./images/search/search-icon.png"></a>
             </form>
             <div class="negative-margin">
                 <div class="search-tags">
                     <p>熱門地區</p>
                     <div class="tags-container">
-                        <a class="tag" href="#">台北市</a>
-                        <a class="tag" href="#">新北市</a>
-                        <a class="tag" href="#">嘉義市</a>
-                        <a class="tag" href="#">台南市</a>
-                        <a class="tag" href="#">玉井區</a>
-                        <a class="tag" href="#">高雄市</a>
+                        <a class="tag" href="./articleList-react.html">台北市</a>
+                        <a class="tag" href="./articleList-react.html">新北市</a>
+                        <a class="tag" href="./articleList-react.html">嘉義市</a>
+                        <a class="tag" href="./articleList-react.html">台南市</a>
+                        <a class="tag" href="./articleList-react.html">玉井區</a>
+                        <a class="tag" href="./articleList-react.html">高雄市</a>
                     </div>
                 </div>
                 <div class="search-tags">
                     <p>熱門分類</p>
                     <div class="tags-container">
-                        <a class="tag" href="#">復古拍貼機</a>
-                        <a class="tag" href="#">中秋煙火</a>
-                        <a class="tag" href="#">期間限定美術展</a>
-                        <a class="tag" href="#">日本當代藝文展</a>
-                        <a class="tag" href="#">台北拉麵</a>
-                        <a class="tag" href="#">深夜咖啡</a>
+                        <a class="tag" href="./articleList-react.html">復古拍貼機</a>
+                        <a class="tag" href="./articleList-react.html">中秋煙火</a>
+                        <a class="tag" href="./articleList-react.html">期間限定美術展</a>
+                        <a class="tag" href="./articleList-react.html">日本當代藝文展</a>
+                        <a class="tag" href="./articleList-react.html">台北拉麵</a>
+                        <a class="tag" href="./articleList-react.html">深夜咖啡</a>
                     </div>
                 </div>
             </div>
