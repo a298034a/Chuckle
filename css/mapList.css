@@ -49,10 +49,11 @@
     width: 100%;
 }
 
-.map-icon {
+#mapIcon {
     width: 64px;
     margin: 0 8px;
     cursor: pointer;
+    
     /* background-image: url(../images/map/logo_bg.svg); */
 }
 
@@ -156,14 +157,21 @@
     flex-direction: column;
     align-items: flex-end;
 }
+.storeBio{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
 #attraction-article {
     width: 80%;
-    height: 60vh;
+    height: 65%;
     /* 加高度才能滑 */
     margin: 0 10%;
     padding: 5% 0;
     overflow: auto;
+    position: absolute;
+    bottom: 0;
 }
 
 #attraction-article::-webkit-scrollbar {

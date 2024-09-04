@@ -1,5 +1,5 @@
 let list = document.getElementById('list');
-// const logo = document.getElementsByClassName('map-icon');
+let logoo = document.getElementById('mapIcon');
 
 document.addEventListener("DOMContentLoaded", async function () {
     const jsonPath = document.getElementById('map').getAttribute('data-json-path');
@@ -54,9 +54,8 @@ document.addEventListener("DOMContentLoaded", async function () {
                     list.classList.add('slide-in');
                     list.classList.remove('slide-out');
                     list.style.opacity = 1;
-                    // LOGO圖案也變白底版
-                    // logo.src = "./images/map/logo_bg_white.svg";
-
+                    // LOGO圖案也變白底版(不知道為甚麼掛了)
+                    logoo.src = "./images/map/logo_bg_white.svg";
                 }
             });
         });

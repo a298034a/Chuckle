@@ -16,7 +16,7 @@
     <header id="map-nev">
         <!-- LOGO和搜尋欄在的地方 -->
         <div id="map-nevleft">
-            <img class="map-icon" src="./images/map/logo_bg.svg" onclick="toggleImage(this)" alt="黃版LOGO">
+            <a href="./index.html"><img id="mapIcon" src="./images/map/logo_bg.svg"  alt="黃版LOGO"></a>
             <form class="search-container">
                 <input type="text" id="search-bar" placeholder="想去哪玩？">
                 <a href="#"><img class="search-icon" src="./images/search/search-icon.png"></a>
@@ -41,10 +41,11 @@
 
         <div id="attraction-introduction">
             <div id="close" onclick="Close(this)"><img src="./images/map/close-btn.svg" alt=""></div>
-            <h2>店家名稱店家名稱店家名稱</h2>
-            <p>營業時間營業時間營業時間營業時間營業時間營業時間營業時間營業時間</p>
-            <p>地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址</p>
-
+            <div class="storeBio">
+            <h2>山巒餐廳</h2>
+            <p>營業時間:星期一至星期日 11:00 AM-21:00 PM</p>
+            <p>地址:台北市松山區山巒街88號2樓</p>
+        </div>
         </div>
 
         <div id="attraction-article">
@@ -54,7 +55,7 @@
             <article class="addressPosts">
                 <a href="./article.html">
                     <div class="posts-title">
-                        <h3>貼文名稱貼文名稱貼文名稱貼文名稱</h3>
+                        <h3>絕美山巒風景佐美食</h3>
                         <div class="posts-btn">
                             <img src="./images/collect.svg" alt="">
                             <img src="./images/Share.svg" alt="">
@@ -63,7 +64,7 @@
                     </div>
                     <hr>
                     <p class="posts-content">
-                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                        以迷人的自然景觀和精緻料理為特色，讓您在山林間享受大地的恩賜。無論是好友聚會還是浪漫約會，這裡的每一刻都充滿了難忘的滋味。
                     </p>
                 </a>
             </article>
@@ -71,7 +72,7 @@
             <article class="addressPosts">
                 <a href="./article.html">
                     <div class="posts-title">
-                        <h3>貼文名稱貼文名稱貼文名稱貼文名稱</h3>
+                        <h3>品味自然的饗宴</h3>
                         <div class="posts-btn">
                             <img src="./images/collect.svg" alt="">
                             <img src="./images/Share.svg" alt="">
@@ -80,7 +81,7 @@
                     </div>
                     <hr>
                     <p class="posts-content">
-                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                        隱身於山巒中的餐廳，讓您在享受大自然美景的同時，品嚐以當地食材精心烹調的美食，遠離塵囂，盡享靜謐與美味。
                     </p>
                 </a>
             </article>
@@ -88,7 +89,7 @@
             <article class="addressPosts">
                 <a href="./article.html">
                     <div class="posts-title">
-                        <h3>貼文名稱貼文名稱貼文名稱貼文名稱</h3>
+                        <h3>美食與自然的完美結合</h3>
                         <div class="posts-btn">
                             <img src="./images/collect.svg" alt="">
                             <img src="./images/Share.svg" alt="">
@@ -97,7 +98,7 @@
                     </div>
                     <hr>
                     <p class="posts-content">
-                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                        坐落在山中的山巒餐廳，提供無與倫比的用餐體驗，從新鮮的食材到優美的環境，每一個細節都經過精心設計，帶來最純粹的享受。
                     </p>
                 </a>
             </article>
@@ -105,7 +106,7 @@
             <article class="addressPosts">
                 <a href="./article.html">
                     <div class="posts-title">
-                        <h3>貼文名稱貼文名稱貼文名稱貼文名稱</h3>
+                        <h3>享受山巒中的絕佳料理</h3>
                         <div class="posts-btn">
                             <img src="./images/collect.svg" alt="">
                             <img src="./images/Share.svg" alt="">
@@ -114,7 +115,7 @@
                     </div>
                     <hr>
                     <p class="posts-content">
-                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                        在山巒餐廳，您不僅能夠品嚐到地道的台灣美食，還能在大自然的懷抱中放鬆心情，這是一場讓五感愉悅的饗宴。
                     </p>
                 </a>
             </article>
@@ -122,7 +123,7 @@
             <article class="addressPosts">
                 <a href="./article.html">
                     <div class="posts-title">
-                        <h3>貼文名稱貼文名稱貼文名稱貼文名稱</h3>
+                        <h3>山巒餐廳：逃離城市的美味之旅</h3>
                         <div class="posts-btn">
                             <img src="./images/collect.svg" alt="">
                             <img src="./images/Share.svg" alt="">
@@ -131,7 +132,7 @@
                     </div>
                     <hr>
                     <p class="posts-content">
-                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                        遠離城市喧囂，來到山巒餐廳。這裡的每道料理都散發著自然的香氣，在清新空氣中細細品味，您將會愛上這裡的獨特魅力。
                     </p>
                 </a>
             </article>
@@ -139,7 +140,7 @@
             <article class="addressPosts">
                 <a href="./article.html">
                     <div class="posts-title">
-                        <h3>貼文名稱貼文名稱貼文名稱貼文名稱</h3>
+                        <h3>自然與美食的雙重享受</h3>
                         <div class="posts-btn">
                             <img src="./images/collect.svg" alt="">
                             <img src="./images/Share.svg" alt="">
@@ -148,7 +149,7 @@
                     </div>
                     <hr>
                     <p class="posts-content">
-                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                        隱秘於山間的山巒餐廳，以天然食材與迷人景色為特色，無論是美味的料理還是放鬆的環境，都讓您流連忘返。
                     </p>
                 </a>
             </article>
@@ -156,7 +157,7 @@
             <article class="addressPosts">
                 <a href="./article.html">
                     <div class="posts-title">
-                        <h3>貼文名稱貼文名稱貼文名稱貼文名稱</h3>
+                        <h3>台灣山林間的隱藏美味-山巒餐廳</h3>
                         <div class="posts-btn">
                             <img src="./images/collect.svg" alt="">
                             <img src="./images/Share.svg" alt="">
@@ -165,7 +166,7 @@
                     </div>
                     <hr>
                     <p class="posts-content">
-                        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+                        讓您在山林間享用美味的台灣料理，這裡的菜色和環境都令人讚嘆，是尋求平靜與美味的最佳去處。
                     </p>
                 </a>
             </article>
@@ -190,8 +191,14 @@
 
     <script>
         // list往左
-        const logo = document.getElementsByClassName('map-icon');
+        let logo = document.getElementById('mapIcon');
+        logo.addEventListener('mouseover', function () {
+            this.src = './images/map/logo_bg_hover.svg';
+        });
 
+        logo.addEventListener('mouseout', function () {
+            this.src = './images/map/logo_bg.svg';
+        });
        
 
 
@@ -204,30 +211,30 @@
 
                 list.classList.add('slide-out');
                 list.classList.remove('slide-in');
-            
+                logo.src = "./images/map/logo_bg.svg";
         }
 
 
 
         // 舊版是按LOGO打開LIST
-        function toggleImage(prop) {
-            let list = document.getElementById('list');
+        // function toggleImage(prop) {
+        //     let list = document.getElementById('list');
 
-            // 檢查目前圖片的 src，並根據不同的 src 切換圖片
-            if (prop.src.includes("logo_bg.svg")) {
-                prop.src = "./images/map/logo_bg_white.svg";
+        //     // 檢查目前圖片的 src，並根據不同的 src 切換圖片
+        //     if (prop.src.includes("logo_bg.svg")) {
+        //         prop.src = "./images/map/logo_bg_white.svg";
 
-                list.classList.add('slide-in');
-                list.classList.remove('slide-out');
-                list.style.opacity = 1;
-            } else {
-                prop.src = "./images/map/logo_bg.svg";
-                list.style.opacity = 0;
+        //         list.classList.add('slide-in');
+        //         list.classList.remove('slide-out');
+        //         list.style.opacity = 1;
+        //     } else {
+        //         prop.src = "./images/map/logo_bg.svg";
+        //         list.style.opacity = 0;
 
-                list.classList.add('slide-out');
-                list.classList.remove('slide-in');
-            }
-        }
+        //         list.classList.add('slide-out');
+        //         list.classList.remove('slide-in');
+        //     }
+        // }
 
         // 返回鍵
         // const back = document.getElementById('back');
