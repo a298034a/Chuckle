@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <li><a href="./themeSeason.html">主題季</a></li>
                 <li><a href="./officialEvent.html">官方活動</a></li>
                 <li><a href="./articleList.html">文章列表</a></li>
-                <li><a href="#">地圖搜尋</a></li>
+                <li><a href="./map.html">地圖搜尋</a></li>
                 <li><a id="member-modal-btn" href="#">會員登入</a></li>
             </ul>
             <ul class="nav-list">
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </ul>
                 </li>
                 <li class="menu"><a class="contrast-text" href="./articleList.html">文章列表</a></li>
-                <li class="icon"><a href="#"><img class="icon-map" src="./images/navbar/icon-map.png"
+                <li class="icon"><a href="./map.html"><img class="icon-map" src="./images/navbar/icon-map.png"
                             alt="前往地圖搜尋頁面"></a></li>
                 <li class="icon">
                     <label for="search-modal-switch" class="modal-switch">
