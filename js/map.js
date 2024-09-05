@@ -1,0 +1,102 @@
+
+        // list往左
+        let logo = document.getElementById('mapIcon');
+        logo.addEventListener('mouseover', function () {
+            this.src = './images/map/logo_bg_hover.svg';
+        });
+
+        logo.addEventListener('mouseout', function () {
+            this.src = './images/map/logo_bg.svg';
+        });
+       
+
+
+        function Close(prop) {
+            let list = document.getElementById('list');
+
+            // 檢查目前圖片的 src，並根據不同的 src 切換圖片
+           
+                list.style.opacity = 0;
+
+                list.classList.add('slide-out');
+                list.classList.remove('slide-in');
+                logo.src = "./images/map/logo_bg.svg";
+        }
+
+        function Open(){
+            let list = document.getElementById('list');
+            list.classList.add('slide-in');
+                    list.classList.remove('slide-out');
+                    list.style.opacity = 1;
+                    logo.src = "./images/map/logo_bg_white.svg";
+        }
+
+
+
+        // 舊版是按LOGO打開LIST
+        // function toggleImage(prop) {
+        //     let list = document.getElementById('list');
+
+        //     // 檢查目前圖片的 src，並根據不同的 src 切換圖片
+        //     if (prop.src.includes("logo_bg.svg")) {
+        //         prop.src = "./images/map/logo_bg_white.svg";
+
+        //         list.classList.add('slide-in');
+        //         list.classList.remove('slide-out');
+        //         list.style.opacity = 1;
+        //     } else {
+        //         prop.src = "./images/map/logo_bg.svg";
+        //         list.style.opacity = 0;
+
+        //         list.classList.add('slide-out');
+        //         list.classList.remove('slide-in');
+        //     }
+        // }
+
+        // 返回鍵
+        // const back = document.getElementById('back');
+
+        // back.addEventListener('mouseover', function () {
+        //     this.src = './images/map/goback-hover.svg';
+        // });
+
+        // back.addEventListener('mouseout', function () {
+        //     this.src = './images/map/goback.svg';
+        // });
+
+
+
+        const map = document.getElementById('map');
+
+        map.addEventListener('click', function () {
+            if (map.className === 'map-listout') {
+                map.classList.add('map-listin');
+                map.classList.remove('map-listout');
+            } else {
+                map.classList.add('map-listout');
+                map.classList.remove('map-listin');
+                
+            }
+        });
+
+        let popup = document.getElementById('popup');
+        let close = document.getElementById('close-btn');
+                let newpage = document.getElementById('popup-content');
+        
+                popup.addEventListener('click', function () {
+                    if (newpage.style.display === 'block') {
+                        newpage.style.display = 'none';
+                    } else {
+                        newpage.style.display = 'block';
+                    }
+                });
+        
+                close.addEventListener('click', function () {
+                    if (newpage.style.display === 'block') {
+                        newpage.style.display = 'none';
+                    } else {
+                        newpage.style.display = 'block';
+                    }
+                });
+
+    

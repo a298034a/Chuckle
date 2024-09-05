@@ -19,10 +19,10 @@
             <a href="./index.html"><img id="mapIcon" src="./images/map/logo_bg.svg"  alt="黃版LOGO"></a>
             <form class="search-container">
                 <input type="text" id="search-bar" placeholder="想去哪玩？">
-                <a href="#"><img class="search-icon" src="./images/search/search-icon.png"></a>
+                <a href="#"><img class="search-icon"  src="./images/search/search-icon.png"></a>
             </form>
 
-            <a class="tag nev-things" href="#">市集</a>
+            <a class="tag nev-things" href="#" onclick="Open(this)">市集</a>
             <a class="tag nev-things" href="#">展覽</a>
             <a class="tag nev-things" href="#">快閃店</a>
             <a class="tag nev-things" href="#">餐廳</a>
@@ -52,9 +52,9 @@
             <!-- 超出時要可以往下滑，可能要加滾軸 -->
 
 
-            <article class="addressPosts">
-                <a href="./article.html">
-                    <div class="posts-title">
+            <article class="addressPosts" >
+                <!-- <a href="./article.html"> -->
+                    <div class="posts-title" >
                         <h3>絕美山巒風景佐美食</h3>
                         <div class="posts-btn">
                             <img src="./images/collect.svg" alt="">
@@ -66,11 +66,11 @@
                     <p class="posts-content">
                         以迷人的自然景觀和精緻料理為特色，讓您在山林間享受大地的恩賜。無論是好友聚會還是浪漫約會，這裡的每一刻都充滿了難忘的滋味。
                     </p>
-                </a>
+                <!-- </a> -->
             </article>
 
-            <article class="addressPosts">
-                <a href="./article.html">
+            <article class="addressPosts" >
+                
                     <div class="posts-title">
                         <h3>品味自然的饗宴</h3>
                         <div class="posts-btn">
@@ -83,11 +83,11 @@
                     <p class="posts-content">
                         隱身於山巒中的餐廳，讓您在享受大自然美景的同時，品嚐以當地食材精心烹調的美食，遠離塵囂，盡享靜謐與美味。
                     </p>
-                </a>
+                
             </article>
 
-            <article class="addressPosts">
-                <a href="./article.html">
+            <article class="addressPosts" id="popup">
+                
                     <div class="posts-title">
                         <h3>美食與自然的完美結合</h3>
                         <div class="posts-btn">
@@ -100,11 +100,10 @@
                     <p class="posts-content">
                         坐落在山中的山巒餐廳，提供無與倫比的用餐體驗，從新鮮的食材到優美的環境，每一個細節都經過精心設計，帶來最純粹的享受。
                     </p>
-                </a>
+                
             </article>
 
-            <article class="addressPosts">
-                <a href="./article.html">
+            <article class="addressPosts"  >
                     <div class="posts-title">
                         <h3>享受山巒中的絕佳料理</h3>
                         <div class="posts-btn">
@@ -117,13 +116,12 @@
                     <p class="posts-content">
                         在山巒餐廳，您不僅能夠品嚐到地道的台灣美食，還能在大自然的懷抱中放鬆心情，這是一場讓五感愉悅的饗宴。
                     </p>
-                </a>
             </article>
 
-            <article class="addressPosts">
-                <a href="./article.html">
+            <article class="addressPosts" >
+                
                     <div class="posts-title">
-                        <h3>山巒餐廳：逃離城市的美味之旅</h3>
+                        <h3>逃離城市的美味之旅</h3>
                         <div class="posts-btn">
                             <img src="./images/collect.svg" alt="">
                             <img src="./images/Share.svg" alt="">
@@ -134,11 +132,11 @@
                     <p class="posts-content">
                         遠離城市喧囂，來到山巒餐廳。這裡的每道料理都散發著自然的香氣，在清新空氣中細細品味，您將會愛上這裡的獨特魅力。
                     </p>
-                </a>
+               
             </article>
 
-            <article class="addressPosts">
-                <a href="./article.html">
+            <article class="addressPosts" >
+                
                     <div class="posts-title">
                         <h3>自然與美食的雙重享受</h3>
                         <div class="posts-btn">
@@ -151,11 +149,11 @@
                     <p class="posts-content">
                         隱秘於山間的山巒餐廳，以天然食材與迷人景色為特色，無論是美味的料理還是放鬆的環境，都讓您流連忘返。
                     </p>
-                </a>
+                
             </article>
 
-            <article class="addressPosts">
-                <a href="./article.html">
+            <article class="addressPosts" >
+                
                     <div class="posts-title">
                         <h3>台灣山林間的隱藏美味-山巒餐廳</h3>
                         <div class="posts-btn">
@@ -168,7 +166,7 @@
                     <p class="posts-content">
                         讓您在山林間享用美味的台灣料理，這裡的菜色和環境都令人讚嘆，是尋求平靜與美味的最佳去處。
                     </p>
-                </a>
+                
             </article>
 
             <div class="lest"></div>
@@ -180,91 +178,25 @@
 
     </div>
 
-
-
     <!-- 地圖 -->
     <div id="map" class="map-listout" data-json-path="./json/map.json">
 
     </div>
     
-
-
-    <script>
-        // list往左
-        let logo = document.getElementById('mapIcon');
-        logo.addEventListener('mouseover', function () {
-            this.src = './images/map/logo_bg_hover.svg';
-        });
-
-        logo.addEventListener('mouseout', function () {
-            this.src = './images/map/logo_bg.svg';
-        });
-       
-
-
-        function Close(prop) {
-            let list = document.getElementById('list');
-
-            // 檢查目前圖片的 src，並根據不同的 src 切換圖片
-           
-                list.style.opacity = 0;
-
-                list.classList.add('slide-out');
-                list.classList.remove('slide-in');
-                logo.src = "./images/map/logo_bg.svg";
-        }
+    <div id="popup-content">
+        <span id="close-btn">&times;</span>
+        <!-- <img id="close-btn" src="./images/map/close-btn.svg "alt=""> -->
+        <iframe id="outPage" src="./news-article-map.html" width="100%" height="100%" title="內嵌頁面"></iframe>
+    </div>
 
 
 
-        // 舊版是按LOGO打開LIST
-        // function toggleImage(prop) {
-        //     let list = document.getElementById('list');
-
-        //     // 檢查目前圖片的 src，並根據不同的 src 切換圖片
-        //     if (prop.src.includes("logo_bg.svg")) {
-        //         prop.src = "./images/map/logo_bg_white.svg";
-
-        //         list.classList.add('slide-in');
-        //         list.classList.remove('slide-out');
-        //         list.style.opacity = 1;
-        //     } else {
-        //         prop.src = "./images/map/logo_bg.svg";
-        //         list.style.opacity = 0;
-
-        //         list.classList.add('slide-out');
-        //         list.classList.remove('slide-in');
-        //     }
-        // }
-
-        // 返回鍵
-        // const back = document.getElementById('back');
-
-        // back.addEventListener('mouseover', function () {
-        //     this.src = './images/map/goback-hover.svg';
-        // });
-
-        // back.addEventListener('mouseout', function () {
-        //     this.src = './images/map/goback.svg';
-        // });
-
-
-
-        const map = document.getElementById('map');
-
-        map.addEventListener('click', function () {
-            if (map.className === 'map-listout') {
-                map.classList.add('map-listin');
-                map.classList.remove('map-listout');
-            } else {
-                map.classList.add('map-listout');
-                map.classList.remove('map-listin');
-            }
-        });
-
-    </script>
     <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
         ({ key: "AIzaSyBnV_x0SwoErXaHcDSIh84eI1y4YRj0sYY", v: "weekly" });</script>
 <script src="./js/initMap.js"></script>
+<script src="./js/map.js"></script>
+
+
 </body>
 
 </html>

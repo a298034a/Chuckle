@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* #region 共用區 */
 :root {
@@ -194,7 +193,7 @@
 
 @media (max-width:820px) {
     #introduce {
-        background-image: url(../images/index/map-820.png);
+        background-image: url(../images/index/map-820.webp);
         background-position: right bottom;
         background-size: cover;
     }
@@ -435,7 +434,7 @@
         flex-direction: column;
         align-items: center;
 
-        background-image: url(../images/index/cloud-bg.png);
+        background-image: url(../images/index/cloud-bg.webp);
         background-position: center;
         margin-top: 0;
     }
@@ -447,7 +446,7 @@
     }
 
     .carousel {
-        background-image: url(../images/index/tv-bg-820.png);
+        background-image: url(../images/index/tv-bg-820.webp);
         background-size: contain;
         background-position: top;
         background-repeat: no-repeat;
@@ -523,7 +522,7 @@
     position: relative;
 
     overflow: hidden;
-    background-image: url(../images/index/greenfish.png);
+    background-image: url(../images/index/greenfish.webp);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -629,7 +628,7 @@
     }
 
     #hot-article {
-        background-image: url(../images/index/hot-bg-1050.png);
+        background-image: url(../images/index/hot-bg-1050.webp);
         background-size: contain;
         background-position: top;
     }
@@ -672,7 +671,7 @@
 
 @media (max-width:431px) {
     #hot-article {
-        background-image: url(../images/index/hot-bg-phone.png);
+        background-image: url(../images/index/hot-bg-phone.webp);
         background-size: contain;
         background-position: top;
     }
@@ -899,7 +898,6 @@
     position: relative;
     z-index: 2;
 
-    background: rgb(255, 226, 74);
     background: linear-gradient(0deg, rgba(255,226,74,0) 60%, rgba(255,226,74,1) 60%, rgba(255,226,74,1) 90%, rgba(255,226,74,0) 90%),linear-gradient(182deg, rgba(255,226,74,0) 20%, rgba(255,226,74,1) 20%, rgba(255,226,74,1) 88%, rgba(255,226,74,1) 93%, rgba(34,193,195,0) 93%);
 
     overflow: hidden;
