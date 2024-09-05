@@ -70,7 +70,6 @@ h4 {
 
 #newArticleBody p,
 #articleBody p,
-#articleListBody p,
 #underNev p {
     font-size: 20px;
     letter-spacing: 1px;
@@ -256,32 +255,36 @@ hr {
 
 .tag {
 
-    margin: 0.5rem 0.5rem;
-    margin-left: 0;
-    padding: 0.1rem 1rem;
-    border-radius: 20px;
-    font-size: 14px;
     color: var(--black);
     cursor: pointer;
     width: fit-content;
 
 }
-.tag:hover{
-    transform: scale(1.1,1.1);
-    transition: all .25s linear;
-}
+
 
 /* 文章列表-TAG區顏色 */
 #articleListBody .tag {
+    margin: 0.5rem 0.5rem;
+    margin-left: 0;
     font-size: 20px;
     border-radius: 10px;
 }
 #articleListBody #hotFilter .tag {
+    margin: 0.5rem 0.5rem;
+    margin-left: 0;
     background-color: var(--black);
     color: var(--base-backgroundColor);
     padding: 0.4rem 0.8rem;
+    
+    
+}
+#articleListBody #hotFilter .tag:hover{
+    transform: scale(1.1,1.1);
+    transition: all .25s linear;
 }
 #articleListBody #listTag .tag {
+    margin: 0.5rem 0.5rem;
+    margin-left: 0;
     border: var(--black) 3px solid;
     font-weight: 500;
     padding: 0.2rem 0.8rem;
@@ -289,6 +292,8 @@ hr {
 
 #articleListBody #listTag .tag:hover{
 background-color: rgba(0, 0, 0, 0.2);
+transform: scale(1.1,1.1);
+    transition: all .25s linear;
 }
 
 
@@ -303,6 +308,11 @@ background-color: rgba(0, 0, 0, 0.2);
 }
 
 #articleBody .tag {
+    padding: 0.1rem 1rem;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: 0.5rem 0.5rem;
+    margin-left: 0;
     background-color: var(--main-green);
 }
 #articleBody .tag:hover {
@@ -320,6 +330,11 @@ background-color: rgba(0, 0, 0, 0.2);
 }
 
 #newArticleBody .tag {
+    margin: 0.5rem 0.5rem;
+    margin-left: 0;
+    padding: 0.1rem 1rem;
+    border-radius: 20px;
+    font-size: 14px;
     background-color: var(--main-yellow);
 }
 #newArticleBody .tag:hover {
@@ -396,7 +411,7 @@ background-color: rgba(0, 0, 0, 0.2);
 /*#region 列表區 */
 
 .list {
-    margin: 36px 0px;
+    margin: 50px 0px;
     display: flex;
     width: 100%;
     height: 20%;
