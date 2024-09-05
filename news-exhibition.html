@@ -17,17 +17,6 @@
 </head>
 
 <body id="news-body">
-    <div class="characters exhibition">
-        <figure class="showall sunny">
-            <img src="./images/news/exhibition-char.png" alt="裝飾吉祥物">
-        </figure>
-        <figure class="rainy">
-            <img src="./images/news/popup-char.png" alt="裝飾吉祥物">
-        </figure>
-        <figure class="winter">
-            <img src="./images/news/market-char.png" alt="裝飾吉祥物">
-        </figure>
-    </div>
     <div id="root"></div>
     <script type="text/babel">
         const { useState, useEffect, useRef } = React;
@@ -165,6 +154,17 @@
 
             return (
                 <>
+                    <div className="characters exhibition">
+                        <figure className="showall sunny">
+                            <img src="./images/news/exhibition-char.png" alt="裝飾吉祥物" />
+                        </figure>
+                        <figure className="rainy">
+                            <img src="./images/news/popup-char.png" alt="裝飾吉祥物" />
+                        </figure>
+                        <figure className="winter">
+                            <img src="./images/news/market-char.png" alt="裝飾吉祥物" />
+                        </figure>
+                    </div>
                     <section id="current-events">
                         <nav id="newinfo-nav">
                             <ul className="btn-container">
@@ -323,7 +323,7 @@
             return (
                 <>
                     <section id="upcoming-events">
-                        <figure class="upcoming-title">
+                        <figure className="upcoming-title">
                             <img src="./images/news/upcoming-title.webp" alt="即將開始" />
                         </figure>
                         <ul>
