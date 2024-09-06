@@ -1741,6 +1741,21 @@
     letter-spacing: 0.1rem;
 }
 
+#officialEvent-content .title img{
+    animation: neon-white 5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-white {
+    0%,
+    100% {
+        filter:drop-shadow(-5px 5px 5px #ffffff85);
+    }
+
+    50% {
+        filter:drop-shadow(-5px 5px 50px #ffffff88) drop-shadow(5px 5px 50px #ffffff96);
+    }
+}
+
 @media (max-width:1280px) {
     #officialEvent-introduce .content {
         background-position: right;
@@ -1921,6 +1936,21 @@
 #officialEvent-target .title {
     width: 25%;
     min-width: 250px;
+}
+
+#officialEvent-target .title img{
+    animation: neon-yellow 5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-yellow {
+    0%,
+    100% {
+        filter:drop-shadow(-5px 5px 5px #e6e9138c);
+    }
+
+    50% {
+        filter:drop-shadow(-5px 5px 50px #dee90884) drop-shadow(5px 5px 50px #dee9086d);
+    }
 }
 
 #officialEvent-target p {
