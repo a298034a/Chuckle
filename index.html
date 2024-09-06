@@ -24,12 +24,12 @@
     <main>
         <!-- 網站介紹 -->
         <section id="introduce">
-            <div class="first-article">
+            <div class="first-article rotate-effect">
                 <figure class="star pulse-animation-2s">
                     <img src="./images/index/star.png" alt="裝飾星星">
                 </figure>
                 <figure class="flower">
-                    <img class="rotate-animation-5s animation-delay-1s" src="./images/index/flower.png" alt="裝飾花">
+                    <img src="./images/index/flower.png" alt="裝飾花">
                 </figure>
                 <div class="content">
                     <h2>地圖直接連結文章！</h2>
@@ -57,12 +57,12 @@
                     <p>Chuckle 每月都會出一個新主題整理相關店家帶給你出遊的靈感<br>不定期舉辦小活動等你來參加</p>
                 </div>
                 <figure class="flower">
-                    <img class="rotate-animation-5s animation-delay-2s" src="./images/index/flower.png" alt="裝飾花">
+                    <img src="./images/index/flower.png" alt="裝飾花">
                 </figure>
             </div>
             <div class="third-article">
                 <figure class="flower">
-                    <img class="rotate-animation-5s animation-delay-3s" src="./images/index/flower.png" alt="裝飾花">
+                    <img src="./images/index/flower.png" alt="裝飾花">
                 </figure>
                 <div class="content">
                     <h2>想知道最近有什麼新奇的活動？</h2>
@@ -132,6 +132,7 @@
         </section>
     </main>
 
+    <script src="./js/indexUtility.js"></script>
     <script src="./js/navbar.js"></script>
     <script src="./js/footer.js"></script>
     <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
