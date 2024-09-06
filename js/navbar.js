@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <li>
                     <form class="search-container">
                         <input type="text" id="search-bar" placeholder="想去哪玩？">
-                        <a href="./articleList-react.html"><img class="search-icon" src="./images/search/search-icon.png"></a>
+                        <a href="./articleList-react.html"><img class="search-icon" src="./images/navbar/icon-search.svg" alt="搜尋按鈕"></a>
                     </form>
                 </li>
                 <li><a href="./news-exhibition.html">最新消息</a></li>
@@ -41,18 +41,18 @@ document.addEventListener('DOMContentLoaded', function () {
                     </ul>
                 </li>
                 <li class="menu"><a class="contrast-text" href="./articleList-react.html">文章列表</a></li>
-                <li class="icon"><a href="./map.html"><img class="icon-map" src="./images/navbar/icon-map.png"
+                <li class="icon"><a href="./map.html"><img class="icon-map" src="./images/navbar/icon-map.svg"
                             alt="前往地圖搜尋頁面"></a></li>
                 <li class="icon">
                     <label for="search-modal-switch" class="modal-switch">
                         <input type="checkbox" id="search-modal-switch">
-                        <img class="icon-search" src="./images/navbar/icon-search.png" alt="顯示搜尋功能區塊">
+                        <img class="icon-search" src="./images/navbar/icon-search.svg" alt="顯示搜尋功能區塊">
                     </label>
                 </li>
                 <li class="icon">
                     <label for="member-modal-switch" class="modal-switch">
                         <input type="checkbox" id="member-modal-switch">
-                        <img class="icon-member" src="./images/navbar/icon-member.png" alt="顯示會員區塊">
+                        <img class="icon-member" src="./images/navbar/icon-member.svg" alt="顯示會員區塊">
                     </label>
                 </li>
             </ul>
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <section id="search-modal" style="display:none">
             <form class="search-container">
                 <input type="text" id="search-bar" placeholder="想去哪玩？">
-                <a href="./articleList-react.html"><img class="search-icon" src="./images/search/search-icon.png"></a>
+                <a href="./articleList-react.html"><img class="search-icon" src="./images/navbar/icon-search.svg"></a>
             </form>
             <div class="negative-margin">
                 <div class="search-tags">

@@ -115,31 +115,31 @@ searchModalCheckbox.addEventListener('change', () => {
 const mapIcon = document.querySelector(`.icon-map`);
 
 mapIcon.addEventListener('mouseover', function () {
-    this.src = './images/navbar/icon-map-hover.png';
+    this.src = './images/navbar/icon-map-hover.svg';
 });
 
 mapIcon.addEventListener('mouseout', function () {
-    this.src = './images/navbar/icon-map.png';
+    this.src = './images/navbar/icon-map.svg';
 });
 
 const searchIcon = document.querySelector(`.icon-search`);
 
 searchIcon.addEventListener('mouseover', function () {
-    this.src = './images/navbar/icon-search-hover.png';
+    this.src = './images/navbar/icon-search-hover.svg';
 });
 
 searchIcon.addEventListener('mouseout', function () {
-    this.src = './images/navbar/icon-search.png';
+    this.src = './images/navbar/icon-search.svg';
 });
 
 const memberIcon = document.querySelector(`.icon-member`);
 
 memberIcon.addEventListener('mouseover', function () {
-    this.src = './images/navbar/icon-member-hover.png';
+    this.src = './images/navbar/icon-member-hover.svg';
 });
 
 memberIcon.addEventListener('mouseout', function () {
-    this.src = './images/navbar/icon-member.png';
+    this.src = './images/navbar/icon-member.svg';
 });
 // #endregion
 
