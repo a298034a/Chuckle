@@ -42,9 +42,61 @@
     min-width: 50px;
 }
 
+.pulse-animation-2s {
+    animation: pulse 2s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.pulse-animation-3s {
+    animation: pulse 3s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 .flower {
     width: 3%;
     min-width: 40px;
+}
+
+.rotate-animation-5s{
+    animation: rotate 5s infinite;
+    animation-timing-function: ease-in-out;    
+}
+
+.animation-delay-1s{
+    animation-delay: 1s;
+}
+
+.animation-delay-2s{
+    animation-delay: 2s;
+}
+
+.animation-delay-3s{
+    animation-delay: 3s;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .corner {
@@ -898,7 +950,7 @@
     position: relative;
     z-index: 2;
 
-    background: linear-gradient(0deg, rgba(255,226,74,0) 60%, rgba(255,226,74,1) 60%, rgba(255,226,74,1) 90%, rgba(255,226,74,0) 90%),linear-gradient(182deg, rgba(255,226,74,0) 20%, rgba(255,226,74,1) 20%, rgba(255,226,74,1) 88%, rgba(255,226,74,1) 93%, rgba(34,193,195,0) 93%);
+    background: linear-gradient(0deg, rgba(255, 226, 74, 0) 60%, rgba(255, 226, 74, 1) 60%, rgba(255, 226, 74, 1) 90%, rgba(255, 226, 74, 0) 90%), linear-gradient(182deg, rgba(255, 226, 74, 0) 20%, rgba(255, 226, 74, 1) 20%, rgba(255, 226, 74, 1) 88%, rgba(255, 226, 74, 1) 93%, rgba(34, 193, 195, 0) 93%);
 
     overflow: hidden;
 }
