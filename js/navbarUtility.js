@@ -30,7 +30,7 @@ let scrollYisZero;
 window.addEventListener('scroll', function () {
     if (window.scrollY > 0 && scrollYisZero != false) {
         scrollYisZero = false;
-        document.documentElement.style.setProperty('--navbg-width', `590px`);
+        document.documentElement.style.setProperty('--navbg-width', `550px`);
 
         if (backgroundColor == black) {
             document.documentElement.style.setProperty('--border-color', black);
