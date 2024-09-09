@@ -946,7 +946,7 @@
 #current-events .swiper-btn {
     position: absolute;
     z-index: 3;
-    top: 50%;
+    top: 52%;
     width: 5%;
     min-width: 80px;
     cursor: pointer;
@@ -1124,11 +1124,11 @@
 }
 
 .level-2 {
-    left: 80.5%;
+    left: 78.5%;
 }
 
 .level-1 {
-    left: 61.5%;
+    left: 60.5%;
 }
 
 .level0 {
@@ -1136,27 +1136,27 @@
 }
 
 .level1 {
-    left: 23.5%;
+    left: 24.5%;
 }
 
 .level2 {
-    left: 4.5%;
+    left: 6.5%;
 }
 
 .left-enter {
     opacity: 0;
-    left: -14.5%;
+    left: -13.5%;
 }
 
 .left-enter.left-enter-active {
     opacity: 1;
-    left: 4.5%;
+    left: 6.5%;
     transition: left 1s, opacity 1s;
 }
 
 .left-leave {
     opacity: 1;
-    left: 80.5%;
+    left: 78.5%;
 }
 
 .left-leave.left-leave-active {
@@ -1171,13 +1171,13 @@
 }
 
 .right-enter.right-enter-active {
-    left: 80.5%;
+    left: 78.5%;
     opacity: 1;
     transition: left 1s, opacity 1s;
 }
 
 .right-leave {
-    left: 4.5%;
+    left: 6.5%;
     opacity: 1;
 }
 
@@ -1543,11 +1543,11 @@
 }
 
 #upcoming-events .level-2 {
-    left: 89%;
+    left: 85%;
 }
 
 #upcoming-events .level-1 {
-    left: 64%;
+    left: 62%;
 }
 
 #upcoming-events .level0 {
@@ -1555,11 +1555,11 @@
 }
 
 #upcoming-events .level1 {
-    left: 14%;
+    left: 16%;
 }
 
 #upcoming-events .level2 {
-    left: -11%;
+    left: -7%;
 }
 
 #upcoming-events .left-enter {
@@ -1569,13 +1569,13 @@
 
 #upcoming-events .left-enter.left-enter-active {
     opacity: 1;
-    left: -11%;
+    left: -7%;
     transition: left 1s, opacity 1s;
 }
 
 #upcoming-events .left-leave {
     opacity: 1;
-    left: 89%;
+    left: 85%;
 }
 
 #upcoming-events .left-leave.left-leave-active {
@@ -1590,7 +1590,7 @@
 }
 
 #upcoming-events .right-enter.right-enter-active {
-    left: 89%;
+    left: 85%;
     opacity: 1;
     transition: left 1s, opacity 1s;
 }
