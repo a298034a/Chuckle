@@ -411,6 +411,10 @@ label[for="keep-login"] {
     cursor: pointer;
 }
 
+#member-modal input[type="button"]:hover{
+    background-color: var(--hover-yellow);
+}
+
 .sns-login {
     display: flex;
     justify-content: space-between;
