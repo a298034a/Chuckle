@@ -613,6 +613,10 @@
     display: inline-block;
 }
 
+#hot-article .title:hover{
+    opacity: 0.5;
+}
+
 #hot-article .content {
     position: relative;
     z-index: 1;
