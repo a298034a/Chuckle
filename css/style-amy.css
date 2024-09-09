@@ -1026,13 +1026,13 @@
     background-position: center;
     background-size: cover;
 
-    padding: 25px;
+    padding: 28px;
 
     border-radius: 30px;
 
     overflow: hidden;
     color: var(--white);
-
+    
     transition: transform 0.3s ease;
 }
 
@@ -1059,6 +1059,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    letter-spacing: 0.25rem;
 }
 
 #current-events .event-list li h2 {
@@ -1085,7 +1086,7 @@
     opacity: 0;
     transition: opacity 0.3s ease;
 
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.25rem;
 }
 
 #current-events .event-list li a:hover .content {
