@@ -180,13 +180,20 @@ hr {
 /* #endregion */
 
 /* #region 文章TAG區*/
+#newArticleBody,#articleBody{
+    position: relative;
+}
+
+
+
 #post-info {
     /* width: 400px; */
     width: 20%;
     height: auto;
 
-    position: fixed;
-    top: 13%;
+    /* position: fixed; */
+    /* top: 13%; */
+    position: absolute;
     left: 7%;
     border-radius: 30px;
     display: flex;
