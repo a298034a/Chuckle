@@ -21,7 +21,7 @@ const bars = document.querySelectorAll(".navigation .hamburger .bar");
 if (backgroundColor == black) {
     updateColor(contrastTexts, white);
 
-    bars.forEach(bar =>{
+    bars.forEach(bar => {
         bar.style.backgroundColor = white;
     });
 }
@@ -63,24 +63,23 @@ const searchModalCheckbox = document.getElementById("search-modal-switch");
 const memberModal = document.getElementById("member-modal");
 const memberModalCheckbox = document.getElementById("member-modal-switch");
 
+const memberModalBtn = document.getElementById("member-modal-btn");
+const blackBoard = document.querySelector(".black-board");
+
 memberModal.style.display = "none";
 
-memberModalCheckbox.addEventListener('change', () => {
-    if (memberModalCheckbox.checked) {
+memberModalCheckbox.addEventListener('click', () => {
+    if (memberModal.style.display == "none") {
         memberModal.style.display = "flex";
-
-        searchModalCheckbox.checked = false;
-        searchModal.style.display = "none";
+        blackBoard.style.display = "block";
     }
     else {
         memberModal.style.display = "none";
+        blackBoard.style.display = "none";
     }
 });
 
 //平板以下尺寸
-const memberModalBtn = document.getElementById("member-modal-btn");
-const blackBoard = document.querySelector(".black-board");
-
 memberModalBtn.addEventListener('click', () => {
     if (memberModal.style.display == "none") {
         memberModal.style.display = "flex";
@@ -172,8 +171,6 @@ window.addEventListener('resize', () => {
         hamburgers.forEach(function (hamburger) {
             hamburger.classList.remove('is-active');
         });
-
-        blackBoard.style.display = "none";
     }
     else {
         memberModalCheckbox.checked = false;
