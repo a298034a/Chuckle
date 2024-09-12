@@ -1100,8 +1100,6 @@
 
     opacity: 0;
     transition: opacity 0.3s ease;
-
-    letter-spacing: 0.25rem;
 }
 
 #current-events .event-list li a:hover .content {
@@ -2033,13 +2031,50 @@
     width: 80%;
     aspect-ratio: 1/1;
 
+    margin: 7%;
+    padding: 10%;
+}
+
+#officialEvent-join::after {
+    position: absolute;
+    content: '';
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
     background-image: url(../images/official/bowl.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 
-    margin: 7%;
-    padding: 10%;
+    animation: rotate360 30s linear infinite; 
+}
+
+#officialEvent-join::before {
+    position: absolute;
+    content: '';
+    z-index: -2;
+
+    width: 115%;
+    height: 115%;
+
+    background-image: url(../images/official/role-01.svg);
+    background-repeat: no-repeat;
+    background-size: 281px 304px;
+    background-position: top;
+
+    animation: rotate360 30s linear infinite reverse; 
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 #officialEvent-join .content {
@@ -2103,7 +2138,11 @@ video {
     #officialEvent-join {
         width: 100%;
         padding: 15% 1%;
+    }
+
+    #officialEvent-join::after {
         background-size: cover;
+        animation: none;
     }
 
     #officialEvent-join .content .join-btn {
