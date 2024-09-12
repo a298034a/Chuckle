@@ -501,6 +501,18 @@ label[for="keep-login"] {
     padding: 30px;
 }
 
+#search-modal .tag {
+    display: inline-flex;
+    padding: 1px 10px;
+
+    background-color: var(--main-yellow);
+    border-radius: 99px;
+}
+
+#search-modal .tag:hover {
+    background-color: var(--hover-yellow);
+}
+
 .search-container {
     display: flex;
     align-items: center;
