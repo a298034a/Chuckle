@@ -1100,8 +1100,6 @@
 
     opacity: 0;
     transition: opacity 0.3s ease;
-
-    letter-spacing: 0.25rem;
 }
 
 #current-events .event-list li a:hover .content {
