@@ -1076,6 +1076,21 @@
     letter-spacing: 0.1rem;
 }
 
+#current-events .wrap .tags{
+    opacity: 0;
+    margin-bottom: 5px;
+}
+
+#current-events .wrap .tags .tag{
+    color: var(--black);
+    background-color: var(--white);
+    margin-right: 10px;
+}
+
+#current-events .event-list li a:hover .tags{
+    opacity: 1;
+}
+
 #current-events .event-list li a .content {
     position: relative;
     z-index: 1;
