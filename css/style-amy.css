@@ -12,6 +12,8 @@
 
     background-color: var(--main-yellow);
     border-radius: 99px;
+
+    transition: all 0.3s ease;
 }
 
 .tag:hover {
@@ -62,7 +64,7 @@
     }
 
     50% {
-        transform: scale(1.05);
+        transform: scale(1.15);
     }
 
     100% {
@@ -2048,7 +2050,7 @@
     background-size: contain;
     background-position: center;
 
-    animation: rotate360 30s linear infinite; 
+    animation: rotate360 30s linear infinite;
 }
 
 #officialEvent-join::before {
@@ -2064,7 +2066,7 @@
     background-size: 281px 304px;
     background-position: top;
 
-    animation: rotate360 30s linear infinite reverse; 
+    animation: rotate360 30s linear infinite reverse;
 }
 
 @keyframes rotate360 {
@@ -2102,6 +2104,7 @@ video {
 }
 
 #officialEvent-join .content .join-btn {
+    position: relative;
     width: 30%;
     min-width: 150px;
     aspect-ratio: 315/95;
@@ -2114,8 +2117,23 @@ video {
     cursor: pointer;
 }
 
-#officialEvent-join .content .join-btn:hover {
+#officialEvent-join .content .join-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url(../images/official/join-btn-hover.svg);
+    background-position: center;
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+#officialEvent-join .content .join-btn:hover::before {
+    opacity: 1;
 }
 
 @media (max-width:1680px) {
