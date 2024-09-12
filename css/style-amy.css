@@ -1059,7 +1059,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.1rem;
 }
 
 #current-events .event-list li h2 {
