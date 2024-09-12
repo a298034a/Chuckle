@@ -613,7 +613,7 @@
     display: inline-block;
 }
 
-#hot-article .title:hover{
+#hot-article .title:hover {
     opacity: 0.5;
 }
 
@@ -1032,7 +1032,7 @@
 
     overflow: hidden;
     color: var(--white);
-    
+
     transition: transform 0.3s ease;
 }
 
@@ -1074,6 +1074,21 @@
     text-overflow: ellipsis;
 
     letter-spacing: 0.1rem;
+}
+
+#current-events .wrap .tags {
+    opacity: 0;
+    margin-bottom: 5px;
+}
+
+#current-events .wrap .tags .tag {
+    color: var(--black);
+    background-color: var(--white);
+    margin-right: 10px;
+}
+
+#current-events .event-list li a:hover .tags {
+    opacity: 1;
 }
 
 #current-events .event-list li a .content {
@@ -2013,21 +2028,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 
     width: 80%;
     aspect-ratio: 1/1;
 
-    background-image: url(../images/official/bowl.png);
+    background-image: url(../images/official/bowl.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 
     margin: 7%;
+    padding: 10%;
 }
 
 #officialEvent-join .content {
-    width: 60%;
-    padding-top: 5%;
+    width: 100%;
+    padding: 0 12%;
 }
 
 #officialEvent-join .content h2 {
@@ -2037,7 +2054,7 @@
 
 #officialEvent-join .content p {
     line-height: 2rem;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 #officialEvent-join .content .video {
@@ -2049,6 +2066,23 @@ video {
     aspect-ratio: 16/9;
 }
 
+#officialEvent-join .content .join-btn {
+    width: 30%;
+    min-width: 150px;
+    aspect-ratio: 315/95;
+    background-image: url(../images/official/join-btn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+#officialEvent-join .content .join-btn:hover {
+    background-image: url(../images/official/join-btn-hover.svg);
+}
+
 @media (max-width:1680px) {
     #officialEvent-join {
         width: 90%;
@@ -2056,25 +2090,38 @@ video {
 }
 
 @media (max-width:1280px) {
+    #officialEvent-join .title {
+        width: 80%;
+    }
+
+    #officialEvent-join .content .join-btn {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:830px) {
     #officialEvent-join {
-        width: 150%;
-        margin: 7% 0;
+        width: 100%;
+        padding: 15% 1%;
+        background-size: cover;
+    }
+
+    #officialEvent-join .content .join-btn {
+        margin-top: 10px;
     }
 
     #officialEvent-join .content {
-        width: 50%;
-        padding-top: 10%;
+        width: 100%;
+        padding: 5%;
     }
 }
 
 @media (max-width:431px) {
-    #officialEvent-join .content {
-        width: 60%;
-    }
 
     #officialEvent-join .content h2 {
         font-size: 1rem;
-        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-bottom: 0;
     }
 
     #officialEvent-join .content p {

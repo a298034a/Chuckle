@@ -22,7 +22,7 @@
         const { useState, useEffect, useRef } = React;
         const { CSSTransition, TransitionGroup } = window.ReactTransitionGroup;
 
-        function CurrentItem({ href, content, date, title, bg, level }) {
+        function CurrentItem({ href, content, date, title, bg, level, tags }) {
             const className = `item level${level}`;
             return (
                 <li className={className}>
@@ -30,6 +30,11 @@
                         <div className="overlay"></div>
                         <p className="content" dangerouslySetInnerHTML={{ __html: content }}></p>
                         <div className="wrap">
+                            <p className="tags">
+                                {tags.map((tag, index) => (
+                                    <span key={index} className="tag">{tag}</span>
+                                ))}
+                            </p>
                             <p>{date}</p>
                             <h2>{title}</h2>
                         </div>
@@ -78,6 +83,7 @@
             const [rangeStart, setRangeStart] = useState(2);
             const [rangeEnd, setRangeEnd] = useState(3);
             const [items, setItems] = useState([]);
+            const [isMoving, setIsMoving] = useState(false);
 
             const getEventData = async () => {
                 const result = await axios.get("./json/currentEvent.json");
@@ -130,27 +136,42 @@
                         index = i % items.length;
                     }
                     level = currentActive - i;
-                    newItems.push(<CurrentItem key={index} href={items[index].href} content={items[index].content} date={items[index].date} title={items[index].title} bg={items[index].bg} level={level} />);
+                    newItems.push(<CurrentItem key={index} href={items[index].href} content={items[index].content} date={items[index].date} title={items[index].title} bg={items[index].bg} level={level} tags={items[index].tags} />);
                 }
 
                 return newItems;
             };
 
             const moveLeft = () => {
-                setDirection('left');
-                setTimeout(() => {
-                    const newActive = currentActive - 1;
-                    setCurrentActive(newActive < 0 ? items.length - 1 : newActive);
-                }, 0);
+                if (!isMoving) {
+                    setIsMoving(true);
+                    setDirection('left');
+                    setTimeout(() => {
+                        const newActive = currentActive - 1;
+                        setCurrentActive(newActive < 0 ? items.length - 1 : newActive);
+                    }, 0);
+
+                    setTimeout(() => {
+                        setIsMoving(false);
+                    }, 600);
+                }
             };
 
             const moveRight = () => {
-                setDirection('right');
-                setTimeout(() => {
-                    const newActive = currentActive + 1;
-                    setCurrentActive(newActive % items.length);
-                }, 0);
+                if (!isMoving) {
+                    setIsMoving(true);
+                    setDirection('right');
+                    setTimeout(() => {
+                        const newActive = currentActive + 1;
+                        setCurrentActive(newActive % items.length);
+                    }, 0);
+
+                    setTimeout(() => {
+                        setIsMoving(false);
+                    }, 600);
+                }
             };
+
 
             return (
                 <>
