@@ -411,6 +411,7 @@ label[for="keep-login"] {
     margin-bottom: 15px;
 
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 #member-modal input[type="button"]:hover {
