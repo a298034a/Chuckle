@@ -121,6 +121,9 @@ hr {
     align-items: center;
     margin-bottom : 2%
 }
+.seeCount h5 {
+    font-weight: 600;
+}
 
 
 .comment {
@@ -397,10 +400,14 @@ transform: scale(1.1,1.1);
     padding: 0px 40px;
     padding-bottom: 40px;
 }
+#post-info-icon h5 {
+    font-weight: 600;
+}
 
 .posts-btn {
     display: flex;
 }
+
 
 .posts-btn img {
     width: 32px;
