@@ -99,4 +99,28 @@
                     }
                 });
 
+    // 點收藏
+        let collects = document.querySelectorAll('.collect');
     
+        collects.forEach(collect => {
+            collect.addEventListener('click', () => {
+                if (collect.src.includes('collect-new-noframe.svg')) {
+                    collect.src = './images/collect-new-hover.svg';
+                } else {
+                    collect.src = './images/collect-new-noframe.svg';
+                }
+            });
+        });
+    
+        // 點分享
+        let shares = document.querySelectorAll('.share');
+    
+        shares.forEach(share => {
+            share.addEventListener('click', () => {
+                if (share.src.includes('share-new-noframe.svg')) {
+                    share.src = './images/share-new-hover.svg';
+                } else {
+                    share.src = './images/share-new-noframe.svg';
+                }
+            });
+        });

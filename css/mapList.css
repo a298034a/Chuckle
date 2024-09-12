@@ -211,7 +211,7 @@
 
 .posts-btn {
     display: flex;
-
+    align-items: center;
 }
 
 .posts-btn img {
@@ -219,6 +219,9 @@
     height: 24px;
     margin: 0 2%;
     cursor: pointer;
+}
+.posts-btn h5{
+    margin-right: 2%;
 }
 
 
