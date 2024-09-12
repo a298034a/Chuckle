@@ -247,13 +247,10 @@ hr {
     flex-wrap: wrap;
 }
 
-/* .tag {
-
-    color: var(--black);
+.tag {
     cursor: pointer;
-    width: fit-content;
-
-} */
+    /* width: fit-content; */
+}
 
 
 /* 文章列表-TAG區顏色 */
