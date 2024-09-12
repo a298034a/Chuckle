@@ -12,6 +12,8 @@
 
     background-color: var(--main-yellow);
     border-radius: 99px;
+
+    transition: all 0.3s ease;
 }
 
 .tag:hover {
