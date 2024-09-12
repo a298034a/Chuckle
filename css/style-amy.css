@@ -2048,7 +2048,23 @@
     background-size: contain;
     background-position: center;
 
-    animation: rotate360 20s linear infinite; 
+    animation: rotate360 30s linear infinite; 
+}
+
+#officialEvent-join::before {
+    position: absolute;
+    content: '';
+    z-index: -2;
+
+    width: 115%;
+    height: 115%;
+
+    background-image: url(../images/official/role-01.svg);
+    background-repeat: no-repeat;
+    background-size: 281px 304px;
+    background-position: top;
+
+    animation: rotate360 30s linear infinite reverse; 
 }
 
 @keyframes rotate360 {
@@ -2126,6 +2142,7 @@ video {
 
     #officialEvent-join::after {
         background-size: cover;
+        animation: none;
     }
 
     #officialEvent-join .content .join-btn {
