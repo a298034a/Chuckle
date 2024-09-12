@@ -247,13 +247,13 @@ hr {
     flex-wrap: wrap;
 }
 
-.tag {
+/* .tag {
 
     color: var(--black);
     cursor: pointer;
     width: fit-content;
 
-}
+} */
 
 
 /* 文章列表-TAG區顏色 */
@@ -262,6 +262,7 @@ hr {
     margin-left: 0;
     font-size: 20px;
     border-radius: 10px;
+    color: var(--black);
 }
 #articleListBody #hotFilter .tag {
     margin: 0.5rem 0.5rem;
@@ -308,6 +309,7 @@ transform: scale(1.1,1.1);
     margin: 0.5rem 0.5rem;
     margin-left: 0;
     background-color: var(--main-green);
+    color: var(--black);
 }
 #articleBody .tag:hover {
     background-color: var(--hover-green);
