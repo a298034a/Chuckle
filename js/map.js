@@ -124,3 +124,32 @@
                 }
             });
         });
+
+        // 搜尋欄位
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchBar = document.getElementById('search-bar');
+            const keywordsContainer = document.getElementById('keywords-container');
+            const searchContainer = document.querySelector('.search-container');
+
+            // 當點擊輸入框時，顯示熱門關鍵字
+            searchBar.addEventListener('focus', function () {
+                keywordsContainer.classList.remove('hidden');
+                keywordsContainer.classList.add('visible');
+            });
+
+            // 當點擊容器時，隱藏熱門關鍵字
+            searchContainer.addEventListener('click', function (e) {
+                if (!searchBar.contains(e.target)) {
+                    keywordsContainer.classList.add('hidden');
+                    keywordsContainer.classList.remove('visible');
+                }
+            });
+
+            // 當點擊外部區域時，隱藏熱門關鍵字
+            document.addEventListener('click', function (e) {
+                if (!searchContainer.contains(e.target)) {
+                    keywordsContainer.classList.add('hidden');
+                    keywordsContainer.classList.remove('visible');
+                }
+            });
+        });

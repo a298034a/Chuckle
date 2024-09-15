@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/nav-footer-general.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/mapList.css">
+   
 </head>
 
 <body id="map-body">
@@ -19,7 +20,16 @@
             <a href="./index.html"><img id="mapIcon" src="./images/map/logo_bg.svg" alt="黃版LOGO"></a>
             <form class="search-container">
                 <input type="text" id="search-bar" placeholder="想去哪玩？">
-                <a href="#"><img class="search-icon" src="./images/search/search-icon.png"></a>
+                <a href="#" class="search-icon"><img src="./images/search/search-icon.png" alt="搜尋"></a>
+                <!-- 熱門關鍵字欄 -->
+                <div id="keywords-container" class="hidden">
+                    <ul>
+                        <li><a href="#">1台北101</a></li>
+                        <li><a href="#">2夜市美食</a></li>
+                        <li><a href="#">3滷味推薦</a></li>
+                        <li><a href="#">4貓咪咖啡廳</a></li>
+                    </ul>
+                </div>
             </form>
 
             <a class="tag nev-things" href="#">市集</a>
@@ -27,11 +37,7 @@
             <a class="tag nev-things" href="#">快閃店</a>
             <a class="tag nev-things" href="#">餐廳</a>
             <a class="tag nev-things" href="#">飲料店</a>
-
         </div>
-        <!-- <a href="#" onclick="history.back(); return false;">
-            <img id="back" class="map-icon" src="./images/map/goback.svg" alt="返回">
-        </a> -->
     </header>
 
 
@@ -216,7 +222,7 @@
             ({ key: "AIzaSyBnV_x0SwoErXaHcDSIh84eI1y4YRj0sYY", v: "weekly" });</script>
     <script src="./js/initMap.js"></script>
     <script src="./js/map.js"></script>
-   
+  
 
 </body>
 
