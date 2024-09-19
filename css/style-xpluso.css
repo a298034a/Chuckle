@@ -51,10 +51,12 @@ h4 {
     font-size: 16px;
     letter-spacing: 1px;
 }
-h5{
+
+h5 {
     font-size: 14px;
     letter-spacing: 1px;
 }
+
 #newArticleBody p,
 #articleBody p,
 #underNev p {
@@ -99,33 +101,38 @@ hr {
     margin-left: 32%;
 
 }
-@media (max-width:390px){
-    #post-body{
+
+@media (max-width:390px) {
+    #post-body {
         width: 150%;
     }
+}
+
+@media (max-width:1249px) {
+    #listBody {
+        margin-left: 35%;
     }
-    @media (max-width:1249px){
-        #listBody{
-            margin-left: 35%;
-        }
-        }
-        @media (max-width:1145px){
-            #listBody{
-                margin-left: 36%;
-            }
-            }
-            @media (max-width:1090px){
-                #listBody{
-                    margin-left: 37%;
-                }
-                }
-                @media (max-width:1047px){
-                    #listBody{
-                        margin-left: 38%;
-                    }
-                    }
-        
-    
+}
+
+@media (max-width:1145px) {
+    #listBody {
+        margin-left: 36%;
+    }
+}
+
+@media (max-width:1090px) {
+    #listBody {
+        margin-left: 37%;
+    }
+}
+
+@media (max-width:1047px) {
+    #listBody {
+        margin-left: 38%;
+    }
+}
+
+
 
 
 #comment {
@@ -137,12 +144,13 @@ hr {
 }
 
 /* 觀看數 */
-.seeCount{
+.seeCount {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-bottom : 2%
+    margin-bottom: 2%
 }
+
 .seeCount h5 {
     font-weight: 600;
 }
@@ -219,7 +227,8 @@ hr {
 /* #endregion */
 
 /* #region 文章TAG區*/
-#newArticleBody,#articleBody{
+#newArticleBody,
+#articleBody {
     position: relative;
 }
 
@@ -239,33 +248,37 @@ hr {
     flex-direction: column;
     align-items: flex-end;
 }
-@media (max-width:390px){
-    #post-info{
+
+@media (max-width:390px) {
+    #post-info {
         width: 150%;
         align-items: flex-start;
         margin-left: 25%;
     }
-    }
+}
 
 #post-info-text {
     padding: 10%;
     padding-bottom: 20px;
 }
-@media (max-width:390px){
-    #post-info-text{
+
+@media (max-width:390px) {
+    #post-info-text {
         display: flex;
         /* 為了TAG內容並排 */
-        
+
     }
 
 }
+
 .bio {
     display: flex;
     align-items: center;
     padding-bottom: 20px;
 }
-@media (max-width:1655px){
-    .bio{
+
+@media (max-width:1655px) {
+    .bio {
         flex-direction: column;
     }
 
@@ -295,9 +308,10 @@ hr {
     flex-direction: column;
     align-items: flex-start;
 }
-@media (max-width:1655px){
-    .memberName{
-        align-items:center;
+
+@media (max-width:1655px) {
+    .memberName {
+        align-items: center;
     }
 
 }
@@ -329,19 +343,22 @@ hr {
     border-radius: 10px;
     color: var(--black);
 }
+
 #articleListBody #hotFilter .tag {
     margin: 0.5rem 0.5rem;
     margin-left: 0;
     background-color: var(--black);
     color: var(--base-backgroundColor);
     padding: 0.4rem 0.8rem;
-    
-    
+
+
 }
-#articleListBody #hotFilter .tag:hover{
-    transform: scale(1.1,1.1);
+
+#articleListBody #hotFilter .tag:hover {
+    transform: scale(1.1, 1.1);
     transition: all .25s linear;
 }
+
 #articleListBody #listTag .tag {
     margin: 0.5rem 0.5rem;
     margin-left: 0;
@@ -350,9 +367,9 @@ hr {
     padding: 0.2rem 0.8rem;
 }
 
-#articleListBody #listTag .tag:hover{
-background-color: rgba(0, 0, 0, 0.2);
-transform: scale(1.1,1.1);
+#articleListBody #listTag .tag:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: scale(1.1, 1.1);
     transition: all .25s linear;
 }
 
@@ -376,6 +393,7 @@ transform: scale(1.1,1.1);
     background-color: var(--main-green);
     color: var(--black);
 }
+
 #articleBody .tag:hover {
     background-color: var(--hover-green);
 }
@@ -398,6 +416,7 @@ transform: scale(1.1,1.1);
     font-size: 14px;
     background-color: var(--main-yellow);
 }
+
 #newArticleBody .tag:hover {
     background-color: var(--hover-yellow);
 }
@@ -422,6 +441,7 @@ transform: scale(1.1,1.1);
     padding: 0px 40px;
     padding-bottom: 40px;
 }
+
 #post-info-icon h5 {
     font-weight: 600;
 }
@@ -448,11 +468,11 @@ transform: scale(1.1,1.1);
 /* #region 留言送出欄*/
 
 #send {
-    
+
     display: flex;
     align-content: space-between;
     margin: 10%;
-    
+
 }
 
 
@@ -493,7 +513,7 @@ transform: scale(1.1,1.1);
     padding-left: 2%;
 
     width: 200px;
-    
+
     /* 設置寬度，根據需要調整 */
     height: auto;
     /* 設置高度，與寬度一致以保持圓形 */
@@ -514,15 +534,17 @@ transform: scale(1.1,1.1);
     width: 100%;
     height: auto;
 }
-.listTextArea h2{
-    overflow: hidden;/* 多出來時則省略 */
+
+.listTextArea h2 {
+    overflow: hidden;
+    /* 多出來時則省略 */
     text-overflow: ellipsis;
-      /* 自動加省略號... */
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      /* 定義Box垂直佈局 */
-      -webkit-line-clamp: 1;
-      /* 行數限制 */
+    /* 自動加省略號... */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /* 定義Box垂直佈局 */
+    -webkit-line-clamp: 1;
+    /* 行數限制 */
 }
 
 .listTextArea p {
@@ -681,7 +703,7 @@ body.themeSeason {
     justify-content: center;
     align-items: center;
     width: 100%;
-    
+
     /* 粉框 */
     /* padding: 5px 16px;
     margin-top: 2%;
@@ -690,7 +712,7 @@ body.themeSeason {
     width: 1; */
 }
 
-.slogan h5{
+.slogan h5 {
     padding: 1rem 2%;
     text-align: center;
 }
@@ -704,7 +726,7 @@ body.themeSeason {
 }
 
 /* 草莓遮色片 */
-.thing .col{
+.thing .col {
     display: flex;
     position: relative;
     justify-content: center;
@@ -712,26 +734,32 @@ body.themeSeason {
     flex: 1;
     margin: 1%;
 }
-.thing .mask{
+
+.thing .mask {
     mask-image: url(../images/theme/straw_icon.svg);
     mask-size: 100% 100%;
     mask-position: center;
     mask-repeat: no-repeat;
+    position: relative;
 }
-.thing img{
+
+.thing img {
     display: block;
     width: 100%;
     object-fit: cover;
 }
-.thing .photo{
+
+.thing .photo {
     z-index: 10;
     width: 97%;
     position: absolute;
     margin: -9% 10%;
 }
-.thing .straw{
+
+
+.thing .straw {
     width: 100%;
-   
+
 }
 
 
@@ -758,7 +786,7 @@ body.themeSeason {
     right: 70%;
     z-index: 1;
     margin-left: 5%;
-    
+
 }
 
 
@@ -797,14 +825,16 @@ body.themeSeason {
     height: auto;
     margin: 1%;
 }
+
 /* 頁籤 */
-#page-choose .pageChoose-btn{
+#page-choose .pageChoose-btn {
     height: auto;
     margin: 1%;
     cursor: pointer;
-    
+
 }
-#page-choose .pageChoose-btn:hover{
+
+#page-choose .pageChoose-btn:hover {
     animation: moveRightAndLeft 0.6s ease-in-out infinite;
     /* 待研究為甚麼動不起來 */
 }
