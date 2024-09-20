@@ -82,8 +82,9 @@ map.addEventListener('click', function () {
 // 選取所有 .addressPosts 和 .popup-content 元素
 let posts = document.querySelectorAll('.addressPosts');
 let newpage = document.querySelector('.popup-content'); // 假設只會有一個 popup-content
-// let newpage = document.querySelector('.showpage');
 let closeButton = document.querySelector('.close-btn');
+
+let shadow = document.querySelector('#shadow');
 
 // 遍歷每個 .addressPosts 元素，對它們添加點擊事件監聽器
 posts.forEach(function(post) {
@@ -91,10 +92,12 @@ posts.forEach(function(post) {
         if (newpage.style.display === 'block') {
             newpage.style.display = 'none';
             post.style.backgroundColor='var(--white)';
+            shadow.style.display = 'none';
 
         } else {
             newpage.style.display = 'block';
             post.style.backgroundColor='var(--hover-yellow)';
+            shadow.style.display = 'block';
         }
     });
     // 
@@ -103,6 +106,7 @@ closeButton.addEventListener('click', function () {
     // 隱藏 .popup-content
     newpage.style.display = 'none'; // 隱藏 popup-content
     post.style.backgroundColor='var(--white)';
+    shadow.style.display = 'none';
 });
 });
 
