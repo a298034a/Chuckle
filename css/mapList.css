@@ -314,22 +314,22 @@
 /* #endregion */
 
 
-#popup-content {
-    /* background-color: white; */
+.popup-content {
+    display: none; /* 默認隱藏 */
     width: 80%;
     max-width: 1440px;
     height: 80vh;
     padding: 20px;
-    position: relative;
+    position: fixed;
+    background-color: var(--base-backgroundColor);
     border-radius: 30px;
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
-    display: none;
     top: 15vh;
     left: 10%;
-    z-index: 999;
+    z-index: 99;
+    
 }
 
-#close-btn {
+.close-btn {
     position: absolute;
     top: 25px;
     right: 50px;
