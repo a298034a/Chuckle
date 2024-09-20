@@ -471,10 +471,15 @@ hr {
 
     display: flex;
     align-content: space-between;
-    margin: 10%;
+    margin-top: 10%;
+    width: 100%;
 
 }
+#send .sendFrom{
 
+    width: 100%;
+    margin-right: 2%;
+}
 
 #send img {
     /* icon */
@@ -484,8 +489,8 @@ hr {
 }
 
 #send input {
-    width: 800px;
-    height: 40px;
+    width: 100%;
+    height:100%;
     border-radius: 30px;
     margin-right: 10px;
 }
