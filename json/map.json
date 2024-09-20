@@ -6,12 +6,12 @@
     },
     {
         "position": { "lat": 25.024652, "lng": 121.523789 },
-        "imgSrc": "./images/map/landmark-blue.svg",
+        "imgSrc": "./images/map/landmark-green.svg",
         "title": "星空公園"
     },
     {
         "position": { "lat": 25.069321, "lng": 121.532146 },
-        "imgSrc": "./images/map/landmark-blue.svg",
+        "imgSrc": "./images/map/landmark-green.svg",
         "title": "湖光餐廳"
     },
     {
@@ -21,7 +21,7 @@
     },
     {
         "position": { "lat": 25.072135, "lng": 121.556412 },
-        "imgSrc": "./images/map/landmark-blue.svg",
+        "imgSrc": "./images/map/landmark-green.svg",
         "title": "城市花園"
     },
     {
@@ -31,12 +31,12 @@
     },
     {
         "position": { "lat": 25.070456, "lng": 121.467890 },
-        "imgSrc": "./images/map/landmark-blue.svg",
+        "imgSrc": "./images/map/landmark-green.svg",
         "title": "綠洲公園"
     },
     {
         "position": { "lat": 25.052789, "lng": 121.532101 },
-        "imgSrc": "./images/map/landmark-blue.svg",
+        "imgSrc": "./images/map/landmark-green.svg",
         "title": "山巒餐廳"
     },
     {
@@ -46,12 +46,12 @@
     },
     {
         "position": { "lat": 25.068234, "lng": 121.554789 },
-        "imgSrc": "./images/map/landmark-blue.svg",
+        "imgSrc": "./images/map/landmark-green.svg",
         "title": "童話花園"
     },
     {
         "position": { "lat": 25.023456, "lng": 121.500987 },
-        "imgSrc": "./images/map/landmark-blue.svg",
+        "imgSrc": "./images/map/landmark-green.svg",
         "title": "河畔咖啡廳"
     },
     {
@@ -61,12 +61,12 @@
     },
     {
         "position": { "lat": 25.031234, "lng": 121.521678 },
-        "imgSrc": "./images/map/landmark-blue.svg",
+        "imgSrc": "./images/map/landmark-green.svg",
         "title": "花草森林公園"
     },
     {
         "position": { "lat": 25.054321, "lng": 121.469876 },
-        "imgSrc": "./images/map/landmark-blue.svg",
+        "imgSrc": "./images/map/landmark-green.svg",
         "title": "藍天餐廳"
     },
     {
@@ -81,12 +81,12 @@
     },
     {
         "position": { "lat": 25.044756, "lng": 121.515822 },
-        "imgSrc": "./images/map/landmark-blue.svg",
+        "imgSrc": "./images/map/landmark-green.svg",
         "title": "小豬拉麵"
     },
     {
         "position": { "lat": 25.038252, "lng": 121.536847 },
-        "imgSrc": "./images/map/landmark-blue.svg",
+        "imgSrc": "./images/map/landmark-green.svg",
         "title": "拉麵"
     }
 ]
