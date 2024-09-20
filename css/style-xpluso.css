@@ -248,14 +248,38 @@ hr {
     flex-direction: column;
     align-items: flex-end;
 }
-
-@media (max-width:390px) {
-    #post-info {
-        width: 150%;
-        align-items: flex-start;
-        margin-left: 25%;
+@media (max-width:850px) {
+    #post-info{
+        width: 170px;
     }
 }
+@media (max-width:800px) {
+    #post-body,#comment {
+        margin-left: 38%;
+     }
+}
+@media (max-width:610px) {
+    #post-body,#comment {
+        margin-left: 40%;
+     }
+}
+
+@media (max-width:550px) {
+    #post-info {
+         position: relative;
+        width: 90%;
+        align-items: flex-start;
+        margin: 5%;
+        left: 0%;
+    }
+    #post-body,#comment {
+        /* margin-top: 2%; */
+        margin-left: 0%;
+        width: 100%;
+        padding: 0% 8%;
+     }
+}
+
 
 #post-info-text {
     padding: 10%;
