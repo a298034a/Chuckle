@@ -827,16 +827,44 @@ body.themeSeason {
 }
 
 /* 頁籤 */
-#page-choose .pageChoose-btn {
+ .pageChoose-btn {
     height: auto;
     margin: 1%;
     cursor: pointer;
 
 }
 
-#page-choose .pageChoose-btn:hover {
-    animation: moveRightAndLeft 0.6s ease-in-out infinite;
-    /* 待研究為甚麼動不起來 */
+.pageChoose-next:hover {
+    animation: moveRight 0.6s ease-in-out infinite;
+}
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(15px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+.pageChoose-pre:hover {
+    animation: moveLeft 0.6s ease-in-out infinite;
+}
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-15px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 /* #endregion */
