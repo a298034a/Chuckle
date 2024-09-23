@@ -86,7 +86,8 @@
             const [isMoving, setIsMoving] = useState(false);
 
             const getEventData = async () => {
-                const result = await axios.get("./json/currentEvent.json");
+                // const result = await axios.get("./json/currentEvent.json");
+                const result = await axios.get("https://a298034a.github.io/Chuckle/json/currentEvent.json");
                 setItems(result.data);
             }
 
@@ -261,7 +262,8 @@
             const [items, setItems] = useState([]);
 
             const getEventData = async () => {
-                const result = await axios.get("./json/upcommingEvent.json");
+                // const result = await axios.get("./json/upcommingEvent.json");
+                const result = await axios.get("https://a298034a.github.io/Chuckle/json/upcommingEvent.json");
                 setItems(result.data);
             }
 
