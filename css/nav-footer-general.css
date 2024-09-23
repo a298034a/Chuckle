@@ -431,6 +431,12 @@ label[for="keep-login"] {
 .sns-login a {
     background-color: var(--white);
     border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sns-login a:hover {
+    background-color: var(--hover-yellow);
 }
 
 #member-modal #close-member-modal {
