@@ -49,9 +49,19 @@
     width: 100%;
 }
 
-.map-tagArea {
+.map-nevArea {
+    /* 搜尋 */
     display: flex;
     margin-bottom: 10px;
+    width: 19%;
+}
+
+
+.map-tagArea {
+    /* 黃色TAG */
+    display: flex;
+    margin-bottom: 10px;
+    padding: 0 2%;
 }
 
 #mapIcon {
@@ -79,23 +89,7 @@
 }
 
 
-/* @media (max-width:1336px) {
-    #map-nev .search-container {
-        width: 13%;
-    }
-}
 
-@media (max-width:1060px) {
-    #map-nev .search-container {
-        width: 11%;
-    }
-}
-
-@media (max-width:800px) {
-    #map-nev .search-container {
-        width: 11%;
-    }
-} */
 
 
 .nev-things {
@@ -223,28 +217,8 @@
     display: flex;
 }
 
-@media (max-width:800px) {
-    #list {
-        width: 21%;
-    }
-}
 
-@media (max-width:732px) {
-    #list {
-        width: 22%;
-    }
-}
 
-@media (max-width:644px) {
-    #list {
-        width: 100vw;
-    }
-
-    #map-nev {
-        width: 100vw;
-    }
-
-}
 
 
 
@@ -447,10 +421,38 @@ iframe {
     display: none;
 }
 
-/* 手機尺寸 */
 
-@media (max-width:390px) {
 
+
+/* 電腦平板尺寸 */
+
+@media (max-width:820px) {
+    #list {
+        width: 30%;
+    }
+    .map-nevArea {
+        width: 28%;
+    }
+}
+
+
+
+@media (max-width:644px) {
+    #list {
+        width: 100vw;
+    }
+
+    #map-nev {
+        width: 100vw;
+        z-index: 80;
+    }
+    #attraction-introduction {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0;
+    }
+   
     #close {
         display: none;
     }
@@ -458,17 +460,11 @@ iframe {
     #phone-close-btn {
         display: block;
     }
+}
 
-    #attraction-introduction {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 0;
-    }
+/* 提前手機尺寸 */
 
-    #map-nev {
-        z-index: 80;
-    }
+@media (max-width:584px) {
 
     #map-nevleft {
         display: flex;
@@ -485,6 +481,9 @@ iframe {
     .nev-things {
         /* tag長寬調整 */
         padding: 0px 10px;
+    }
+    .map-nevArea {
+        width: 85%;
     }
 
 }
