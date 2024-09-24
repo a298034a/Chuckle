@@ -182,7 +182,7 @@
 
 #map {
     /* 當叫出LIST時縮小，寫完LIST要先恢復成W100% */
-    /* width: 100%; */
+    width: 100%;
     padding: 0px;
     z-index: 2;
     position: static !important;
