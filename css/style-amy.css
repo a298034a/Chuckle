@@ -1782,26 +1782,30 @@
 
 #officialEvent-introduce {
     margin-top: 50px;
+    width: 100%;
 }
 
 #officialEvent-introduce .content {
-    background-image: url(../images/official/smoke.svg);
+    background-image: url(../images/official/smoke.gif);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
-
-    padding-top: 8%;
-    padding-left: 18%;
+    background-position: right;
 
     width: 100%;
-    aspect-ratio: 3/1;
-    min-width: 300px;
+    aspect-ratio: 192/80;
 }
 
 #officialEvent-introduce .content p {
-    width: 65%;
+    position: relative;
+    z-index: 1;
+    
+    width: 45%;
     text-align: center;
     letter-spacing: 0.1rem;
+    margin: 0 auto;
+    padding-top: 8%;
+    padding-right: 4.5%;
+    font-size: 1.2rem;
 }
 
 #officialEvent-content .title img {
@@ -1821,31 +1825,33 @@
 }
 
 @media (max-width:1280px) {
-    #officialEvent-introduce .content {
-        background-position: right;
-
-        padding-top: 8%;
-        padding-left: 18%;
-
-        width: 100%;
-        aspect-ratio: 3/1;
-        min-width: 300px;
-    }
-
     #officialEvent-introduce .content p {
-        width: 75%;
+        padding-top: 7%;
+        font-size: 1rem;
     }
 }
 
-@media (max-width:860px) {
+@media (max-width:1024px) {
     #officialEvent-introduce .content {
-        background-image: none;
-        padding-left: 22%;
+        background-image: url(../images/official/smoke-ipad.gif);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+
+        width: 100%;
+        aspect-ratio: 192/80;
     }
 
     #officialEvent-introduce .content p {
-        width: 70%;
-        text-align: left;
+        width: 80%;
+        padding-top: 12%;
+    }
+}
+
+@media (max-width:680px) {
+    #officialEvent-introduce .content p {
+        width: 80%;
+        padding-top: 10%;
     }
 }
 
@@ -1857,14 +1863,14 @@
 
     #officialEvent-introduce .content p {
         width: 80%;
-        margin: 0 auto;
+        padding-right: 0;
     }
 }
 
 /* 活動步驟 */
 #officialEvent-content {
     width: 50%;
-    margin-top: -3%;
+    margin-top: -20%;
 }
 
 #officialEvent-content .title {
@@ -1908,6 +1914,13 @@
 @media (max-width:1440px) {
     #officialEvent-content {
         width: 55%;
+    }
+}
+
+@media (max-width:1024px){
+    #officialEvent-content {
+        width: 50%;
+        margin-top: -10%;
     }
 }
 
