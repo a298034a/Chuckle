@@ -66,18 +66,20 @@ function Open() {
 
 
 
-const map = document.getElementById('map');
+// const map = document.getElementById('map');
 
-map.addEventListener('click', function () {
-    if (map.className === 'map-listout') {
-        map.classList.add('map-listin');
-        map.classList.remove('map-listout');
-    } else {
-        map.classList.add('map-listout');
-        map.classList.remove('map-listin');
+// map.addEventListener('click', function () {
+//     if (map.className === 'map-listout') {
+//         map.classList.add('map-listin');
+//         map.classList.remove('map-listout');
+//     } else {
+//         map.classList.add('map-listout');
+//         map.classList.remove('map-listin');
 
-    }
-});
+//     }
+// });
+
+
 //彈跳文章分頁
 // 選取所有 .addressPosts 和 .popup-content 元素
 let posts = document.querySelectorAll('.addressPosts');
