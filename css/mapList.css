@@ -397,6 +397,6 @@ iframe {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
-    z-index: 99;
+    z-index: 90;
     display: none;
 }
