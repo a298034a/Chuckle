@@ -485,7 +485,7 @@ hr {
 #post-info-icon p {
     font-size: 14px;
     padding-left: 7px;
-    margin-top: -8px;
+    /* margin-top: -8px; */
 }
 
 /* #endregion */
