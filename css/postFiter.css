@@ -118,7 +118,9 @@ cursor: pointer;
 .inOder{
     margin-left: 56px; 
 }
-
+#inOder0{
+    display: none;
+}
 
 
 

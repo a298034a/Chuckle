@@ -23,14 +23,14 @@ if (typeBody.style.display === 'block') {
 });
 
 
-// 讓台北市打開信義區中山區
-let container1 = document.getElementById('container-1');
-let inOder1 = document.getElementById('inOder-1');
+// 讓台北市container0打開信義區中山區inOder0
+let container0 = document.getElementById('container0');
+let inOder0 = document.getElementById('inOder0');
 
-container1.addEventListener('click', () => {
-if (inOder1.style.display === 'block') {
-  inOder1.style.display = 'none';
+container0.addEventListener('click', () => {
+if (inOder0.style.display === 'block') {
+  inOder0.style.display = 'none';
 } else {
-  inOder1.style.display = 'block';
+  inOder0.style.display = 'block';
 }
 });
