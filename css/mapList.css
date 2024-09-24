@@ -242,6 +242,12 @@
     height: 16px;
     margin-bottom: 10%;
 }
+#phone-close-btn{
+    width: 16px;
+    height: 16px;
+    margin-bottom: 10%;
+}
+
 
 .slide-out {
     transform: translateX(-200%);
@@ -414,4 +420,26 @@ iframe {
     position: fixed;
     z-index: 90;
     display: none;
+}
+
+/* 手機尺寸 */
+
+@media (max-width:390px){
+
+    #close{
+        display: none;
+    }
+    #phone-close-btn{
+        display: block;
+    }
+    #attraction-introduction {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0;
+     }
+     #map-nev{
+        z-index: 80;
+     }
+     
 }
