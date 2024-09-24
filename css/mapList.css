@@ -72,9 +72,25 @@
 #map-nev .search-container {
     margin-left: 1%;
     margin-right: 2%;
-    width: 13%;
+    width: 14%;
 
 }
+@media (max-width:1336px) {
+    #map-nev .search-container {
+        width: 13%;
+    }
+}
+@media (max-width:1060px) {
+    #map-nev .search-container {
+        width: 11%;
+    }
+}
+@media (max-width:800px) {
+    #map-nev .search-container {
+        width: 11%;
+    }
+}
+
 
 .nev-things {
     padding: 2px 15px;
@@ -191,6 +207,33 @@
     opacity: 0;
     z-index: 90;
 }
+#map-tags{
+    display: flex;
+}
+
+@media (max-width:800px) {
+    #list {
+        width: 21%;
+    }
+}
+@media (max-width:732px) {
+    #list {
+        width: 22%;
+    }
+}
+@media (max-width:644px) {
+    #list {
+        width: 100vw;
+    }
+    #map-nev{
+        width: 100vw;  
+    }
+   
+}
+
+
+
+
 #close{
     /* 關閉list */
     width: 16px;
