@@ -644,6 +644,9 @@ hr {
     font-size: 25px;
 
 }
+#more:hover{
+    background-color: var(--hover-pink); 
+}
 
 
 /* #endregion */
