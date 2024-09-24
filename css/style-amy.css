@@ -358,13 +358,30 @@
 
 /* #region 首頁-最新活動*/
 #news {
+    position: relative;
     display: flex;
     width: 100%;
-    background-image: url(../images/index/news-bg.webp);
+    background-image: url(../images/index/news-bg.png);
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: -100px;
     padding: 15% 0;
+}
+
+#news .cloud-l {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 40%;
+}
+
+#news .cloud-r {
+    position: absolute;
+    z-index: -1;
+    top: 10%;
+    right: 0;
+    width: 18%;
 }
 
 .whatnews {
@@ -373,6 +390,8 @@
 }
 
 .carousel {
+    position: relative;
+
     display: flex;
     align-items: end;
     margin-left: 3.7%;
@@ -394,6 +413,17 @@
 
     border-radius: 20px;
     border: var(--black) 2px solid;
+}
+
+.carousel .knob {
+    position: absolute;
+    z-index: 1;
+
+    width: 10%;
+    height: 10%;
+
+    right: 0;
+    top: 20%;
 }
 
 .carousel a {
@@ -477,6 +507,11 @@
         margin-top: 0;
     }
 
+    #news .cloud-r,
+    #news .cloud-l {
+        display: none;
+    }
+
     .whatnews {
         width: 40%;
         margin: 0 auto;
@@ -509,6 +544,10 @@
 
         border-radius: 20px;
         border: var(--black) 2px solid;
+    }
+
+    .carousel .knob {
+        display: none;
     }
 
     .carousel a h2 {
