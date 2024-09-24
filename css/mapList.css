@@ -477,6 +477,9 @@ iframe {
     #map-nev .search-container {
         width: 100%;
     }
+    .map-tagArea {
+        z-index: -9;
+    }
 
     .nev-things {
         /* tag長寬調整 */
