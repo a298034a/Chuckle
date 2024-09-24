@@ -367,6 +367,7 @@
     flex: auto;
     height: 30px;
     border: none;
+    padding: 8px;
 }
 
 #member-modal form label span {
