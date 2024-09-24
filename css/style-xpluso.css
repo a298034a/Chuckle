@@ -770,6 +770,7 @@ body.themeSeason {
     margin: 1%;
 }
 
+
 .thing .mask {
     mask-image: url(../images/theme/straw_icon.svg);
     mask-size: 100% 100%;
@@ -784,11 +785,45 @@ body.themeSeason {
     object-fit: cover;
 }
 
+
 .thing .photo {
     z-index: 10;
     width: 97%;
     position: absolute;
     margin: -9% 10%;
+}
+/* 草莓 */
+.thing .photo::before {
+    content: "更多介紹";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+
+    /* font-weight: bold; */
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 20;
+}
+
+.thing .photo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.thing .photo:hover::before,
+.thing .photo:hover::after {
+    opacity: 1;
 }
 
 
