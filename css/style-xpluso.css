@@ -666,6 +666,8 @@ hr {
     left: 5%;
     border-radius: 30px;
     padding: 25px;
+    position: absolute;
+/* 讓打開列表時不會因為過長而被裁切掉 */
 }
 
 #post-filter-text {
