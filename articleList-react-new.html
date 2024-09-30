@@ -111,6 +111,11 @@
                         setTypeVisible(!isTypeVisible); // 切換 inOder-1 的可見性
                     };
 
+                    const [isOrder, setOrderVisible] = useState(false); //類型
+                    const handleOrderClick = () => {
+                        setOrderVisible(!isOrder); 
+                    };
+
                     return (
                         <>
                             <main id="articleListBody">
@@ -129,13 +134,14 @@
 
                                                 {/* 遍歷cityData並顯示每個CityName和其對應的AreaName */}
                                                 {cityData.map((city, cityIndex) => (
-                                                    <li key={cityIndex}>
-                                                        <div id="container0" className="filter-order-Area" >
+                                                    <li key={cityIndex} >
+                                                        <div id="container0" className="filter-order-Area" onClick={handleOrderClick}>
                                                         {/* 顯示城市名稱 */}
                                                         <Container title={city.CityName} />
                                                         <FilterBtn />
                                                     </div>
-
+                                                    
+                                                    {isOrder && (
                                                         <ul className="inOder">
                                                             {/* 遍歷並顯示城市下的每個區域 */}
                                                             {city.AreaList.map((area, areaIndex) => (
@@ -145,6 +151,8 @@
                                                                 </li>
                                                             ))}
                                                         </ul>
+
+                                                        )}
                                                     </li>
                                                 ))}
 
