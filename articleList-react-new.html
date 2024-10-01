@@ -100,18 +100,19 @@
                 const response = await axios.get('./json/CityCountyData.json');
                 const cityData = response.data;
 
+                //篩選列表顯示與否
                 function App() {
                     const [isContainerVisible, setContainerVisible] = useState(false);
                     const handleTitleClick = () => {
-                        setContainerVisible(!isContainerVisible);
+                        setContainerVisible(!isContainerVisible);//縣市
                     };
 
                     const [isTypeVisible, setTypeVisible] = useState(true); //類型
                     const handleTypeClick = () => {
-                        setTypeVisible(!isTypeVisible); // 切換 inOder-1 的可見性
+                        setTypeVisible(!isTypeVisible); 
                     };
 
-                    const [isOrder, setOrderVisible] = useState(false); //類型
+                    const [isOrder, setOrderVisible] = useState(false); //鄉鎮區
                     const handleOrderClick = () => {
                         setOrderVisible(!isOrder); 
                     };
