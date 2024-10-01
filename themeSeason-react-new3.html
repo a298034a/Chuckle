@@ -52,7 +52,7 @@
         (async () => {
 
             // 獲取CityCountyData.json的數據
-            const response = await axios.get('./json/strawbarry.json');
+            const response = await axios.get('./json/strawbarry3.json');
             const strawbarryData = response.data;
             function App() {
                 return <>
@@ -108,11 +108,11 @@
 
 
                                 <div id="page-choose">
-                                    <div><img src="./images/theme/pre.svg" alt="頁碼選擇" /></div>
-                                    <a href="./themeSeason-react-new.html"><img src="./images/theme/page_1.svg" alt="頁碼選擇" /></a>
+                                    <div class="pageChoose-pre"><a href="./themeSeason-react-new2.html"><img src="./images/theme/pre.svg" alt="頁碼選擇" /></a></div>
+                                    <a href="./themeSeason-react-new.html"><img src="./images/theme/page_1_un.svg" alt="頁碼選擇" /></a>
                                     <a href="./themeSeason-react-new2.html"><img src="./images/theme/page_2_un.svg" alt="頁碼選擇" /></a>
-                                    <a href="./themeSeason-react-new3.html"><img src="./images/theme/page_3_un.svg" alt="頁碼選擇" /></a>
-                                    <div className="pageChoose-next"><a href="./themeSeason-react-new2.html"><img src="./images/theme/next.svg" alt="頁碼選擇" /></a></div>
+                                    <a href="./themeSeason-react-new3.html"><img src="./images/theme/page_3.svg" alt="頁碼選擇" /></a>
+                                    <div><img src="./images/theme/next.svg" alt="頁碼選擇" /></div>
 
                                 </div>
                             </div>
