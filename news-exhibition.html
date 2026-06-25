@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="./css/style-amy.css">
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/react-transition-group/dist/react-transition-group.js"></script>
+    <!-- 修正：固定版本號，避免最新版 CDN 格式不符導致 window.ReactTransitionGroup 為 undefined -->
+    <script src="https://unpkg.com/react-transition-group@4.4.5/dist/react-transition-group.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
 </head>
@@ -20,7 +21,10 @@
     <div id="root"></div>
     <script type="text/babel">
         const { useState, useEffect, useRef } = React;
-        const { CSSTransition, TransitionGroup } = window.ReactTransitionGroup;
+        // 修正：加入安全檢查，避免 CDN 未載入時整頁崩潰
+        const RTG = window.ReactTransitionGroup || {};
+        const CSSTransition = RTG.CSSTransition;
+        const TransitionGroup = RTG.TransitionGroup;
 
         function CurrentItem({ href, content, date, title, bg, level, tags }) {
             const className = `item level${level}`;
@@ -70,7 +74,8 @@
 
             return (
                 <li className="btn">
-                    <a class={isCurrent === true ? "current" : ""} href={href} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    {/* 修正：class → className */}
+                    <a className={isCurrent === true ? "current" : ""} href={href} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                         <img src={src} alt={alt} />
                     </a>
                 </li>
@@ -86,9 +91,7 @@
             const [isMoving, setIsMoving] = useState(false);
 
             const getEventData = async () => {
-                // const result = await axios.get("./json/currentEvent.json");
                 const result = await axios.get("https://a298034a.github.io/Chuckle/json/currentEvent.json");
-                
                 setItems(result.data);
             }
 
@@ -174,6 +177,31 @@
                 }
             };
 
+            const renderList = () => {
+                const currentItems = generateCurrentItems();
+                if (TransitionGroup && CSSTransition) {
+                    return (
+                        <TransitionGroup component={null}>
+                            {currentItems.map((item) => (
+                                <CSSTransition
+                                    key={item.key}
+                                    timeout={1000}
+                                    classNames={{
+                                        enter: `${direction}-enter`,
+                                        enterActive: `${direction}-enter-active`,
+                                        exit: `${direction}-leave`,
+                                        exitActive: `${direction}-leave-active`,
+                                    }}
+                                >
+                                    {item}
+                                </CSSTransition>
+                            ))}
+                        </TransitionGroup>
+                    );
+                }
+                return <>{currentItems}</>;
+            };
+
             return (
                 <>
                     <div className="characters exhibition">
@@ -201,23 +229,9 @@
                                 </li>
                             </ul>
                         </nav>
-                        <ul class="event-list">
-                            <TransitionGroup component={null}>
-                                {generateCurrentItems().map((item) => (
-                                    <CSSTransition
-                                        key={item.key}
-                                        timeout={1000}
-                                        classNames={{
-                                            enter: `${direction}-enter`,
-                                            enterActive: `${direction}-enter-active`,
-                                            exit: `${direction}-leave`,
-                                            exitActive: `${direction}-leave-active`,
-                                        }}
-                                    >
-                                        {item}
-                                    </CSSTransition>
-                                ))}
-                            </TransitionGroup>
+                        {/* 修正：class → className */}
+                        <ul className="event-list">
+                            {renderList()}
                         </ul>
                         <div className="swiper-btn swiper-btn-pre" onClick={moveLeft}>
                             <img src="./images/hand-l.png" alt="" />
@@ -264,7 +278,6 @@
             const [isMoving, setIsMoving] = useState(false);
 
             const getEventData = async () => {
-                // const result = await axios.get("./json/upcommingEvent.json");
                 const result = await axios.get("https://a298034a.github.io/Chuckle/json/upcommingEvent.json");
                 setItems(result.data);
             }
@@ -358,6 +371,31 @@
                 }
             };
 
+            const renderList = () => {
+                const upcomingItems = generateItems();
+                if (TransitionGroup && CSSTransition) {
+                    return (
+                        <TransitionGroup component={null}>
+                            {upcomingItems.map((item) => (
+                                <CSSTransition
+                                    key={item.key}
+                                    timeout={1000}
+                                    classNames={{
+                                        enter: `${direction}-enter`,
+                                        enterActive: `${direction}-enter-active`,
+                                        exit: `${direction}-leave`,
+                                        exitActive: `${direction}-leave-active`,
+                                    }}
+                                >
+                                    {item}
+                                </CSSTransition>
+                            ))}
+                        </TransitionGroup>
+                    );
+                }
+                return <>{upcomingItems}</>;
+            };
+
             return (
                 <>
                     <section id="upcoming-events">
@@ -365,22 +403,7 @@
                             <img src="./images/news/upcoming-title.webp" alt="即將開始" />
                         </figure>
                         <ul>
-                            <TransitionGroup component={null}>
-                                {generateItems().map((item) => (
-                                    <CSSTransition
-                                        key={item.key}
-                                        timeout={1000}
-                                        classNames={{
-                                            enter: `${direction}-enter`,
-                                            enterActive: `${direction}-enter-active`,
-                                            exit: `${direction}-leave`,
-                                            exitActive: `${direction}-leave-active`,
-                                        }}
-                                    >
-                                        {item}
-                                    </CSSTransition>
-                                ))}
-                            </TransitionGroup>
+                            {renderList()}
                         </ul>
                         <div className="swiper-btn swiper-btn-pre" onClick={moveLeft}>
                             <img src="./images/hand-l.png" alt="" />
@@ -395,12 +418,12 @@
 
         const active = 2;
 
-        ReactDOM.render(
+        // 修正：ReactDOM.render → ReactDOM.createRoot（React 18 正確用法）
+        ReactDOM.createRoot(document.getElementById('root')).render(
             <React.Fragment>
                 <CurrentEvents active={active} />
                 <UpcommingEvents active={active} />
-            </React.Fragment>,
-            document.getElementById('root')
+            </React.Fragment>
         );
     </script>
     <script src="./js/navbar.js"></script>
