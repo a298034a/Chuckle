@@ -7,37 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.23.3/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <title>草莓季主題頁面</title>
     <link rel="stylesheet" href="./css/nav-footer-general.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style-xpluso.css">
 </head>
 
-<body>
-    <!-- 跟元素的地方 -->
+<body class="themeSeason">
     <div id="root"></div>
-    <!--JSX -->
     <script type="text/babel">
+        const { useState, useEffect } = React;
 
         function Store(props) {
             return <>
                 <div className="store">
                     <h2>{props.storeName}</h2>
-
-                    <a href="#" className="thing" >
+                    <a href="#" className="thing">
                         <div className="col">
                             <div className="photo mask">
-                                {/*<!-- 草莓遮色片 --*/}
                                 <img src={props.img} alt="" />
                             </div>
                             <div className="straw">
-                                { /*<!-- 底圖草莓 --*/}
                                 <img src="./images/theme/image.png" alt="" />
                             </div>
                         </div>
                     </a>
-
                     <h3>{props.product}</h3>
                     <div className="slogan">
                         <img className="straw_icon" src="./images/theme/straw_small.svg" alt="icon" />
@@ -47,14 +43,33 @@
                 </div>
             </>
         }
+
+        // 修正：改為 useState + useEffect，頁面不再需要等資料才渲染
         function App() {
+            const [strawbarryData, setStrawbarryData] = useState([]);
+            const [loading, setLoading] = useState(true);
+            const [error, setError] = useState(null);
+
+            useEffect(() => {
+                axios.get('./json/strawbarry.json')
+                    .then(response => {
+                        setStrawbarryData(response.data);
+                        setLoading(false);
+                    })
+                    .catch(err => {
+                        console.error('載入資料失敗：', err);
+                        setError('資料載入失敗，請重新整理頁面');
+                        setLoading(false);
+                    });
+            }, []);
+
+            if (loading) return <div style={{ textAlign: 'center', padding: '50px' }}>載入中...</div>;
+            if (error) return <div style={{ textAlign: 'center', padding: '50px', color: 'red' }}>{error}</div>;
+
             return <>
                 <div className="themeSeason">
                     <div id="underNev">
-                        
-                            {/*左區塊*/}
                         <div id="left-block" className="block">
-
                             <figure id="straw-1">
                                 <img src="./images/theme/straw-role-1.svg" alt="草莓和粉色區塊" />
                             </figure>
@@ -62,57 +77,52 @@
                                 <img src="./images/theme/straw-role-2.svg" alt="左下方草莓" />
                             </figure>
                         </div>
-                    
-                    
 
-                        {/*中間區塊 */}
                         <div id="themeBody">
-
                             <img id="banner" src="./images/theme/banner.png" alt="BANNER" />
 
-
-                            <div className="storeBlock">
-                                <Store storeName="" img="" product="" slogan=""></Store>
-                                <Store storeName="" img="" product="" slogan=""></Store>
-                                <Store storeName="" img="" product="" slogan=""></Store>
+                            <div>
+                                {Array.from({ length: 3 }).map((_, blockIndex) => {
+                                    const storesInBlock = strawbarryData.slice(blockIndex * 3, blockIndex * 3 + 3);
+                                    return (
+                                        <div className="storeBlock" key={blockIndex}>
+                                            {storesInBlock.map((straw, index) => (
+                                                <Store
+                                                    key={index}
+                                                    storeName={straw.storeName}
+                                                    img={straw.imgSrc}
+                                                    product={straw.product}
+                                                    slogan={straw.slogan}
+                                                />
+                                            ))}
+                                        </div>
+                                    );
+                                })}
                             </div>
-                            <div className="storeBlock">
-                                <Store storeName="" img="" product="" slogan=""></Store>
-                                <Store storeName="" img="" product="" slogan=""></Store>
-                                <Store storeName="" img="" product="" slogan=""></Store>
-                            </div>
-                            <div className="storeBlock">
-                                <Store storeName="" img="" product="" slogan=""></Store>
-                                <Store storeName="" img="" product="" slogan=""></Store>
-                                <Store storeName="" img="" product="" slogan=""></Store>
-                            </div>
-
 
                             <div id="page-choose">
                                 <div><img src="./images/theme/pre.svg" alt="頁碼選擇" /></div>
-                                <a href="./themeSeason.html"><img src="./images/theme/page_1.svg" alt="頁碼選擇" /></a>
-                                <a href="./themeSeason2.html"><img src="./images/theme/page_2_un.svg" alt="頁碼選擇" /></a>
-                                <a href="./themeSeason3.html"><img src="./images/theme/page_3_un.svg" alt="頁碼選擇" /></a>
-                                <div className="pageChoose-next"><a href="./themeSeason2.html"><img src="./images/theme/next.svg" alt="頁碼選擇" /></a></div>
-
+                                <a href="./themeSeason-react-new.html"><img src="./images/theme/page_1.svg" alt="頁碼選擇" /></a>
+                                <a href="./themeSeason-react-new2.html"><img src="./images/theme/page_2_un.svg" alt="頁碼選擇" /></a>
+                                <a href="./themeSeason-react-new3.html"><img src="./images/theme/page_3_un.svg" alt="頁碼選擇" /></a>
+                                <div className="pageChoose-next"><a href="./themeSeason-react-new2.html"><img src="./images/theme/next.svg" alt="頁碼選擇" /></a></div>
                             </div>
                         </div>
 
-                        {/*右區塊*/}
                         <div id="right-block" className="block">
                             <figure id="straw-3">
                                 <img src="./images/theme/straw-role-3.svg" alt="草莓和粉色區塊" />
                             </figure>
                         </div>
-
                     </div>
                 </div>
-
-
             </>
         }
+
         ReactDOM.createRoot(document.getElementById('root')).render(<App />);
     </script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/footer.js"></script>
 </body>
 
 </html>
