@@ -5,5 +5,5 @@ document.addEventListener('DOMContentLoaded', function () {
     </footer>
     `;
     
-    document.body.insertAdjacentHTML('afterend', footerHTML);
+   document.body.insertAdjacentHTML('beforeend', footerHTML);
 });
