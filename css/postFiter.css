@@ -35,7 +35,7 @@ body {
     font-size: 100%;
     line-height: 1.5;
 }
-/*     重置標題 */
+/*     重置標題 */
 h1,
 h2,
 h3,
@@ -194,3 +194,62 @@ cursor: pointer;
   }
 
 
+/* ==========================================
+   RWD 手機版 (≤ 820px)
+   ========================================== */
+@media (max-width: 820px) {
+
+    /* 隱藏左側篩選器，手機空間不夠顯示 */
+    #post-filter {
+        display: none !important;
+    }
+
+    /* 文章列表佔滿畫面寬度 */
+    #listBody {
+        width: 92% !important;
+        margin-left: 4% !important;
+        margin-right: 4% !important;
+    }
+
+    /* 文章卡片：縮小封面圖，維持橫向排列 */
+    .list .cover {
+        width: 110px !important;
+        flex-shrink: 0;
+    }
+
+    .listTextArea h2 {
+        font-size: 16px;
+    }
+
+    .listTextArea p {
+        font-size: 14px;
+    }
+
+    #articleListBody .tag {
+        font-size: 15px;
+    }
+}
+
+/* ==========================================
+   RWD 小手機版 (≤ 480px)
+   ========================================== */
+@media (max-width: 480px) {
+
+    /* 文章卡片改為上下堆疊排列 */
+    .list {
+        flex-direction: column;
+    }
+
+    /* 封面圖移到文字下方，恢復全寬 */
+    .list .cover {
+        width: 100% !important;
+        padding-left: 0 !important;
+        margin-top: 12px;
+    }
+
+    .list .cover img {
+        border-radius: 12px;
+        max-height: 200px;
+        object-fit: cover;
+    }
+}
