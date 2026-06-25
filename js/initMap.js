@@ -1,15 +1,16 @@
-
 document.addEventListener("DOMContentLoaded", async function () {
-   const mapEl = document.getElementById('map');
-   if (!mapEl) return;
-   const list = document.getElementById('list');
-   const logoo = document.getElementById('mapIcon');
-    const jsonPath = document.mapEl.getAttribute('data-json-path');
+    const mapEl = document.getElementById('map');
+    if (!mapEl) return; // 這個頁面沒有地圖，直接結束
+
+    const jsonPath = mapEl.getAttribute('data-json-path');
 
     //取得 marker 資料
     const response = await fetch(jsonPath);
     const markersData = await response.json();
-    
+
+    // 只有地圖頁（map.html）才有這兩個元素，index 頁沒有
+    const list = document.getElementById('list');
+    const logoo = document.getElementById('mapIcon');
 
     async function initMap() {
         //地圖中心點座標
@@ -33,3 +34,36 @@ document.addEventListener("DOMContentLoaded", async function () {
             const img = document.createElement("img");
             img.style.width = "90%";
             img.src = data.imgSrc;
+            img.alt = "地標";
+
+            const marker = new AdvancedMarkerElement({
+                map: map,
+                position: data.position,
+                content: img,
+                title: data.title,
+            });
+
+            marker.addListener("click", () => {
+                //如果資料帶有連結則打開連結
+                if (data.url) {
+                    window.open(data.url, '_blank');
+                }
+                else {
+                    //地圖頁的視窗開關寫這裡
+                    if (list) {
+                        // 打開list
+                        list.classList.add('slide-in');
+                        list.classList.remove('slide-out');
+                        list.style.opacity = 1;
+                    }
+                    if (logoo) {
+                        // LOGO圖案也變白底版
+                        logoo.src = "./images/map/logo_bg_white.svg";
+                    }
+                }
+            });
+        });
+    }
+
+    initMap();
+});
