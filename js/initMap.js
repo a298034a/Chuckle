@@ -1,8 +1,11 @@
-let list = document.getElementById('list');
-let logoo = document.getElementById('mapIcon');
+
 
 document.addEventListener("DOMContentLoaded", async function () {
-    const jsonPath = document.getElementById('map').getAttribute('data-json-path');
+   const mapEl = document.getElementById('map');
+   if (!mapEl) return;
+   const list = document.getElementById('list');
+   const logoo = document.getElementById('mapIcon');
+    const jsonPath = document.mapEl.getAttribute('data-json-path');
 
     //取得 marker 資料
     const response = await fetch(jsonPath);
@@ -52,11 +55,14 @@ document.addEventListener("DOMContentLoaded", async function () {
                 else {
                     //地圖頁的視窗開關寫這裡
                     // 打開list
-                    list.classList.add('slide-in');
-                    list.classList.remove('slide-out');
-                    list.style.opacity = 1;
-                    // LOGO圖案也變白底版(不知道為甚麼掛了)
-                    logoo.src = "./images/map/logo_bg_white.svg";
+                    if (list) {
+       list.classList.add('slide-in');
+       list.classList.remove('slide-out');
+       list.style.opacity = 1;
+   }
+   if (logoo) {
+       logoo.src = "./images/map/logo_bg_white.svg";
+   }
                 }
             });
         });
