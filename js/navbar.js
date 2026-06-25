@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <ul class="nav-list-v">
                 <li>
                     <form class="search-container">
-                        <input type="text" id="search-bar" placeholder="想去哪玩？">
+                        <input type="text" id="search-bar-mobile" placeholder="想去哪玩？">
                         <a href="./articleList-react-new.html"><img class="search-icon" src="./images/navbar/icon-search.svg" alt="搜尋按鈕"></a>
                     </form>
                 </li>
